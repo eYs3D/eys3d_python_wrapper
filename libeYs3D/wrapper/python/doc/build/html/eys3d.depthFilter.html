@@ -1,0 +1,748 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eys3d.depthFilter package &#8212; eYs3D-python-wrapper 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="eys3d.depthAccuracy package" href="eys3d.depthAccuracy.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="eys3d-depthfilter-package">
+<h1>eys3d.depthFilter package<a class="headerlink" href="#eys3d-depthfilter-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="eys3d-depthfilter-depthfilter-module">
+<h2>eys3d.depthFilter.depthFilter module<a class="headerlink" href="#eys3d-depthfilter-depthfilter-module" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.depthFilter.depthFilter.</code><code class="sig-name descname">DepthFilterOptions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">camera_device</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Filter type apply to the depthfilter.</p>
+<p>It includes: subsample, edgePreServingFilter, holeFill, temporalFilter and
+removeCurve sub function.
+Please see each sub function comment for detail usage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>camera_device</strong> (<em>obj</em>) – CameraDevice.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">disable</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Disable DepthFilter function.</p>
+<p>To disable DepthFilter function.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">enable</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Enable DepthFilter function.</p>
+<p>To enable DepthFilter function.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_bytes_per_pixel</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the number of bytes per pixel.</p>
+<p>To get the number of bytes for one pixel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The number of bytes for saving one pixel.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">is_enabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Check the depthFilter status.</p>
+<p>To check the status of depth filtering function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True for enable. False otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="eys3d-depthfilter-edgepreservingfilter-module">
+<h2>eys3d.depthFilter.edgePreServingFilter module<a class="headerlink" href="#eys3d-depthfilter-edgepreservingfilter-module" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.depthFilter.edgePreServingFilter.</code><code class="sig-name descname">EdgePreServingFilter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">camera_device</span></em>, <em class="sig-param"><span class="n">depthFilterOptions</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Perform edge preserve filtering.</p>
+<p>This function can smooth the depth image but still reserve the edge
+information. User can strengthen the effect by increasing the parameter
+“level”.</p>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">disable</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Disable edge preserve filtering.</p>
+<p>To disable edge preserve filtering.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">enable</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Enable edge preserve filtering.</p>
+<p>To enable edge preserve filtering.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the config of the edge preserve filtering to a dictionary.</p>
+<p>To get all the argument about edge preserve filtering.
+It returns a dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><p>The dictionary with following keys:</p>
+<p>level (int): The level for edge preserve filtering (larger means heavier effect).
+sigma (str): The internal parameter for edge preserve filtering. Default is 0.015.
+Lambda (str): The internal parameter for edge preserve filtering. Default is 0.1 .</p>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_edge_level</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the level.</p>
+<p>To get the level of the edge preserve filtering.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The level for edge preserve filtering.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_lambda</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the lambda.</p>
+<p>To get the lambda user provided.
+This value is fixed.</p>
+<p>float: The internal parameter for edge preserve filtering.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_sigma</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the sigma.</p>
+<p>To get the sigma value.
+This value is fixed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The internal parameter for edge preserve filtering.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">is_enabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Check the status.</p>
+<p>To check the status of edge preserve filtering function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True for enable. False otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">edge_level</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the config fo the edge preserving filtering.</p>
+<p>To set all the argument about edge preserve filtering.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>level</strong> (<em>int</em>) – The level for edge preserve filtering (larger means heavier effect).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set_edge_level</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">level</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the level of edge.</p>
+<p>To set the level for edge preserve filtering.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>level</strong> (<em>int</em>) – The level for edge preserve filtering (larger means heavier effect). The range is 1 ~ 10.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="eys3d-depthfilter-holefill-module">
+<h2>eys3d.depthFilter.holeFill module<a class="headerlink" href="#eys3d-depthfilter-holefill-module" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.depthFilter.holeFill.</code><code class="sig-name descname">HoleFill</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">camera_device</span></em>, <em class="sig-param"><span class="n">depthFilterOptions</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Performe HoleFill.</p>
+<p>This function tries to fill the holes in the depth image. Users can strengthen the
+effect by increasing the parameter “level”. The parameter “horizontal” controls
+the hole filtering to be performed horizontally or vertically.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>camera_device</strong> (<em>obj</em>) – CameraDevice.</p></li>
+<li><p><strong>depthFilterOptions</strong> (<em>obj</em>) – DepthFilterOptions.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">disable</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Disable holeFill.</p>
+<p>To disable holeFill.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">disable_horizontal</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Disable horizontal.</p>
+<p>To disable horizontal hole filiing.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">enable</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Enable holeFill.</p>
+<p>To enable holeFill.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">enable_horizontal</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Enable horizontal.</p>
+<p>To enable horizontal hole filiing.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the config of the hole filiing to a dictionary.</p>
+<p>To get the total argument about hole filling.
+It return a dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The dictionary with following keys:
+kernel_size (int): The kernel size for hole filtering. Defalut is 1.
+level (int): The level for hole filling. The larger one means heavier effect.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_kernel_size</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the kernel size.</p>
+<p>To get the kernel size user provided.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The kernel size for hole filtering.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_level</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the level.</p>
+<p>To get the level for hole filling.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The level for hole filling.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">is_enabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Check the status.</p>
+<p>To check the status of subsample function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True for enable. False otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">is_horizontal</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Check the status of horizontal.</p>
+<p>To check the status of horizontal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True for enable. False otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">kernel_size</span></em>, <em class="sig-param"><span class="n">level</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the config of the hole filling.</p>
+<p>To set the total argument about hole filling.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>size</strong> (<em>int</em>) – The kernel size for hole filtering. Defalut is 1.</p></li>
+<li><p><strong>level</strong> (<em>int</em>) – The level for hole filling. The larger one means heavier effect.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set_kernel_size</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">size</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the kernel size.</p>
+<p>To set the kernel size for hole filtering.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>size</strong> (<em>int</em>) – The kernel size for hole filtering. Defalut is 1.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set_level</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">level</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the level.</p>
+<p>To set the level for hole filling.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>level</strong> (<em>int</em>) – The level for hole filling. The larger one means heavier effect. The range is 1 ~ 3.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="eys3d-depthfilter-removecurve-module">
+<h2>eys3d.depthFilter.removeCurve module<a class="headerlink" href="#eys3d-depthfilter-removecurve-module" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.depthFilter.removeCurve.</code><code class="sig-name descname">RemoveCurve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">camera_device</span></em>, <em class="sig-param"><span class="n">depthFilterOptions</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Perform curve removal function.</p>
+<p>[TODO][EYS3D][DOC] Description in detail.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>camera_device</strong> (<em>obj</em>) – CameraDevice.</p></li>
+<li><p><strong>depthFilterOptions</strong> (<em>obj</em>) – DepthFilterOptions.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">disable</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Disable remove curve.</p>
+<p>To disable remove curve.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">enable</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Enable remove curve.</p>
+<p>To enable remove curve.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">is_enabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Check the status.</p>
+<p>To check the status of remove curve function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True for enable. False otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="eys3d-depthfilter-subsample-module">
+<h2>eys3d.depthFilter.subsample module<a class="headerlink" href="#eys3d-depthfilter-subsample-module" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.depthFilter.subsample.</code><code class="sig-name descname">Subsample</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">camera_device</span></em>, <em class="sig-param"><span class="n">depthFilterOptions</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Perform subsampling process.</p>
+<p>This function mainly scales the depth image down to reduce the computational loading.
+It provides users two kinds of filtering methods (median and mean filtering) to subsample the depth image.
+Furthermore, this function should be used with “EtronDI_ApplyFilters”.
+Then, you have to call “EtronDI_ApplyFilters” before finishing the process of depth filtering, if you have
+called this function at the beginning of the process of depth filtering.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>camera_device</strong> (<em>obj</em>) – CameraDevice.</p></li>
+<li><p><strong>depthFilterOptions</strong> (<em>obj</em>) – DepthFilterOptions.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">disable</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Disable subsample.</p>
+<p>To disable subsample.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">enable</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Enable subsample.</p>
+<p>To enable subsample.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the filtering mode and scaling factor to a dictionary.</p>
+<p>To get the filtering mode and scaling factor.
+It return a dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><p>The dictionary with following keys:</p>
+<p>mode_index (int): The filtering mode. 0: median filter. 1: mean filter.
+factor (int): The scaling factor.</p>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">is_enabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Check the status.</p>
+<p>To check the status of subsample function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True for enable. False otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mode_index</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the filtering mode and scaling factor.</p>
+<p>To set the filtering mode and scaling factor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mode_index</strong> (<em>int</em>) – The mode for subsample.
+0: median filter and factor 2.
+1: median filter and factor 3.
+2: mean filter and factor 4.
+3: mean filter and factor 5.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="eys3d-depthfilter-temporalfilter-module">
+<h2>eys3d.depthFilter.temporalFilter module<a class="headerlink" href="#eys3d-depthfilter-temporalfilter-module" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.depthFilter.temporalFilter.</code><code class="sig-name descname">TemporalFilter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">camera_device</span></em>, <em class="sig-param"><span class="n">depthFilterOptions</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Perform temporal filter.</p>
+<p>This function can reduce the variation of each depth pixel by mixing the current
+depth image and the previous ones. Users can control the mixing ratio through
+the parameter “alpha”. Increasing it can strengthen the influence of the current
+depth image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>camera_device</strong> (<em>obj</em>) – CameraDevice.</p></li>
+<li><p><strong>depthFilterOptions</strong> (<em>obj</em>) – DepthFilterOptions.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">disable</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Disable temporal filter.</p>
+<p>To disable temporal filter.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">enable</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Enable temporal filter.</p>
+<p>To enable temporal filter.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the config of the temporal filtering to a dictionary.</p>
+<p>To get all the total argument about temporal filtering.
+It returns a dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><p>The dictionary with following keys:</p>
+<p>alpha (str): The weighting ratio for controlling the mix of the current depthimage and the passing depth images.
+history (int): Number of passing depth images to be recorded.</p>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_alpha</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the alpha.</p>
+<p>To get the alpha user provided.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The alpha value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_history</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the history.</p>
+<p>To get the history.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The number of passing depth images to be recorded.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">is_enabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Check the status.</p>
+<p>To check the status of temporal filtering function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True for enable. False otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">alpha</span></em>, <em class="sig-param"><span class="n">history</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the config fo the temporal filtering.</p>
+<p>To set all the argument about temporal filtering.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>alpha</strong> (<em>float</em>) – The weighting ratio for controlling the mix of the current depthimage and the passing depth images.</p></li>
+<li><p><strong>history</strong> (<em>int</em>) – Number of passing depth images to be recorded.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set_alpha</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">alpha</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the alpha.</p>
+<p>To set the alpha the user could control the mixing raio.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>alpha</strong> (<em>float</em>) – The weighting ratio for controlling the mix of the current depthimage and the passing depth images. The range is 0 ~ 1.0.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set_history</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">history</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the history</p>
+<p>To set the history value which is the number of passing depth images to be recorded.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>history</strong> (<em>int</em>) – Number of passing depth images to be recorded.The range is 2 ~ 3.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">eYs3D-python-wrapper</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">eys3d</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="eys3d.html">eys3d package</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">eys3d</a><ul>
+  <li><a href="eys3d.html">eys3d package</a><ul>
+      <li>Previous: <a href="eys3d.depthAccuracy.html" title="previous chapter">eys3d.depthAccuracy package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, KT.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/eys3d.depthFilter.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

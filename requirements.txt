@@ -1,0 +1,12 @@
+python-config==0.1.2
+pybind11==2.6.1
+numpy==1.19.2
+scikit-build==0.11.1
+opencv-python==4.2.0.34
+glfw==2.0.0
+PyOpenGL==3.1.5
+pytest==6.0.1 # It should be removed when release.
+configshell-fb==1.1.28
+rtslib-fb==2.1.74
+targetcli-fb==2.1.51.1
+loguru==0.5.3

@@ -1,0 +1,2494 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eys3d package &#8212; eYs3D-python-wrapper 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="eys3d.depthAccuracy package" href="eys3d.depthAccuracy.html" />
+    <link rel="prev" title="eys3d" href="modules.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="eys3d-package">
+<h1>eys3d package<a class="headerlink" href="#eys3d-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="eys3d.depthAccuracy.html">eys3d.depthAccuracy package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eys3d.depthAccuracy.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eys3d.depthAccuracy.html#eys3d-depthaccuracy-depthaccuracy-module">eys3d.depthAccuracy.depthAccuracy module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eys3d.depthAccuracy.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eys3d.depthFilter.html">eys3d.depthFilter package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eys3d.depthFilter.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eys3d.depthFilter.html#eys3d-depthfilter-depthfilter-module">eys3d.depthFilter.depthFilter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eys3d.depthFilter.html#eys3d-depthfilter-edgepreservingfilter-module">eys3d.depthFilter.edgePreServingFilter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eys3d.depthFilter.html#eys3d-depthfilter-holefill-module">eys3d.depthFilter.holeFill module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eys3d.depthFilter.html#eys3d-depthfilter-removecurve-module">eys3d.depthFilter.removeCurve module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eys3d.depthFilter.html#eys3d-depthfilter-subsample-module">eys3d.depthFilter.subsample module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eys3d.depthFilter.html#eys3d-depthfilter-temporalfilter-module">eys3d.depthFilter.temporalFilter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eys3d.depthFilter.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="eys3d-cameraproperty-module">
+<h2>eys3d.cameraProperty module<a class="headerlink" href="#eys3d-cameraproperty-module" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.cameraProperty.</code><code class="sig-name descname">CameraProperty</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">camera_device</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class contains the camera properties.</p>
+<p>This class contains the camera properties including auto exposure, auto white balance,
+low light compesation, light source switch, and etc.
+User could controls the propeties by following function.
+[EYS3D][TODO][DOC]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>camera_device</strong> (<em>obj</em>) – CameraDevice.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">disable_AE</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Disable auto exposure mode.</p>
+<p>To disable auto exposure mode.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">disable_AWB</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Disable auto white balance mode.</p>
+<p>To disable auto white balance mode.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">disable_low_light_compensation</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Disable low light compesation mode.</p>
+<p>To disable low light compesation mode.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">enable_AE</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Enable auto exposure mode.</p>
+<p>To enable auto exposure mode.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">enable_AWB</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Enable auto white balance mode.</p>
+<p>To enable auto white balance mode.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">enable_low_light_compensation</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Enable low light compesation mode.</p>
+<p>To enable low light compesation mode.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_AE_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the status of auto exposure.</p>
+<p>To get the status of auto exposure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The return value. True for enable, False otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_AWB_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the status of auto white balance.</p>
+<p>To get the status of auto white balance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The return value. True for enable, False otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_exposure_range</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the exposure range from eYs3D camera module.</p>
+<p>To get the exposure range as a dictionary.
+The key is following:
+* Max
+* Min
+* Step
+* Default
+* Flag</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>The exposure range. The key is following:</dt><dd><ul class="simple">
+<li><p>Max</p></li>
+<li><p>Min</p></li>
+<li><p>Step</p></li>
+<li><p>Default</p></li>
+<li><p>Flag</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_exposure_value</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the exposure value.</p>
+<p>To get the exposure value.
+The value is calculated by log2.
+The range of value is -13 ~ 3.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The exposure value. The range is -13 ~ 3.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_light_source_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the status of light source.</p>
+<p>To get the status of light source.
+The options are 50 Hz and 60 Hz.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>VALUE_50HZ is 50 Hz, VALUE_60HZ is 60 Hz.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>LIGHT_SOURCE_VALUE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_low_light_compensation_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the status of low light compensation.</p>
+<p>To get the status of low light compensation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The return value. True for enable, False otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_manual_exposure_time</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the manual exposure time.</p>
+<p>To get the manual exposure time.
+[EYS3D][TODO][DOC]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The exposure time. [EYS3D][TODO][DOC]</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_white_balance_temperature</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the white balance temperature.</p>
+<p>To get the white balance temperature.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The white balance temperature (the range is 2800 ~ 6500).</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_white_balance_temperature_range</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the range of white balance temperature.</p>
+<p>To Get the range of white balance temperature as a dictionary.
+The key is following :
+* Max
+* Min
+* Step
+* Default
+* Flag</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>The range of white balance temperature. The key is following:</dt><dd><ul class="simple">
+<li><p>Max</p></li>
+<li><p>Min</p></li>
+<li><p>Step</p></li>
+<li><p>Default</p></li>
+<li><p>Flag</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set_exposure_value</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the exposure value.</p>
+<p>To set the exposure value.
+The range of value is -13 ~ 3.
+It would set to minimun or maximun value if input-value is out of range.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>int</em>) – The exposure value. The range is -13 ~ 3.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set_light_source</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the light source.</p>
+<p>To set the light source
+The options are 50 Hz and 60 Hz.</p>
+<p>value (LIGHT_SOURCE_VALUE): Set to VALUE_50HZ for 50 Hz and VALUE_60HZ for 60 Hz</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set_manual_exposure_time</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the manual exposure time.</p>
+<p>To set the manual exposure time.
+[EYS3D][TODO][DOC]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>float</em>) – The manual exposure time.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set_white_balance_temperature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the white balance temperature.</p>
+<p>To set the white balance temperatue.
+The range is 2800 ~ 6500.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> – The white balance temperature.The range si 2800 ~ 6500.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="eys3d-config-module">
+<h2>eys3d.config module<a class="headerlink" href="#eys3d-config-module" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.config.</code><code class="sig-name descname">Config</code></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class is to set the configuration of streaming.</p>
+<p>This class is to set the configuration of streaming.
+It could set the resolution and format of color and depth frame.</p>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_color_stream_resolution</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the resolution of color stream.</p>
+<p>Get the resolution of color frame.
+The return order is height, width.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The tuple contains height and width.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the dictionary of the user-provided config.</p>
+<p>To get the dictionary of the user-provided config.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>The user-provided config. The key is following:</dt><dd><ul class="simple">
+<li><p>colorFormat: The format of color stream.</p></li>
+<li><p>colorWidth: The width of color stream.</p></li>
+<li><p>colorHeight: The height of color stream.</p></li>
+<li><p>depthWidth: The width of depth stream.</p></li>
+<li><p>depthHeight: The width of depth stream.</p></li>
+<li><p>actualFps: The actual fps.</p></li>
+<li><p>depthFormat: The depth data type.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_depth_stream_resolution</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the resolution of depth stream.</p>
+<p>Get the resolution of depth frame.
+The return order is height, width.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The tuple contains height and width.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set_color_stream</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">streamFormat</span></em>, <em class="sig-param"><span class="n">nEP0Width</span></em>, <em class="sig-param"><span class="n">nEP0Height</span></em>, <em class="sig-param"><span class="n">fps</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the format and resolution of color stream.</p>
+<p>To set the format, resolution, and fps of color stream.
+Please refer PIF of camera module or ModeConfig.db.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>streamFormat</strong> (<em>int</em>) – The format of color stream. 0: YUY2. 1: MJPG.
+User could refer COLOR_RAW_DATA_YUY2 and COLOR_RAW_DATA_MJPG in COLOR_RAW_DATA_TYPE.</p></li>
+<li><p><strong>nEP0Width</strong> (<em>int</em>) – The width of the color stream.</p></li>
+<li><p><strong>nEP0Height</strong> (<em>int</em>) – The height of the color stream.</p></li>
+<li><p><strong>fps</strong> (<em>int</em>) – The fps of color stream.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set_depth_dataType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">DepthDataType</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the data type of depth stream.</p>
+<p>To set the data type for depth stream.
+Please refer DEPTH_RAW_DATA_TYPE.
+The options are:
+* DEPTH_RAW_DATA_8_BITS
+* DEPTH_RAW_DATA_11_BITS
+* DEPTH_RAW_DATA_14_BITS</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set_depth_stream</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">streamFormat</span></em>, <em class="sig-param"><span class="n">nEP1Width</span></em>, <em class="sig-param"><span class="n">nEP1Height</span></em>, <em class="sig-param"><span class="n">fps</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the format and resolution of depth stream.</p>
+<p>To set the format, resolution, and fps of depth stream.
+Please refer PIF of camera module or ModeConfig.db.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>streamFormat</strong> (<em>int</em>) – The format of depth stream. [TODO]</p></li>
+<li><p><strong>nEP0Width</strong> (<em>int</em>) – The width of the depth stream.</p></li>
+<li><p><strong>nEP0Height</strong> (<em>int</em>) – The height of the depth stream.</p></li>
+<li><p><strong>fps</strong> (<em>int</em>) – The fps of depth stream.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set_preset_mode_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pid</span></em>, <em class="sig-param"><span class="n">index</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the preset mode config.</p>
+<p>This function is to make the mode config setting easier.
+User could select mode index from modeConfig.db to complete config setting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pid</strong> (<em>int</em>) – The product id of camera module. Please refer the PIF. It is availabel for integer or heximal.</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – The mode index in modeConfig.db.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.config.</code><code class="sig-name descname">ModeConfig</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pid</span></em>, <em class="sig-param"><span class="n">index</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class is to link database <cite>modeConfig.db</cite>.</p>
+<p>This class is to link database <cite>modeConfig.db</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pid</strong> (<em>hex</em>) – The product id of camera module. Please refer the PIF.</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – The mode index in modeConfig.db.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_current_index</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the index of current mode.</p>
+<p>To get the index of current mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The index of current mode.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_current_mode_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the information of current mode.</p>
+<p>To get the information of current mode.
+It return a object of <cite>MODE_CONFIG</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>The MODE_CONFIG. It contains</dt><dd><ul class="simple">
+<li><p>iMode</p></li>
+<li><p>iUSB_Type</p></li>
+<li><p>iInterLeaveModeFPS</p></li>
+<li><p>eDecodeType_L</p></li>
+<li><p>eDecodeType_K</p></li>
+<li><p>eDecodeType_T</p></li>
+<li><p>L_Resolution</p></li>
+<li><p>D_Resolution</p></li>
+<li><p>K_Resolution</p></li>
+<li><p>T_Resolution</p></li>
+<li><p>vecDepthType</p></li>
+<li><p>vecColorFps</p></li>
+<li><p>vecDepthFps</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>obj</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_mode_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the total number of mode in modeConfig.db.</p>
+<p>To the the total number of mode on camera module in modeConfig.db.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_modes</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the modes.</p>
+<p>To Get the modes.
+It is not to be implemented.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>NotImplementedError</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">select_current_index</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">index</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Select the index that user wanted.</p>
+<p>To select the index that user wanted.
+It raised error if index is not in modeConfig.db.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – The index user wanted to select.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>IndexError</strong> – If no index in modeConfig.db.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.config.</code><code class="sig-name descname">PointCloud</code></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">generate_point_cloud</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">depthFrame</span></em>, <em class="sig-param"><span class="n">colorFrame</span></em>, <em class="sig-param"><span class="n">plyFilter</span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">generate_point_cloud_gpu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">depthFrame</span></em>, <em class="sig-param"><span class="n">colorFrame</span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">write_ply</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">point_cloud</span></em>, <em class="sig-param"><span class="n">f_name</span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.config.</code><code class="sig-name descname">RectLogData</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dictionary</span></em>, <em class="sig-param"><span class="n">nRectifyLogIndex</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class is to save rectify log data.</p>
+<p>This class is to save rectify log data.
+Its attribute is follow the <cite>eSPCtrl_RectLogData</cite> in eSPDI_def.h.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dictionary</strong> – The dictonary of rectyLogData from eys3dPy.</p></li>
+<li><p><strong>nRectifyLogIndex</strong> – The index user wanted to select.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>Exception</strong> – No rectify log.Please check rectify index.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the dictionary of rectify log data.</p>
+<p>To get the dictionary of rectify log data.
+The key is refer to <cite>eSPCtrl_RectLogData</cite> in eSPDI_def.h.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The rectify log data as dictionary.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">save_json</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fname</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Save rectify log data as json file.</p>
+<p>To save rectify log data as json file.
+It save as <cite>RectfyLog-{index}.json</cite> if fname is not provided.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fname</strong> (<em>str</em>) – The filename for json file. Default is RectfyLog-{index}.json if fname is None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="eys3d-device-module">
+<h2>eys3d.device module<a class="headerlink" href="#eys3d-device-module" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.device.</code><code class="sig-name descname">Device</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">camera_index</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The class is the function related to eys3d api function.</p>
+<p>The class is to control the eys3d api function.
+First, it creates the EYS3D system to control the device.
+Second, user could decide the camera module by index provided by EYS3D system.
+The device could control following function:
+* Stream
+* DepthFilter
+* Property
+* Register
+* Depth information</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>device_index</strong> (<em>int</em>) – Index for device would like to initialize.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">close_stream</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Close stream</p>
+<p>To close stream.
+The device would close the stream then erase the config and callback.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">enable_stream</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Enable stream.</p>
+<p>To enable stream.
+It would enable color, depth and point cloud streaming.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_IRProperty</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_cameraProperty</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the class of CameraProperty.</p>
+<p>To get the class of CameraProperty.
+User could read description on <cite>cameraProperty.py</cite> in detail.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_depthAccuracy</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the class of DepthAccuracy.</p>
+<p>To get the class of DepthAccuracy.
+User could read description on <cite>depthAccuracy</cite> in detail.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_depthFilter_options</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the class of DepthFilterOptions.</p>
+<p>To get the class of DepthFilterOptions.
+User could read description on <cite>depthFilter</cite> in detail.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_device_index</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the index of user-provided camera device.</p>
+<p>To get the index of user-provided camera device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The index of camera device.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_device_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the device infomation.</p>
+<p>To get the device information from camera module as dictionary.
+It contains FW version, VID , PID and etc…</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>The device information. The key is following:</dt><dd><ul class="simple">
+<li><p>firmware_version</p></li>
+<li><p>serial_number</p></li>
+<li><p>bus_info</p></li>
+<li><p>mode_name</p></li>
+<li><dl class="simple">
+<dt>dev_info</dt><dd><ul>
+<li><p>PID</p></li>
+<li><p>VID</p></li>
+<li><p>dev_name</p></li>
+<li><p>chip_ID</p></li>
+<li><p>dev_type</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_exposure_range</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_rectify_mat_log_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nRectifyLogIndex</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_register_options</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_usb_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_z_range</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">open_device</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em>, <em class="sig-param"><span class="n">rectLogIndex</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">colorFrameCallback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">depthFrameCallback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">PCFrameCallback</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Open camera device with Config and callback function.</p>
+<p>It would call EtronDI_OpenDevice by stream setting.
+In the meantime, it also registers the callback function to get frame data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>config</strong> (<em>obj</em>) – The Config class. It contains the streaming setting.</p></li>
+<li><p><strong>colorFrameCallback</strong> (<em>function</em>) – The callback function of color frame. User could define the callback function. If none, the device could not enable color streaming.</p></li>
+<li><p><strong>depthFrameCallback</strong> (<em>function</em>) – The callback function of depth frame. User could define the callback function. If none, the device could not enable depth streaming.</p></li>
+<li><p><strong>PCFrameCallback</strong> (<em>function</em>) – The callback function of point cloud frame. User could define the callback function. If none, the device could not enable point cloud streaming.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">pause_stream</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Pause stream</p>
+<p>To pause stream.
+The device would hold the resouce of config and callback function and then wait for next action.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">release</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Release the device.</p>
+<p>The EYS3D system would release the device.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set_z_range</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">near</span></em>, <em class="sig-param"><span class="n">far</span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="eys3d-eys3d-def-module">
+<h2>eys3d.eys3d_def module<a class="headerlink" href="#eys3d-eys3d-def-module" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.eys3d_def.</code><code class="sig-name descname">CStream</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">MJPEG</code><em class="property"> = 1</em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">YUYV</code><em class="property"> = 0</em></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.eys3d_def.</code><code class="sig-name descname">DStream</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">COLORFUL</code><em class="property"> = 2</em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">DEFAULT</code><em class="property"> = 0</em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">GRAY</code><em class="property"> = 1</em></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.eys3d_def.</code><code class="sig-name descname">DepthDataFormat</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">DEPTH_DATA_11_BITS</code><em class="property"> = 4</em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">DEPTH_DATA_11_BITS_COMBINED_RECTIFY</code><em class="property"> = 13</em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">DEPTH_DATA_11_BITS_RAW</code><em class="property"> = 9</em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">DEPTH_DATA_14_BITS</code><em class="property"> = 2</em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">DEPTH_DATA_14_BITS_COMBINED_RECTIFY</code><em class="property"> = 11</em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">DEPTH_DATA_14_BITS_RAW</code><em class="property"> = 7</em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">DEPTH_DATA_8_BITS</code><em class="property"> = 1</em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">DEPTH_DATA_8_BITS_RAW</code><em class="property"> = 6</em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">DEPTH_DATA_8_BITS_x80</code><em class="property"> = 3</em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">DEPTH_DATA_8_BITS_x80_RAW</code><em class="property"> = 8</em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">DEPTH_DATA_DEFAULT</code><em class="property"> = 0</em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">DEPTH_DATA_OFF_RAW</code><em class="property"> = 0</em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">DEPTH_DATA_OFF_RECTIFY</code><em class="property"> = 5</em></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.eys3d_def.</code><code class="sig-name descname">Frame</code><span class="sig-paren">(</span><em class="sig-param">nwidth: int</em>, <em class="sig-param">nheight: int</em>, <em class="sig-param">nch: int</em>, <em class="sig-param">data: &lt;built-in function array&gt;</em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">data</code><em class="property">: numpy.array</em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">nch</code><em class="property">: int</em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">nheight</code><em class="property">: int</em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">nwidth</code><em class="property">: int</em></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.eys3d_def.</code><code class="sig-name descname">LIGHT_SOURCE_VALUE</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">VALUE_50HZ</code><em class="property"> = 1</em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">VALUE_60HZ</code><em class="property"> = 2</em></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.eys3d_def.</code><code class="sig-name descname">Register</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">FW</code><em class="property"> = 0</em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">HW</code><em class="property"> = 1</em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">SENSOR</code><em class="property"> = 2</em></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.eys3d_def.</code><code class="sig-name descname">SensorMode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">SENSOR_A</code><em class="property"> = 0</em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">SENSOR_B</code><em class="property"> = 1</em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">SENSOR_BOTH</code><em class="property"> = 2</em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">SENSOR_C</code><em class="property"> = 3</em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">SENSOR_D</code><em class="property"> = 3</em></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="eys3d-irproperty-module">
+<h2>eys3d.irProperty module<a class="headerlink" href="#eys3d-irproperty-module" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.irProperty.</code><code class="sig-name descname">IRProperty</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">camera_device</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class is to control the IR property.</p>
+<p>[TODO][EYS3D][DOC]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>camera_device</strong><strong>(</strong> – obj): CameraDeivce.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">disable_extendIR</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Disable range extension of IR.</p>
+<p>To disable range extension of IR.
+The range is 0 ~ 6 after extend disabled.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">enable_extendIR</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Enable range extension of IR.</p>
+<p>To enable range extension of IR.
+The range is 0 ~ 15 after extend enabled.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_IR_max</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the max of IR value.</p>
+<p>To get the max of IR value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The max of IR value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_IR_min</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the min of IR value.</p>
+<p>To get the min of IR value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The min of IR value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_IR_value</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the current value of IR.</p>
+<p>To get the current value of IR.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The current value of IR.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">is_extendIR_enabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the status of IR range extension.</p>
+<p>To get the status of IR range extension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The return value. True for enable, False otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set_IR_value</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the current value of IR.</p>
+<p>To set the current value of IR.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> – The IR value provided by user.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="eys3d-pipeline-module">
+<h2>eys3d.pipeline module<a class="headerlink" href="#eys3d-pipeline-module" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.pipeline.</code><code class="sig-name descname">Pipeline</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">device_index</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class is to manage the color, depth and point cloud stream with pipeline process.</p>
+<p>This class is to manage the color, depth and point cloud stream with pipeline process.
+The purpose is for easier device operation.
+User could start pipeline with user-defined callback function.</p>
+<dl class="simple">
+<dt>Notice:</dt><dd><p>It will call get_color_frame and get_depth_frame if user start with user-defined callback function.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>device_index</strong> (<em>int</em>) – Index for device would like to initialize.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_IRProperty</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_accuracy_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the information of accruracy.</p>
+<p>To get the information of accuracy as dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>The dictionary contains the information of accuracy. The key is following:</dt><dd><ul class="simple">
+<li><p>distance</p></li>
+<li><p>fill_rate</p></li>
+<li><p>z_accuracy</p></li>
+<li><p>temporal_noise</p></li>
+<li><p>spatial_noise</p></li>
+<li><p>angle</p></li>
+<li><p>angle_x</p></li>
+<li><p>angle_y</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_cameraProperty</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the class of CameraProperty.</p>
+<p>To get the class of CameraProperty.
+User could read description on <cite>cameraProperty.py</cite> in detail.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The class CameraProperty.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>obj</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_color_frame</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">raw_data</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Get the color frame by default callback.</p>
+<p>To get the color frame by default callback.
+It show rgb frame if raw_data is False, otherwise is raw data.
+The shape of rgb frame data is (H, W, 3).
+The shape of raw frame data is (H, W, 2).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>raw_data</strong> (<em>bool</em>) – True is raw data, YUY2 or MJPG. False is rgb data.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The array of frame data. The shape is (H, W, 3) if rgb data. The shape is (H, W, 2) if raw data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_depthAccuracy</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the class of DepthAccuracy.</p>
+<p>To get the class of DepthAccuracy.
+User could read description on <cite>depthAccuracy</cite> in detail.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The class DepthAccuracy.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>obj</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_depthFilter_options</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the class of DepthFilterOptions.</p>
+<p>To get the class of DepthFilterOptions.
+User could read description on <cite>depthFilter</cite> in detail.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The class DepthFilter.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>obj</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_depth_frame</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">raw_data</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Get the depth frame by default callback.</p>
+<p>To get the depth frame by default callback.
+It show rgb frame if raw_data is False, otherwise is raw data.
+The shape of rgb frame data is (H, W, 3).
+The shape of raw frame data is (H, W, 2).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>raw_data</strong> (<em>bool</em>) – True is raw data. False is rgb data.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The array of frame data. The shape is (H, W, 3) if rgb data. The shape is (H, W, 2) if raw data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_depth_zValue</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the z value for depth frame.</p>
+<p>To get the z value for depth frame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The array of z value of depth frame. The size is (H, W).</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_device</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the camera device.</p>
+<p>To get the camera device for operating the device in detail.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The class Device.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>obj</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">pause</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Pause the stream.</p>
+<p>To pause the stream.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">start</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">colorFrameCallback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">depthFrameCallback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">PCFrameCallback</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Start the stream with configure and callback function.</p>
+<p>To start the stream with configure and callback function.
+It would use the default callback function to get frame data of color and depth if callback function is None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>config</strong> (<em>obj</em>) – The class Config.</p></li>
+<li><p><strong>colorFrameCallback</strong> (<em>func</em>) – The callback function to get frame from color stream.</p></li>
+<li><p><strong>depthFrameCallback</strong> (<em>func</em>) – The callback function to get frame from depth stream.</p></li>
+<li><p><strong>PCFrameCallback</strong> (<em>func</em>) – The callback function to get frame from point cloud stream.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Stop the stream.</p>
+<p>To stop the stream and then release device.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.</code><code class="sig-name descname">CameraProperty</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">camera_device</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class contains the camera properties.</p>
+<p>This class contains the camera properties including auto exposure, auto white balance,
+low light compesation, light source switch, and etc.
+User could controls the propeties by following function.
+[EYS3D][TODO][DOC]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>camera_device</strong> (<em>obj</em>) – CameraDevice.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">disable_AE</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Disable auto exposure mode.</p>
+<p>To disable auto exposure mode.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">disable_AWB</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Disable auto white balance mode.</p>
+<p>To disable auto white balance mode.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">disable_low_light_compensation</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Disable low light compesation mode.</p>
+<p>To disable low light compesation mode.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">enable_AE</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Enable auto exposure mode.</p>
+<p>To enable auto exposure mode.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">enable_AWB</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Enable auto white balance mode.</p>
+<p>To enable auto white balance mode.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">enable_low_light_compensation</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Enable low light compesation mode.</p>
+<p>To enable low light compesation mode.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_AE_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the status of auto exposure.</p>
+<p>To get the status of auto exposure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The return value. True for enable, False otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_AWB_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the status of auto white balance.</p>
+<p>To get the status of auto white balance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The return value. True for enable, False otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_exposure_range</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the exposure range from eYs3D camera module.</p>
+<p>To get the exposure range as a dictionary.
+The key is following:
+* Max
+* Min
+* Step
+* Default
+* Flag</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>The exposure range. The key is following:</dt><dd><ul class="simple">
+<li><p>Max</p></li>
+<li><p>Min</p></li>
+<li><p>Step</p></li>
+<li><p>Default</p></li>
+<li><p>Flag</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_exposure_value</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the exposure value.</p>
+<p>To get the exposure value.
+The value is calculated by log2.
+The range of value is -13 ~ 3.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The exposure value. The range is -13 ~ 3.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_light_source_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the status of light source.</p>
+<p>To get the status of light source.
+The options are 50 Hz and 60 Hz.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>VALUE_50HZ is 50 Hz, VALUE_60HZ is 60 Hz.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>LIGHT_SOURCE_VALUE</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_low_light_compensation_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the status of low light compensation.</p>
+<p>To get the status of low light compensation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The return value. True for enable, False otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_manual_exposure_time</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the manual exposure time.</p>
+<p>To get the manual exposure time.
+[EYS3D][TODO][DOC]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The exposure time. [EYS3D][TODO][DOC]</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_white_balance_temperature</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the white balance temperature.</p>
+<p>To get the white balance temperature.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The white balance temperature (the range is 2800 ~ 6500).</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_white_balance_temperature_range</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the range of white balance temperature.</p>
+<p>To Get the range of white balance temperature as a dictionary.
+The key is following :
+* Max
+* Min
+* Step
+* Default
+* Flag</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>The range of white balance temperature. The key is following:</dt><dd><ul class="simple">
+<li><p>Max</p></li>
+<li><p>Min</p></li>
+<li><p>Step</p></li>
+<li><p>Default</p></li>
+<li><p>Flag</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set_exposure_value</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the exposure value.</p>
+<p>To set the exposure value.
+The range of value is -13 ~ 3.
+It would set to minimun or maximun value if input-value is out of range.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>int</em>) – The exposure value. The range is -13 ~ 3.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set_light_source</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the light source.</p>
+<p>To set the light source
+The options are 50 Hz and 60 Hz.</p>
+<p>value (LIGHT_SOURCE_VALUE): Set to VALUE_50HZ for 50 Hz and VALUE_60HZ for 60 Hz</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set_manual_exposure_time</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the manual exposure time.</p>
+<p>To set the manual exposure time.
+[EYS3D][TODO][DOC]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>float</em>) – The manual exposure time.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set_white_balance_temperature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the white balance temperature.</p>
+<p>To set the white balance temperatue.
+The range is 2800 ~ 6500.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> – The white balance temperature.The range si 2800 ~ 6500.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.</code><code class="sig-name descname">Config</code></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class is to set the configuration of streaming.</p>
+<p>This class is to set the configuration of streaming.
+It could set the resolution and format of color and depth frame.</p>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_color_stream_resolution</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the resolution of color stream.</p>
+<p>Get the resolution of color frame.
+The return order is height, width.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The tuple contains height and width.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the dictionary of the user-provided config.</p>
+<p>To get the dictionary of the user-provided config.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>The user-provided config. The key is following:</dt><dd><ul class="simple">
+<li><p>colorFormat: The format of color stream.</p></li>
+<li><p>colorWidth: The width of color stream.</p></li>
+<li><p>colorHeight: The height of color stream.</p></li>
+<li><p>depthWidth: The width of depth stream.</p></li>
+<li><p>depthHeight: The width of depth stream.</p></li>
+<li><p>actualFps: The actual fps.</p></li>
+<li><p>depthFormat: The depth data type.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_depth_stream_resolution</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the resolution of depth stream.</p>
+<p>Get the resolution of depth frame.
+The return order is height, width.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The tuple contains height and width.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set_color_stream</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">streamFormat</span></em>, <em class="sig-param"><span class="n">nEP0Width</span></em>, <em class="sig-param"><span class="n">nEP0Height</span></em>, <em class="sig-param"><span class="n">fps</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the format and resolution of color stream.</p>
+<p>To set the format, resolution, and fps of color stream.
+Please refer PIF of camera module or ModeConfig.db.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>streamFormat</strong> (<em>int</em>) – The format of color stream. 0: YUY2. 1: MJPG.
+User could refer COLOR_RAW_DATA_YUY2 and COLOR_RAW_DATA_MJPG in COLOR_RAW_DATA_TYPE.</p></li>
+<li><p><strong>nEP0Width</strong> (<em>int</em>) – The width of the color stream.</p></li>
+<li><p><strong>nEP0Height</strong> (<em>int</em>) – The height of the color stream.</p></li>
+<li><p><strong>fps</strong> (<em>int</em>) – The fps of color stream.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set_depth_dataType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">DepthDataType</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the data type of depth stream.</p>
+<p>To set the data type for depth stream.
+Please refer DEPTH_RAW_DATA_TYPE.
+The options are:
+* DEPTH_RAW_DATA_8_BITS
+* DEPTH_RAW_DATA_11_BITS
+* DEPTH_RAW_DATA_14_BITS</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set_depth_stream</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">streamFormat</span></em>, <em class="sig-param"><span class="n">nEP1Width</span></em>, <em class="sig-param"><span class="n">nEP1Height</span></em>, <em class="sig-param"><span class="n">fps</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the format and resolution of depth stream.</p>
+<p>To set the format, resolution, and fps of depth stream.
+Please refer PIF of camera module or ModeConfig.db.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>streamFormat</strong> (<em>int</em>) – The format of depth stream. [TODO]</p></li>
+<li><p><strong>nEP0Width</strong> (<em>int</em>) – The width of the depth stream.</p></li>
+<li><p><strong>nEP0Height</strong> (<em>int</em>) – The height of the depth stream.</p></li>
+<li><p><strong>fps</strong> (<em>int</em>) – The fps of depth stream.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set_preset_mode_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pid</span></em>, <em class="sig-param"><span class="n">index</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the preset mode config.</p>
+<p>This function is to make the mode config setting easier.
+User could select mode index from modeConfig.db to complete config setting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pid</strong> (<em>int</em>) – The product id of camera module. Please refer the PIF. It is availabel for integer or heximal.</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – The mode index in modeConfig.db.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.</code><code class="sig-name descname">DepthAccuracy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">camera_device</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class manage the functions related to DepthAccuracy.</p>
+<p>The design of this class follow the <cite>DepthAccuracyOptions.cpp</cite>.
+User could operate the function to get the accuracy information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>camera_device</strong> (<em>obj</em>) – The camera_device is CameraDevice.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">disable</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Disable depth accuracy function.</p>
+<p>To disable the depth accuracy function.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">enable</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Enable depth accuracy function.</p>
+<p>To enable the depth accuracy function.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Notice that it would not guarantee the performance.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_groundTruth_distance</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get distance of the ground truth.</p>
+<p>[EYS3D][TODO][DOC]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The ground truth distance that was set by user.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_region_ratio</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the region ratio.</p>
+<p>[EYS3D][TODO][DOC]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The ratio of region that was set by user.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">is_enabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>To check the status.</p>
+<p>Check the accuracy status.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The return value. True for enable, False otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set_groundTruth_distance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ground_truth</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the ground truth distance to calculate.</p>
+<p>[EYS3D][TODO][DOC]
+The unit is millimeter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ground_truth</strong> (<em>int</em>) – The distance to the ground truth object in millimeter (mm).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set_region_ratio</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">region_ratio</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the region ratio.</p>
+<p>[EYS3D][TODO][DOC]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>region_ratio</strong> (<em>float</em>) – The ratio of region to calculate.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.</code><code class="sig-name descname">DepthFilterOptions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">camera_device</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Filter type apply to the depthfilter.</p>
+<p>It includes: subsample, edgePreServingFilter, holeFill, temporalFilter and
+removeCurve sub function.
+Please see each sub function comment for detail usage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>camera_device</strong> (<em>obj</em>) – CameraDevice.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">disable</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Disable DepthFilter function.</p>
+<p>To disable DepthFilter function.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">enable</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Enable DepthFilter function.</p>
+<p>To enable DepthFilter function.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_bytes_per_pixel</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the number of bytes per pixel.</p>
+<p>To get the number of bytes for one pixel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The number of bytes for saving one pixel.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">is_enabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Check the depthFilter status.</p>
+<p>To check the status of depth filtering function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True for enable. False otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.</code><code class="sig-name descname">Device</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">camera_index</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The class is the function related to eys3d api function.</p>
+<p>The class is to control the eys3d api function.
+First, it creates the EYS3D system to control the device.
+Second, user could decide the camera module by index provided by EYS3D system.
+The device could control following function:
+* Stream
+* DepthFilter
+* Property
+* Register
+* Depth information</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>device_index</strong> (<em>int</em>) – Index for device would like to initialize.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">close_stream</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Close stream</p>
+<p>To close stream.
+The device would close the stream then erase the config and callback.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">enable_stream</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Enable stream.</p>
+<p>To enable stream.
+It would enable color, depth and point cloud streaming.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_IRProperty</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_cameraProperty</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the class of CameraProperty.</p>
+<p>To get the class of CameraProperty.
+User could read description on <cite>cameraProperty.py</cite> in detail.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_depthAccuracy</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the class of DepthAccuracy.</p>
+<p>To get the class of DepthAccuracy.
+User could read description on <cite>depthAccuracy</cite> in detail.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_depthFilter_options</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the class of DepthFilterOptions.</p>
+<p>To get the class of DepthFilterOptions.
+User could read description on <cite>depthFilter</cite> in detail.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_device_index</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the index of user-provided camera device.</p>
+<p>To get the index of user-provided camera device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The index of camera device.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_device_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the device infomation.</p>
+<p>To get the device information from camera module as dictionary.
+It contains FW version, VID , PID and etc…</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>The device information. The key is following:</dt><dd><ul class="simple">
+<li><p>firmware_version</p></li>
+<li><p>serial_number</p></li>
+<li><p>bus_info</p></li>
+<li><p>mode_name</p></li>
+<li><dl class="simple">
+<dt>dev_info</dt><dd><ul>
+<li><p>PID</p></li>
+<li><p>VID</p></li>
+<li><p>dev_name</p></li>
+<li><p>chip_ID</p></li>
+<li><p>dev_type</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_exposure_range</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_rectify_mat_log_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nRectifyLogIndex</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_register_options</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_usb_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_z_range</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">open_device</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em>, <em class="sig-param"><span class="n">rectLogIndex</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">colorFrameCallback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">depthFrameCallback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">PCFrameCallback</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Open camera device with Config and callback function.</p>
+<p>It would call EtronDI_OpenDevice by stream setting.
+In the meantime, it also registers the callback function to get frame data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>config</strong> (<em>obj</em>) – The Config class. It contains the streaming setting.</p></li>
+<li><p><strong>colorFrameCallback</strong> (<em>function</em>) – The callback function of color frame. User could define the callback function. If none, the device could not enable color streaming.</p></li>
+<li><p><strong>depthFrameCallback</strong> (<em>function</em>) – The callback function of depth frame. User could define the callback function. If none, the device could not enable depth streaming.</p></li>
+<li><p><strong>PCFrameCallback</strong> (<em>function</em>) – The callback function of point cloud frame. User could define the callback function. If none, the device could not enable point cloud streaming.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">pause_stream</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Pause stream</p>
+<p>To pause stream.
+The device would hold the resouce of config and callback function and then wait for next action.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">release</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Release the device.</p>
+<p>The EYS3D system would release the device.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">set_z_range</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">near</span></em>, <em class="sig-param"><span class="n">far</span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.</code><code class="sig-name descname">ModeConfig</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pid</span></em>, <em class="sig-param"><span class="n">index</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class is to link database <cite>modeConfig.db</cite>.</p>
+<p>This class is to link database <cite>modeConfig.db</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pid</strong> (<em>hex</em>) – The product id of camera module. Please refer the PIF.</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – The mode index in modeConfig.db.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_current_index</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the index of current mode.</p>
+<p>To get the index of current mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The index of current mode.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_current_mode_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the information of current mode.</p>
+<p>To get the information of current mode.
+It return a object of <cite>MODE_CONFIG</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>The MODE_CONFIG. It contains</dt><dd><ul class="simple">
+<li><p>iMode</p></li>
+<li><p>iUSB_Type</p></li>
+<li><p>iInterLeaveModeFPS</p></li>
+<li><p>eDecodeType_L</p></li>
+<li><p>eDecodeType_K</p></li>
+<li><p>eDecodeType_T</p></li>
+<li><p>L_Resolution</p></li>
+<li><p>D_Resolution</p></li>
+<li><p>K_Resolution</p></li>
+<li><p>T_Resolution</p></li>
+<li><p>vecDepthType</p></li>
+<li><p>vecColorFps</p></li>
+<li><p>vecDepthFps</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>obj</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_mode_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the total number of mode in modeConfig.db.</p>
+<p>To the the total number of mode on camera module in modeConfig.db.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_modes</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the modes.</p>
+<p>To Get the modes.
+It is not to be implemented.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>NotImplementedError</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">select_current_index</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">index</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Select the index that user wanted.</p>
+<p>To select the index that user wanted.
+It raised error if index is not in modeConfig.db.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – The index user wanted to select.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>IndexError</strong> – If no index in modeConfig.db.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">eys3d.</code><code class="sig-name descname">Pipeline</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">device_index</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class is to manage the color, depth and point cloud stream with pipeline process.</p>
+<p>This class is to manage the color, depth and point cloud stream with pipeline process.
+The purpose is for easier device operation.
+User could start pipeline with user-defined callback function.</p>
+<dl class="simple">
+<dt>Notice:</dt><dd><p>It will call get_color_frame and get_depth_frame if user start with user-defined callback function.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>device_index</strong> (<em>int</em>) – Index for device would like to initialize.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_IRProperty</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_accuracy_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the information of accruracy.</p>
+<p>To get the information of accuracy as dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>The dictionary contains the information of accuracy. The key is following:</dt><dd><ul class="simple">
+<li><p>distance</p></li>
+<li><p>fill_rate</p></li>
+<li><p>z_accuracy</p></li>
+<li><p>temporal_noise</p></li>
+<li><p>spatial_noise</p></li>
+<li><p>angle</p></li>
+<li><p>angle_x</p></li>
+<li><p>angle_y</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_cameraProperty</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the class of CameraProperty.</p>
+<p>To get the class of CameraProperty.
+User could read description on <cite>cameraProperty.py</cite> in detail.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The class CameraProperty.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>obj</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_color_frame</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">raw_data</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Get the color frame by default callback.</p>
+<p>To get the color frame by default callback.
+It show rgb frame if raw_data is False, otherwise is raw data.
+The shape of rgb frame data is (H, W, 3).
+The shape of raw frame data is (H, W, 2).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>raw_data</strong> (<em>bool</em>) – True is raw data, YUY2 or MJPG. False is rgb data.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The array of frame data. The shape is (H, W, 3) if rgb data. The shape is (H, W, 2) if raw data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_depthAccuracy</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the class of DepthAccuracy.</p>
+<p>To get the class of DepthAccuracy.
+User could read description on <cite>depthAccuracy</cite> in detail.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The class DepthAccuracy.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>obj</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_depthFilter_options</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the class of DepthFilterOptions.</p>
+<p>To get the class of DepthFilterOptions.
+User could read description on <cite>depthFilter</cite> in detail.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The class DepthFilter.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>obj</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_depth_frame</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">raw_data</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Get the depth frame by default callback.</p>
+<p>To get the depth frame by default callback.
+It show rgb frame if raw_data is False, otherwise is raw data.
+The shape of rgb frame data is (H, W, 3).
+The shape of raw frame data is (H, W, 2).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>raw_data</strong> (<em>bool</em>) – True is raw data. False is rgb data.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The array of frame data. The shape is (H, W, 3) if rgb data. The shape is (H, W, 2) if raw data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_depth_zValue</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the z value for depth frame.</p>
+<p>To get the z value for depth frame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The array of z value of depth frame. The size is (H, W).</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">get_device</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the camera device.</p>
+<p>To get the camera device for operating the device in detail.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The class Device.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>obj</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">pause</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Pause the stream.</p>
+<p>To pause the stream.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">start</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">colorFrameCallback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">depthFrameCallback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">PCFrameCallback</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Start the stream with configure and callback function.</p>
+<p>To start the stream with configure and callback function.
+It would use the default callback function to get frame data of color and depth if callback function is None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>config</strong> (<em>obj</em>) – The class Config.</p></li>
+<li><p><strong>colorFrameCallback</strong> (<em>func</em>) – The callback function to get frame from color stream.</p></li>
+<li><p><strong>depthFrameCallback</strong> (<em>func</em>) – The callback function to get frame from depth stream.</p></li>
+<li><p><strong>PCFrameCallback</strong> (<em>func</em>) – The callback function to get frame from point cloud stream.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Stop the stream.</p>
+<p>To stop the stream and then release device.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">eYs3D-python-wrapper</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">eys3d</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">eys3d package</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">eys3d</a><ul>
+      <li>Previous: <a href="modules.html" title="previous chapter">eys3d</a></li>
+      <li>Next: <a href="eys3d.depthAccuracy.html" title="next chapter">eys3d.depthAccuracy package</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, KT.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/eys3d.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

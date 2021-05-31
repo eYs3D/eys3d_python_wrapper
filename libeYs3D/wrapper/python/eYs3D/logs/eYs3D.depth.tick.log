@@ -1,0 +1,2274 @@
+05-31 12:15:45.454 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.070 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.070 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.070 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.070 23290-24560 DepthFrameProducer: After readFrame, sn=7
+05-31 12:15:46.070 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.070 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.070 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.071 23290-24560 DepthFrameProducer: After readFrame, sn=8
+05-31 12:15:46.071 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.071 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.071 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.072 23290-24560 DepthFrameProducer: After readFrame, sn=9
+05-31 12:15:46.072 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.072 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.072 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.073 23290-24560 DepthFrameProducer: After readFrame, sn=10
+05-31 12:15:46.073 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.073 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.073 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.089 23290-24560 DepthFrameProducer: After readFrame, sn=165
+05-31 12:15:46.089 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.089 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.089 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.092 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.092 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.092 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.092 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.092 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.092 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.092 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.092 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.092 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.092 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.092 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.092 23290-24558 DepthFrameProducer: Before: calling App callback, sn=165
+05-31 12:15:46.092 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=165
+05-31 12:15:46.094 23290-24559 DepthFrameProducer: After: calling PC callback, sn=165
+05-31 12:15:46.100 23290-24558 DepthFrameProducer: After: calling App callback, sn=165
+05-31 12:15:46.100 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.107 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.107 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.107 23290-24560 DepthFrameProducer: After readFrame, sn=166
+05-31 12:15:46.107 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.107 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.107 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.111 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.111 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=166
+05-31 12:15:46.111 23290-24558 DepthFrameProducer: Before: calling App callback, sn=166
+05-31 12:15:46.117 23290-24559 DepthFrameProducer: After: calling PC callback, sn=166
+05-31 12:15:46.122 23290-24560 DepthFrameProducer: After readFrame, sn=167
+05-31 12:15:46.122 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.122 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.122 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.135 23290-24558 DepthFrameProducer: After: calling App callback, sn=166
+05-31 12:15:46.135 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.135 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.135 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.135 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.135 23290-24558 DepthFrameProducer: Before: calling App callback, sn=167
+05-31 12:15:46.135 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=167
+05-31 12:15:46.138 23290-24559 DepthFrameProducer: After: calling PC callback, sn=167
+05-31 12:15:46.142 23290-24558 DepthFrameProducer: After: calling App callback, sn=167
+05-31 12:15:46.142 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.142 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.142 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.174 23290-24560 DepthFrameProducer: After readFrame, sn=170
+05-31 12:15:46.174 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.174 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.174 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.177 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.177 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.177 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.177 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.177 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.177 23290-24558 DepthFrameProducer: Before: calling App callback, sn=170
+05-31 12:15:46.177 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=170
+05-31 12:15:46.180 23290-24559 DepthFrameProducer: After: calling PC callback, sn=170
+05-31 12:15:46.183 23290-24558 DepthFrameProducer: After: calling App callback, sn=170
+05-31 12:15:46.183 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.189 23290-24560 DepthFrameProducer: After readFrame, sn=171
+05-31 12:15:46.190 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.190 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.190 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.190 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.190 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.193 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.193 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=171
+05-31 12:15:46.193 23290-24558 DepthFrameProducer: Before: calling App callback, sn=171
+05-31 12:15:46.196 23290-24559 DepthFrameProducer: After: calling PC callback, sn=171
+05-31 12:15:46.204 23290-24558 DepthFrameProducer: After: calling App callback, sn=171
+05-31 12:15:46.204 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.206 23290-24560 DepthFrameProducer: After readFrame, sn=172
+05-31 12:15:46.206 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.206 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.206 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.208 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.208 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.209 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.209 23290-24558 DepthFrameProducer: Before: calling App callback, sn=172
+05-31 12:15:46.209 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=172
+05-31 12:15:46.215 23290-24559 DepthFrameProducer: After: calling PC callback, sn=172
+05-31 12:15:46.220 23290-24558 DepthFrameProducer: After: calling App callback, sn=172
+05-31 12:15:46.220 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.221 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.221 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.222 23290-24560 DepthFrameProducer: After readFrame, sn=173
+05-31 12:15:46.223 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.223 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.223 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.233 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.233 23290-24558 DepthFrameProducer: Before: calling App callback, sn=173
+05-31 12:15:46.233 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=173
+05-31 12:15:46.240 23290-24560 DepthFrameProducer: After readFrame, sn=174
+05-31 12:15:46.240 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.240 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.240 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.240 23290-24559 DepthFrameProducer: After: calling PC callback, sn=173
+05-31 12:15:46.245 23290-24558 DepthFrameProducer: After: calling App callback, sn=173
+05-31 12:15:46.245 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.245 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.245 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.247 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.247 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=174
+05-31 12:15:46.247 23290-24558 DepthFrameProducer: Before: calling App callback, sn=174
+05-31 12:15:46.254 23290-24559 DepthFrameProducer: After: calling PC callback, sn=174
+05-31 12:15:46.254 23290-24558 DepthFrameProducer: After: calling App callback, sn=174
+05-31 12:15:46.254 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.255 23290-24560 DepthFrameProducer: After readFrame, sn=175
+05-31 12:15:46.255 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.255 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.255 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.257 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.257 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.260 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.260 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=175
+05-31 12:15:46.260 23290-24558 DepthFrameProducer: Before: calling App callback, sn=175
+05-31 12:15:46.266 23290-24558 DepthFrameProducer: After: calling App callback, sn=175
+05-31 12:15:46.267 23290-24559 DepthFrameProducer: After: calling PC callback, sn=175
+05-31 12:15:46.267 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.275 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.275 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.276 23290-24560 DepthFrameProducer: After readFrame, sn=176
+05-31 12:15:46.276 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.276 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.276 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.281 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.282 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=176
+05-31 12:15:46.282 23290-24558 DepthFrameProducer: Before: calling App callback, sn=176
+05-31 12:15:46.286 23290-24559 DepthFrameProducer: After: calling PC callback, sn=176
+05-31 12:15:46.288 23290-24558 DepthFrameProducer: After: calling App callback, sn=176
+05-31 12:15:46.288 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.289 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.289 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.290 23290-24560 DepthFrameProducer: After readFrame, sn=177
+05-31 12:15:46.290 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.290 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.290 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.297 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.297 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=177
+05-31 12:15:46.297 23290-24558 DepthFrameProducer: Before: calling App callback, sn=177
+05-31 12:15:46.301 23290-24559 DepthFrameProducer: After: calling PC callback, sn=177
+05-31 12:15:46.306 23290-24560 DepthFrameProducer: After readFrame, sn=178
+05-31 12:15:46.307 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.307 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.307 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.307 23290-24558 DepthFrameProducer: After: calling App callback, sn=177
+05-31 12:15:46.307 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.307 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.307 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.312 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.313 23290-24558 DepthFrameProducer: Before: calling App callback, sn=178
+05-31 12:15:46.314 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=178
+05-31 12:15:46.318 23290-24558 DepthFrameProducer: After: calling App callback, sn=178
+05-31 12:15:46.320 23290-24559 DepthFrameProducer: After: calling PC callback, sn=178
+05-31 12:15:46.321 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.323 23290-24560 DepthFrameProducer: After readFrame, sn=179
+05-31 12:15:46.324 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.324 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.324 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.324 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.324 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.328 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.328 23290-24558 DepthFrameProducer: Before: calling App callback, sn=179
+05-31 12:15:46.328 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=179
+05-31 12:15:46.332 23290-24558 DepthFrameProducer: After: calling App callback, sn=179
+05-31 12:15:46.333 23290-24559 DepthFrameProducer: After: calling PC callback, sn=179
+05-31 12:15:46.333 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.339 23290-24560 DepthFrameProducer: After readFrame, sn=180
+05-31 12:15:46.339 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.339 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.339 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.341 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.341 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.343 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.343 23290-24558 DepthFrameProducer: Before: calling App callback, sn=180
+05-31 12:15:46.343 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=180
+05-31 12:15:46.348 23290-24559 DepthFrameProducer: After: calling PC callback, sn=180
+05-31 12:15:46.348 23290-24558 DepthFrameProducer: After: calling App callback, sn=180
+05-31 12:15:46.348 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.353 23290-24560 DepthFrameProducer: After readFrame, sn=181
+05-31 12:15:46.354 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.354 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.354 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.355 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.355 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.356 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.356 23290-24558 DepthFrameProducer: Before: calling App callback, sn=181
+05-31 12:15:46.356 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=181
+05-31 12:15:46.361 23290-24559 DepthFrameProducer: After: calling PC callback, sn=181
+05-31 12:15:46.366 23290-24558 DepthFrameProducer: After: calling App callback, sn=181
+05-31 12:15:46.366 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.373 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.373 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.374 23290-24560 DepthFrameProducer: After readFrame, sn=182
+05-31 12:15:46.374 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.374 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.374 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.380 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.380 23290-24558 DepthFrameProducer: Before: calling App callback, sn=182
+05-31 12:15:46.380 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=182
+05-31 12:15:46.383 23290-24559 DepthFrameProducer: After: calling PC callback, sn=182
+05-31 12:15:46.387 23290-24558 DepthFrameProducer: After: calling App callback, sn=182
+05-31 12:15:46.387 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.390 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.390 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.390 23290-24560 DepthFrameProducer: After readFrame, sn=183
+05-31 12:15:46.391 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.391 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.391 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.395 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.395 23290-24558 DepthFrameProducer: Before: calling App callback, sn=183
+05-31 12:15:46.395 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=183
+05-31 12:15:46.399 23290-24559 DepthFrameProducer: After: calling PC callback, sn=183
+05-31 12:15:46.402 23290-24558 DepthFrameProducer: After: calling App callback, sn=183
+05-31 12:15:46.402 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.404 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.404 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.408 23290-24560 DepthFrameProducer: After readFrame, sn=184
+05-31 12:15:46.408 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.408 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.408 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.413 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.413 23290-24558 DepthFrameProducer: Before: calling App callback, sn=184
+05-31 12:15:46.413 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=184
+05-31 12:15:46.418 23290-24558 DepthFrameProducer: After: calling App callback, sn=184
+05-31 12:15:46.418 23290-24559 DepthFrameProducer: After: calling PC callback, sn=184
+05-31 12:15:46.418 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.422 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.422 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.423 23290-24560 DepthFrameProducer: After readFrame, sn=185
+05-31 12:15:46.423 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.423 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.423 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.428 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.428 23290-24558 DepthFrameProducer: Before: calling App callback, sn=185
+05-31 12:15:46.428 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=185
+05-31 12:15:46.433 23290-24559 DepthFrameProducer: After: calling PC callback, sn=185
+05-31 12:15:46.439 23290-24560 DepthFrameProducer: After readFrame, sn=186
+05-31 12:15:46.440 23290-24558 DepthFrameProducer: After: calling App callback, sn=185
+05-31 12:15:46.440 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.440 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.440 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.440 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.440 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.440 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.444 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.444 23290-24558 DepthFrameProducer: Before: calling App callback, sn=186
+05-31 12:15:46.444 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=186
+05-31 12:15:46.448 23290-24559 DepthFrameProducer: After: calling PC callback, sn=186
+05-31 12:15:46.448 23290-24558 DepthFrameProducer: After: calling App callback, sn=186
+05-31 12:15:46.448 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.455 23290-24560 DepthFrameProducer: After readFrame, sn=187
+05-31 12:15:46.455 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.455 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.455 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.457 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.457 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.461 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.461 23290-24558 DepthFrameProducer: Before: calling App callback, sn=187
+05-31 12:15:46.461 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=187
+05-31 12:15:46.468 23290-24559 DepthFrameProducer: After: calling PC callback, sn=187
+05-31 12:15:46.468 23290-24558 DepthFrameProducer: After: calling App callback, sn=187
+05-31 12:15:46.468 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.471 23290-24560 DepthFrameProducer: After readFrame, sn=188
+05-31 12:15:46.471 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.471 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.471 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.471 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.471 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.476 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.477 23290-24558 DepthFrameProducer: Before: calling App callback, sn=188
+05-31 12:15:46.477 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=188
+05-31 12:15:46.481 23290-24558 DepthFrameProducer: After: calling App callback, sn=188
+05-31 12:15:46.482 23290-24559 DepthFrameProducer: After: calling PC callback, sn=188
+05-31 12:15:46.482 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.488 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.488 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.491 23290-24560 DepthFrameProducer: After readFrame, sn=189
+05-31 12:15:46.491 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.491 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.491 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.498 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.498 23290-24558 DepthFrameProducer: Before: calling App callback, sn=189
+05-31 12:15:46.498 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=189
+05-31 12:15:46.507 23290-24558 DepthFrameProducer: After: calling App callback, sn=189
+05-31 12:15:46.507 23290-24559 DepthFrameProducer: After: calling PC callback, sn=189
+05-31 12:15:46.507 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.507 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.507 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.508 23290-24560 DepthFrameProducer: After readFrame, sn=190
+05-31 12:15:46.508 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.508 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.508 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.516 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.516 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=190
+05-31 12:15:46.516 23290-24558 DepthFrameProducer: Before: calling App callback, sn=190
+05-31 12:15:46.521 23290-24559 DepthFrameProducer: After: calling PC callback, sn=190
+05-31 12:15:46.525 23290-24560 DepthFrameProducer: After readFrame, sn=191
+05-31 12:15:46.525 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.525 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.525 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.532 23290-24558 DepthFrameProducer: After: calling App callback, sn=190
+05-31 12:15:46.533 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.533 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.533 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.536 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.536 23290-24558 DepthFrameProducer: Before: calling App callback, sn=191
+05-31 12:15:46.536 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=191
+05-31 12:15:46.539 23290-24560 DepthFrameProducer: After readFrame, sn=192
+05-31 12:15:46.540 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.540 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.540 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.543 23290-24558 DepthFrameProducer: After: calling App callback, sn=191
+05-31 12:15:46.544 23290-24559 DepthFrameProducer: After: calling PC callback, sn=191
+05-31 12:15:46.544 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.544 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.544 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.550 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.551 23290-24558 DepthFrameProducer: Before: calling App callback, sn=192
+05-31 12:15:46.551 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=192
+05-31 12:15:46.555 23290-24560 DepthFrameProducer: After readFrame, sn=193
+05-31 12:15:46.555 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.556 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.556 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.559 23290-24559 DepthFrameProducer: After: calling PC callback, sn=192
+05-31 12:15:46.559 23290-24558 DepthFrameProducer: After: calling App callback, sn=192
+05-31 12:15:46.559 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.559 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.559 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.564 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.564 23290-24558 DepthFrameProducer: Before: calling App callback, sn=193
+05-31 12:15:46.564 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=193
+05-31 12:15:46.568 23290-24559 DepthFrameProducer: After: calling PC callback, sn=193
+05-31 12:15:46.568 23290-24558 DepthFrameProducer: After: calling App callback, sn=193
+05-31 12:15:46.568 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.571 23290-24560 DepthFrameProducer: After readFrame, sn=194
+05-31 12:15:46.571 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.571 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.571 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.573 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.573 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.583 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.583 23290-24558 DepthFrameProducer: Before: calling App callback, sn=194
+05-31 12:15:46.583 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=194
+05-31 12:15:46.589 23290-24560 DepthFrameProducer: After readFrame, sn=195
+05-31 12:15:46.589 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.589 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.589 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.590 23290-24559 DepthFrameProducer: After: calling PC callback, sn=194
+05-31 12:15:46.590 23290-24558 DepthFrameProducer: After: calling App callback, sn=194
+05-31 12:15:46.590 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.590 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.590 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.594 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.594 23290-24558 DepthFrameProducer: Before: calling App callback, sn=195
+05-31 12:15:46.595 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=195
+05-31 12:15:46.599 23290-24559 DepthFrameProducer: After: calling PC callback, sn=195
+05-31 12:15:46.608 23290-24560 DepthFrameProducer: After readFrame, sn=196
+05-31 12:15:46.608 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.608 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.608 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.615 23290-24558 DepthFrameProducer: After: calling App callback, sn=195
+05-31 12:15:46.615 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.615 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.615 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.618 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.618 23290-24558 DepthFrameProducer: Before: calling App callback, sn=196
+05-31 12:15:46.619 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=196
+05-31 12:15:46.623 23290-24560 DepthFrameProducer: After readFrame, sn=197
+05-31 12:15:46.623 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.623 23290-24558 DepthFrameProducer: After: calling App callback, sn=196
+05-31 12:15:46.624 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.624 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.627 23290-24559 DepthFrameProducer: After: calling PC callback, sn=196
+05-31 12:15:46.627 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.627 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.627 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.631 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.631 23290-24558 DepthFrameProducer: Before: calling App callback, sn=197
+05-31 12:15:46.631 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=197
+05-31 12:15:46.636 23290-24559 DepthFrameProducer: After: calling PC callback, sn=197
+05-31 12:15:46.636 23290-24558 DepthFrameProducer: After: calling App callback, sn=197
+05-31 12:15:46.636 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.640 23290-24560 DepthFrameProducer: After readFrame, sn=198
+05-31 12:15:46.640 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.640 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.640 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.640 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.640 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.647 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.648 23290-24558 DepthFrameProducer: Before: calling App callback, sn=198
+05-31 12:15:46.648 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=198
+05-31 12:15:46.652 23290-24558 DepthFrameProducer: After: calling App callback, sn=198
+05-31 12:15:46.652 23290-24559 DepthFrameProducer: After: calling PC callback, sn=198
+05-31 12:15:46.652 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.653 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.653 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.654 23290-24560 DepthFrameProducer: After readFrame, sn=199
+05-31 12:15:46.654 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.654 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.654 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.657 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.658 23290-24558 DepthFrameProducer: Before: calling App callback, sn=199
+05-31 12:15:46.658 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=199
+05-31 12:15:46.663 23290-24558 DepthFrameProducer: After: calling App callback, sn=199
+05-31 12:15:46.663 23290-24559 DepthFrameProducer: After: calling PC callback, sn=199
+05-31 12:15:46.663 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.670 23290-24560 DepthFrameProducer: After readFrame, sn=200
+05-31 12:15:46.670 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.670 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.670 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.671 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.671 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.678 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.678 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=200
+05-31 12:15:46.678 23290-24558 DepthFrameProducer: Before: calling App callback, sn=200
+05-31 12:15:46.686 23290-24559 DepthFrameProducer: After: calling PC callback, sn=200
+05-31 12:15:46.687 23290-24560 DepthFrameProducer: After readFrame, sn=201
+05-31 12:15:46.687 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.687 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.687 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.690 23290-24558 DepthFrameProducer: After: calling App callback, sn=200
+05-31 12:15:46.690 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.690 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.690 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.694 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.695 23290-24558 DepthFrameProducer: Before: calling App callback, sn=201
+05-31 12:15:46.695 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=201
+05-31 12:15:46.700 23290-24559 DepthFrameProducer: After: calling PC callback, sn=201
+05-31 12:15:46.700 23290-24558 DepthFrameProducer: After: calling App callback, sn=201
+05-31 12:15:46.700 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.702 23290-24560 DepthFrameProducer: After readFrame, sn=202
+05-31 12:15:46.703 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.703 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.703 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.707 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.707 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.708 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.708 23290-24558 DepthFrameProducer: Before: calling App callback, sn=202
+05-31 12:15:46.708 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=202
+05-31 12:15:46.715 23290-24558 DepthFrameProducer: After: calling App callback, sn=202
+05-31 12:15:46.716 23290-24559 DepthFrameProducer: After: calling PC callback, sn=202
+05-31 12:15:46.716 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.720 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.720 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.723 23290-24560 DepthFrameProducer: After readFrame, sn=203
+05-31 12:15:46.723 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.723 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.723 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.729 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.730 23290-24558 DepthFrameProducer: Before: calling App callback, sn=203
+05-31 12:15:46.730 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=203
+05-31 12:15:46.735 23290-24558 DepthFrameProducer: After: calling App callback, sn=203
+05-31 12:15:46.735 23290-24559 DepthFrameProducer: After: calling PC callback, sn=203
+05-31 12:15:46.736 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.738 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.738 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.738 23290-24560 DepthFrameProducer: After readFrame, sn=204
+05-31 12:15:46.738 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.738 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.738 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.745 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.745 23290-24558 DepthFrameProducer: Before: calling App callback, sn=204
+05-31 12:15:46.745 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=204
+05-31 12:15:46.750 23290-24558 DepthFrameProducer: After: calling App callback, sn=204
+05-31 12:15:46.750 23290-24559 DepthFrameProducer: After: calling PC callback, sn=204
+05-31 12:15:46.750 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.754 23290-24560 DepthFrameProducer: After readFrame, sn=205
+05-31 12:15:46.755 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.755 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.755 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.755 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.755 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.760 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.760 23290-24558 DepthFrameProducer: Before: calling App callback, sn=205
+05-31 12:15:46.760 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=205
+05-31 12:15:46.766 23290-24559 DepthFrameProducer: After: calling PC callback, sn=205
+05-31 12:15:46.766 23290-24558 DepthFrameProducer: After: calling App callback, sn=205
+05-31 12:15:46.767 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.769 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.769 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.771 23290-24560 DepthFrameProducer: After readFrame, sn=206
+05-31 12:15:46.771 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.771 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.771 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.775 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.775 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=206
+05-31 12:15:46.775 23290-24558 DepthFrameProducer: Before: calling App callback, sn=206
+05-31 12:15:46.779 23290-24559 DepthFrameProducer: After: calling PC callback, sn=206
+05-31 12:15:46.779 23290-24558 DepthFrameProducer: After: calling App callback, sn=206
+05-31 12:15:46.779 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.787 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.787 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.788 23290-24560 DepthFrameProducer: After readFrame, sn=207
+05-31 12:15:46.788 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.788 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.788 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.792 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.792 23290-24558 DepthFrameProducer: Before: calling App callback, sn=207
+05-31 12:15:46.792 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=207
+05-31 12:15:46.799 23290-24559 DepthFrameProducer: After: calling PC callback, sn=207
+05-31 12:15:46.799 23290-24558 DepthFrameProducer: After: calling App callback, sn=207
+05-31 12:15:46.799 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.802 23290-24560 DepthFrameProducer: After readFrame, sn=208
+05-31 12:15:46.803 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.803 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.803 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.804 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.804 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.807 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.807 23290-24558 DepthFrameProducer: Before: calling App callback, sn=208
+05-31 12:15:46.807 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=208
+05-31 12:15:46.811 23290-24559 DepthFrameProducer: After: calling PC callback, sn=208
+05-31 12:15:46.811 23290-24558 DepthFrameProducer: After: calling App callback, sn=208
+05-31 12:15:46.811 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.823 23290-24560 DepthFrameProducer: After readFrame, sn=209
+05-31 12:15:46.824 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.824 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.824 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.824 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.824 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.829 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.829 23290-24558 DepthFrameProducer: Before: calling App callback, sn=209
+05-31 12:15:46.829 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=209
+05-31 12:15:46.832 23290-24559 DepthFrameProducer: After: calling PC callback, sn=209
+05-31 12:15:46.832 23290-24558 DepthFrameProducer: After: calling App callback, sn=209
+05-31 12:15:46.832 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.836 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.836 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.838 23290-24560 DepthFrameProducer: After readFrame, sn=210
+05-31 12:15:46.838 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.838 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.838 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.845 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.845 23290-24558 DepthFrameProducer: Before: calling App callback, sn=210
+05-31 12:15:46.845 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=210
+05-31 12:15:46.848 23290-24559 DepthFrameProducer: After: calling PC callback, sn=210
+05-31 12:15:46.848 23290-24558 DepthFrameProducer: After: calling App callback, sn=210
+05-31 12:15:46.848 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.854 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.854 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.855 23290-24560 DepthFrameProducer: After readFrame, sn=211
+05-31 12:15:46.855 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.855 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.855 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.858 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.858 23290-24558 DepthFrameProducer: Before: calling App callback, sn=211
+05-31 12:15:46.858 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=211
+05-31 12:15:46.862 23290-24559 DepthFrameProducer: After: calling PC callback, sn=211
+05-31 12:15:46.862 23290-24558 DepthFrameProducer: After: calling App callback, sn=211
+05-31 12:15:46.862 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.870 23290-24560 DepthFrameProducer: After readFrame, sn=212
+05-31 12:15:46.871 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.871 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.871 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.871 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.871 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.876 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.877 23290-24558 DepthFrameProducer: Before: calling App callback, sn=212
+05-31 12:15:46.877 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=212
+05-31 12:15:46.883 23290-24559 DepthFrameProducer: After: calling PC callback, sn=212
+05-31 12:15:46.884 23290-24558 DepthFrameProducer: After: calling App callback, sn=212
+05-31 12:15:46.884 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.886 23290-24560 DepthFrameProducer: After readFrame, sn=213
+05-31 12:15:46.886 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.886 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.886 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.889 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.889 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.890 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.890 23290-24558 DepthFrameProducer: Before: calling App callback, sn=213
+05-31 12:15:46.890 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=213
+05-31 12:15:46.895 23290-24558 DepthFrameProducer: After: calling App callback, sn=213
+05-31 12:15:46.895 23290-24559 DepthFrameProducer: After: calling PC callback, sn=213
+05-31 12:15:46.896 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.902 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.902 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.902 23290-24560 DepthFrameProducer: After readFrame, sn=214
+05-31 12:15:46.902 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.902 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.902 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.908 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.908 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=214
+05-31 12:15:46.908 23290-24558 DepthFrameProducer: Before: calling App callback, sn=214
+05-31 12:15:46.913 23290-24558 DepthFrameProducer: After: calling App callback, sn=214
+05-31 12:15:46.913 23290-24559 DepthFrameProducer: After: calling PC callback, sn=214
+05-31 12:15:46.913 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.920 23290-24560 DepthFrameProducer: After readFrame, sn=215
+05-31 12:15:46.920 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.920 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.920 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.921 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.921 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.925 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.925 23290-24558 DepthFrameProducer: Before: calling App callback, sn=215
+05-31 12:15:46.925 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=215
+05-31 12:15:46.930 23290-24559 DepthFrameProducer: After: calling PC callback, sn=215
+05-31 12:15:46.931 23290-24558 DepthFrameProducer: After: calling App callback, sn=215
+05-31 12:15:46.931 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.938 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.938 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.938 23290-24560 DepthFrameProducer: After readFrame, sn=216
+05-31 12:15:46.938 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.938 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.938 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.945 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.945 23290-24558 DepthFrameProducer: Before: calling App callback, sn=216
+05-31 12:15:46.945 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=216
+05-31 12:15:46.951 23290-24558 DepthFrameProducer: After: calling App callback, sn=216
+05-31 12:15:46.951 23290-24559 DepthFrameProducer: After: calling PC callback, sn=216
+05-31 12:15:46.951 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.952 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.952 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.955 23290-24560 DepthFrameProducer: After readFrame, sn=217
+05-31 12:15:46.956 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.956 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.956 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.962 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.962 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=217
+05-31 12:15:46.962 23290-24558 DepthFrameProducer: Before: calling App callback, sn=217
+05-31 12:15:46.970 23290-24558 DepthFrameProducer: After: calling App callback, sn=217
+05-31 12:15:46.970 23290-24559 DepthFrameProducer: After: calling PC callback, sn=217
+05-31 12:15:46.970 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.970 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.970 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.973 23290-24560 DepthFrameProducer: After readFrame, sn=218
+05-31 12:15:46.973 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.973 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.973 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.981 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.982 23290-24558 DepthFrameProducer: Before: calling App callback, sn=218
+05-31 12:15:46.982 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=218
+05-31 12:15:46.987 23290-24560 DepthFrameProducer: After readFrame, sn=219
+05-31 12:15:46.987 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:46.987 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:46.987 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:46.989 23290-24559 DepthFrameProducer: After: calling PC callback, sn=218
+05-31 12:15:46.992 23290-24558 DepthFrameProducer: After: calling App callback, sn=218
+05-31 12:15:46.992 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:46.992 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:46.992 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:46.996 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:46.997 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=219
+05-31 12:15:46.997 23290-24558 DepthFrameProducer: Before: calling App callback, sn=219
+05-31 12:15:47.003 23290-24559 DepthFrameProducer: After: calling PC callback, sn=219
+05-31 12:15:47.003 23290-24558 DepthFrameProducer: After: calling App callback, sn=219
+05-31 12:15:47.003 23290-24560 DepthFrameProducer: After readFrame, sn=220
+05-31 12:15:47.003 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.004 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.004 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.004 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.005 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.005 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.011 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.012 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=220
+05-31 12:15:47.012 23290-24558 DepthFrameProducer: Before: calling App callback, sn=220
+05-31 12:15:47.019 23290-24559 DepthFrameProducer: After: calling PC callback, sn=220
+05-31 12:15:47.019 23290-24558 DepthFrameProducer: After: calling App callback, sn=220
+05-31 12:15:47.019 23290-24560 DepthFrameProducer: After readFrame, sn=221
+05-31 12:15:47.019 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.019 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.019 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.019 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.019 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.019 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.024 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.024 23290-24558 DepthFrameProducer: Before: calling App callback, sn=221
+05-31 12:15:47.024 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=221
+05-31 12:15:47.034 23290-24558 DepthFrameProducer: After: calling App callback, sn=221
+05-31 12:15:47.034 23290-24559 DepthFrameProducer: After: calling PC callback, sn=221
+05-31 12:15:47.034 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.035 23290-24560 DepthFrameProducer: After readFrame, sn=222
+05-31 12:15:47.035 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.035 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.035 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.036 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.036 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.038 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.038 23290-24558 DepthFrameProducer: Before: calling App callback, sn=222
+05-31 12:15:47.038 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=222
+05-31 12:15:47.045 23290-24558 DepthFrameProducer: After: calling App callback, sn=222
+05-31 12:15:47.048 23290-24559 DepthFrameProducer: After: calling PC callback, sn=222
+05-31 12:15:47.048 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.054 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.054 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.054 23290-24560 DepthFrameProducer: After readFrame, sn=223
+05-31 12:15:47.055 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.055 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.055 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.060 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.060 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=223
+05-31 12:15:47.060 23290-24558 DepthFrameProducer: Before: calling App callback, sn=223
+05-31 12:15:47.063 23290-24558 DepthFrameProducer: After: calling App callback, sn=223
+05-31 12:15:47.063 23290-24559 DepthFrameProducer: After: calling PC callback, sn=223
+05-31 12:15:47.063 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.071 23290-24560 DepthFrameProducer: After readFrame, sn=224
+05-31 12:15:47.071 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.071 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.071 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.072 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.072 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.077 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.077 23290-24558 DepthFrameProducer: Before: calling App callback, sn=224
+05-31 12:15:47.077 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=224
+05-31 12:15:47.081 23290-24558 DepthFrameProducer: After: calling App callback, sn=224
+05-31 12:15:47.081 23290-24559 DepthFrameProducer: After: calling PC callback, sn=224
+05-31 12:15:47.081 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.085 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.085 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.087 23290-24560 DepthFrameProducer: After readFrame, sn=225
+05-31 12:15:47.087 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.087 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.087 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.089 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.090 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=225
+05-31 12:15:47.090 23290-24558 DepthFrameProducer: Before: calling App callback, sn=225
+05-31 12:15:47.094 23290-24559 DepthFrameProducer: After: calling PC callback, sn=225
+05-31 12:15:47.094 23290-24558 DepthFrameProducer: After: calling App callback, sn=225
+05-31 12:15:47.094 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.102 23290-24560 DepthFrameProducer: After readFrame, sn=226
+05-31 12:15:47.103 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.103 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.103 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.103 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.103 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.107 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.107 23290-24558 DepthFrameProducer: Before: calling App callback, sn=226
+05-31 12:15:47.107 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=226
+05-31 12:15:47.111 23290-24558 DepthFrameProducer: After: calling App callback, sn=226
+05-31 12:15:47.111 23290-24559 DepthFrameProducer: After: calling PC callback, sn=226
+05-31 12:15:47.111 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.118 23290-24560 DepthFrameProducer: After readFrame, sn=227
+05-31 12:15:47.119 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.119 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.119 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.121 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.121 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.123 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.123 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=227
+05-31 12:15:47.123 23290-24558 DepthFrameProducer: Before: calling App callback, sn=227
+05-31 12:15:47.129 23290-24559 DepthFrameProducer: After: calling PC callback, sn=227
+05-31 12:15:47.129 23290-24558 DepthFrameProducer: After: calling App callback, sn=227
+05-31 12:15:47.130 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.134 23290-24560 DepthFrameProducer: After readFrame, sn=228
+05-31 12:15:47.134 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.134 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.134 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.134 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.134 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.138 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.138 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=228
+05-31 12:15:47.138 23290-24558 DepthFrameProducer: Before: calling App callback, sn=228
+05-31 12:15:47.142 23290-24559 DepthFrameProducer: After: calling PC callback, sn=228
+05-31 12:15:47.142 23290-24558 DepthFrameProducer: After: calling App callback, sn=228
+05-31 12:15:47.143 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.150 23290-24560 DepthFrameProducer: After readFrame, sn=229
+05-31 12:15:47.150 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.150 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.150 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.152 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.152 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.154 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.154 23290-24558 DepthFrameProducer: Before: calling App callback, sn=229
+05-31 12:15:47.154 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=229
+05-31 12:15:47.162 23290-24559 DepthFrameProducer: After: calling PC callback, sn=229
+05-31 12:15:47.162 23290-24558 DepthFrameProducer: After: calling App callback, sn=229
+05-31 12:15:47.162 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.169 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.170 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.172 23290-24560 DepthFrameProducer: After readFrame, sn=230
+05-31 12:15:47.172 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.172 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.172 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.181 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.181 23290-24558 DepthFrameProducer: Before: calling App callback, sn=230
+05-31 12:15:47.181 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=230
+05-31 12:15:47.185 23290-24559 DepthFrameProducer: After: calling PC callback, sn=230
+05-31 12:15:47.185 23290-24558 DepthFrameProducer: After: calling App callback, sn=230
+05-31 12:15:47.186 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.187 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.187 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.187 23290-24560 DepthFrameProducer: After readFrame, sn=231
+05-31 12:15:47.187 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.187 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.187 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.195 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.196 23290-24558 DepthFrameProducer: Before: calling App callback, sn=231
+05-31 12:15:47.196 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=231
+05-31 12:15:47.199 23290-24559 DepthFrameProducer: After: calling PC callback, sn=231
+05-31 12:15:47.199 23290-24558 DepthFrameProducer: After: calling App callback, sn=231
+05-31 12:15:47.199 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.201 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.201 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.202 23290-24560 DepthFrameProducer: After readFrame, sn=232
+05-31 12:15:47.202 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.202 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.202 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.205 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.205 23290-24558 DepthFrameProducer: Before: calling App callback, sn=232
+05-31 12:15:47.205 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=232
+05-31 12:15:47.210 23290-24559 DepthFrameProducer: After: calling PC callback, sn=232
+05-31 12:15:47.210 23290-24558 DepthFrameProducer: After: calling App callback, sn=232
+05-31 12:15:47.210 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.219 23290-24560 DepthFrameProducer: After readFrame, sn=233
+05-31 12:15:47.219 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.219 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.219 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.219 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.219 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.223 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.223 23290-24558 DepthFrameProducer: Before: calling App callback, sn=233
+05-31 12:15:47.223 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=233
+05-31 12:15:47.229 23290-24559 DepthFrameProducer: After: calling PC callback, sn=233
+05-31 12:15:47.229 23290-24558 DepthFrameProducer: After: calling App callback, sn=233
+05-31 12:15:47.229 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.234 23290-24560 DepthFrameProducer: After readFrame, sn=234
+05-31 12:15:47.235 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.235 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.235 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.236 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.236 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.239 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.239 23290-24558 DepthFrameProducer: Before: calling App callback, sn=234
+05-31 12:15:47.239 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=234
+05-31 12:15:47.248 23290-24559 DepthFrameProducer: After: calling PC callback, sn=234
+05-31 12:15:47.248 23290-24558 DepthFrameProducer: After: calling App callback, sn=234
+05-31 12:15:47.248 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.253 23290-24560 DepthFrameProducer: After readFrame, sn=235
+05-31 12:15:47.253 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.253 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.253 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.254 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.254 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.256 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.256 23290-24558 DepthFrameProducer: Before: calling App callback, sn=235
+05-31 12:15:47.256 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=235
+05-31 12:15:47.263 23290-24559 DepthFrameProducer: After: calling PC callback, sn=235
+05-31 12:15:47.264 23290-24558 DepthFrameProducer: After: calling App callback, sn=235
+05-31 12:15:47.264 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.267 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.267 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.271 23290-24560 DepthFrameProducer: After readFrame, sn=236
+05-31 12:15:47.271 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.271 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.271 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.276 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.276 23290-24558 DepthFrameProducer: Before: calling App callback, sn=236
+05-31 12:15:47.276 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=236
+05-31 12:15:47.279 23290-24559 DepthFrameProducer: After: calling PC callback, sn=236
+05-31 12:15:47.279 23290-24558 DepthFrameProducer: After: calling App callback, sn=236
+05-31 12:15:47.279 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.285 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.285 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.286 23290-24560 DepthFrameProducer: After readFrame, sn=237
+05-31 12:15:47.286 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.286 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.286 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.291 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.291 23290-24558 DepthFrameProducer: Before: calling App callback, sn=237
+05-31 12:15:47.291 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=237
+05-31 12:15:47.296 23290-24559 DepthFrameProducer: After: calling PC callback, sn=237
+05-31 12:15:47.296 23290-24558 DepthFrameProducer: After: calling App callback, sn=237
+05-31 12:15:47.296 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.303 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.304 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.304 23290-24560 DepthFrameProducer: After readFrame, sn=238
+05-31 12:15:47.304 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.304 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.304 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.308 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.308 23290-24558 DepthFrameProducer: Before: calling App callback, sn=238
+05-31 12:15:47.308 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=238
+05-31 12:15:47.314 23290-24559 DepthFrameProducer: After: calling PC callback, sn=238
+05-31 12:15:47.314 23290-24558 DepthFrameProducer: After: calling App callback, sn=238
+05-31 12:15:47.314 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.317 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.317 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.318 23290-24560 DepthFrameProducer: After readFrame, sn=239
+05-31 12:15:47.318 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.318 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.318 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.321 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.321 23290-24558 DepthFrameProducer: Before: calling App callback, sn=239
+05-31 12:15:47.321 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=239
+05-31 12:15:47.326 23290-24559 DepthFrameProducer: After: calling PC callback, sn=239
+05-31 12:15:47.326 23290-24558 DepthFrameProducer: After: calling App callback, sn=239
+05-31 12:15:47.326 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.334 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.334 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.334 23290-24560 DepthFrameProducer: After readFrame, sn=240
+05-31 12:15:47.334 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.334 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.334 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.339 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.339 23290-24558 DepthFrameProducer: Before: calling App callback, sn=240
+05-31 12:15:47.339 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=240
+05-31 12:15:47.345 23290-24559 DepthFrameProducer: After: calling PC callback, sn=240
+05-31 12:15:47.345 23290-24558 DepthFrameProducer: After: calling App callback, sn=240
+05-31 12:15:47.345 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.350 23290-24560 DepthFrameProducer: After readFrame, sn=241
+05-31 12:15:47.350 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.350 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.350 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.352 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.352 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.357 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.357 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=241
+05-31 12:15:47.357 23290-24558 DepthFrameProducer: Before: calling App callback, sn=241
+05-31 12:15:47.362 23290-24559 DepthFrameProducer: After: calling PC callback, sn=241
+05-31 12:15:47.362 23290-24558 DepthFrameProducer: After: calling App callback, sn=241
+05-31 12:15:47.362 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.367 23290-24560 DepthFrameProducer: After readFrame, sn=242
+05-31 12:15:47.367 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.367 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.367 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.370 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.370 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.376 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.376 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=242
+05-31 12:15:47.376 23290-24558 DepthFrameProducer: Before: calling App callback, sn=242
+05-31 12:15:47.379 23290-24559 DepthFrameProducer: After: calling PC callback, sn=242
+05-31 12:15:47.379 23290-24558 DepthFrameProducer: After: calling App callback, sn=242
+05-31 12:15:47.379 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.383 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.383 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.402 23290-24560 DepthFrameProducer: After readFrame, sn=244
+05-31 12:15:47.402 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.402 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.402 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.404 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.404 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.404 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.404 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=244
+05-31 12:15:47.404 23290-24558 DepthFrameProducer: Before: calling App callback, sn=244
+05-31 12:15:47.407 23290-24559 DepthFrameProducer: After: calling PC callback, sn=244
+05-31 12:15:47.407 23290-24558 DepthFrameProducer: After: calling App callback, sn=244
+05-31 12:15:47.407 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.418 23290-24560 DepthFrameProducer: After readFrame, sn=245
+05-31 12:15:47.418 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.418 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.418 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.419 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.419 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.422 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.422 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=245
+05-31 12:15:47.422 23290-24558 DepthFrameProducer: Before: calling App callback, sn=245
+05-31 12:15:47.426 23290-24558 DepthFrameProducer: After: calling App callback, sn=245
+05-31 12:15:47.426 23290-24559 DepthFrameProducer: After: calling PC callback, sn=245
+05-31 12:15:47.426 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.434 23290-24560 DepthFrameProducer: After readFrame, sn=246
+05-31 12:15:47.434 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.434 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.434 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.437 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.437 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.439 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.439 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=246
+05-31 12:15:47.439 23290-24558 DepthFrameProducer: Before: calling App callback, sn=246
+05-31 12:15:47.443 23290-24559 DepthFrameProducer: After: calling PC callback, sn=246
+05-31 12:15:47.443 23290-24558 DepthFrameProducer: After: calling App callback, sn=246
+05-31 12:15:47.444 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.449 23290-24560 DepthFrameProducer: After readFrame, sn=247
+05-31 12:15:47.450 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.450 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.450 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.450 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.450 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.453 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.453 23290-24558 DepthFrameProducer: Before: calling App callback, sn=247
+05-31 12:15:47.453 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=247
+05-31 12:15:47.457 23290-24559 DepthFrameProducer: After: calling PC callback, sn=247
+05-31 12:15:47.457 23290-24558 DepthFrameProducer: After: calling App callback, sn=247
+05-31 12:15:47.457 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.466 23290-24560 DepthFrameProducer: After readFrame, sn=248
+05-31 12:15:47.466 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.466 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.466 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.468 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.468 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.468 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.468 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=248
+05-31 12:15:47.468 23290-24558 DepthFrameProducer: Before: calling App callback, sn=248
+05-31 12:15:47.473 23290-24558 DepthFrameProducer: After: calling App callback, sn=248
+05-31 12:15:47.473 23290-24559 DepthFrameProducer: After: calling PC callback, sn=248
+05-31 12:15:47.473 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.482 23290-24560 DepthFrameProducer: After readFrame, sn=249
+05-31 12:15:47.482 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.482 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.482 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.486 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.486 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.486 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.486 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=249
+05-31 12:15:47.486 23290-24558 DepthFrameProducer: Before: calling App callback, sn=249
+05-31 12:15:47.492 23290-24559 DepthFrameProducer: After: calling PC callback, sn=249
+05-31 12:15:47.492 23290-24558 DepthFrameProducer: After: calling App callback, sn=249
+05-31 12:15:47.492 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.499 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.499 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.501 23290-24560 DepthFrameProducer: After readFrame, sn=250
+05-31 12:15:47.502 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.502 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.502 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.504 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.504 23290-24558 DepthFrameProducer: Before: calling App callback, sn=250
+05-31 12:15:47.504 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=250
+05-31 12:15:47.509 23290-24558 DepthFrameProducer: After: calling App callback, sn=250
+05-31 12:15:47.509 23290-24559 DepthFrameProducer: After: calling PC callback, sn=250
+05-31 12:15:47.509 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.517 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.517 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.518 23290-24560 DepthFrameProducer: After readFrame, sn=251
+05-31 12:15:47.518 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.518 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.518 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.521 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.521 23290-24558 DepthFrameProducer: Before: calling App callback, sn=251
+05-31 12:15:47.521 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=251
+05-31 12:15:47.526 23290-24558 DepthFrameProducer: After: calling App callback, sn=251
+05-31 12:15:47.526 23290-24559 DepthFrameProducer: After: calling PC callback, sn=251
+05-31 12:15:47.526 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.534 23290-24560 DepthFrameProducer: After readFrame, sn=252
+05-31 12:15:47.534 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.534 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.534 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.534 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.534 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.539 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.539 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=252
+05-31 12:15:47.539 23290-24558 DepthFrameProducer: Before: calling App callback, sn=252
+05-31 12:15:47.542 23290-24558 DepthFrameProducer: After: calling App callback, sn=252
+05-31 12:15:47.542 23290-24559 DepthFrameProducer: After: calling PC callback, sn=252
+05-31 12:15:47.542 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.550 23290-24560 DepthFrameProducer: After readFrame, sn=253
+05-31 12:15:47.550 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.550 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.550 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.552 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.552 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.552 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.553 23290-24558 DepthFrameProducer: Before: calling App callback, sn=253
+05-31 12:15:47.553 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=253
+05-31 12:15:47.556 23290-24558 DepthFrameProducer: After: calling App callback, sn=253
+05-31 12:15:47.556 23290-24559 DepthFrameProducer: After: calling PC callback, sn=253
+05-31 12:15:47.556 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.566 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.566 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.566 23290-24560 DepthFrameProducer: After readFrame, sn=254
+05-31 12:15:47.566 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.566 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.566 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.572 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.572 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=254
+05-31 12:15:47.572 23290-24558 DepthFrameProducer: Before: calling App callback, sn=254
+05-31 12:15:47.577 23290-24559 DepthFrameProducer: After: calling PC callback, sn=254
+05-31 12:15:47.577 23290-24558 DepthFrameProducer: After: calling App callback, sn=254
+05-31 12:15:47.577 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.584 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.584 23290-24560 DepthFrameProducer: After readFrame, sn=255
+05-31 12:15:47.584 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.584 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.584 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.584 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.591 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.591 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=255
+05-31 12:15:47.591 23290-24558 DepthFrameProducer: Before: calling App callback, sn=255
+05-31 12:15:47.596 23290-24559 DepthFrameProducer: After: calling PC callback, sn=255
+05-31 12:15:47.596 23290-24558 DepthFrameProducer: After: calling App callback, sn=255
+05-31 12:15:47.597 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.599 23290-24560 DepthFrameProducer: After readFrame, sn=256
+05-31 12:15:47.599 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.599 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.599 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.601 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.602 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.607 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.607 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=256
+05-31 12:15:47.607 23290-24558 DepthFrameProducer: Before: calling App callback, sn=256
+05-31 12:15:47.613 23290-24559 DepthFrameProducer: After: calling PC callback, sn=256
+05-31 12:15:47.614 23290-24558 DepthFrameProducer: After: calling App callback, sn=256
+05-31 12:15:47.614 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.619 23290-24560 DepthFrameProducer: After readFrame, sn=257
+05-31 12:15:47.619 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.619 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.619 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.619 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.619 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.623 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.623 23290-24558 DepthFrameProducer: Before: calling App callback, sn=257
+05-31 12:15:47.623 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=257
+05-31 12:15:47.626 23290-24559 DepthFrameProducer: After: calling PC callback, sn=257
+05-31 12:15:47.626 23290-24558 DepthFrameProducer: After: calling App callback, sn=257
+05-31 12:15:47.627 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.632 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.632 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.636 23290-24560 DepthFrameProducer: After readFrame, sn=258
+05-31 12:15:47.636 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.636 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.636 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.639 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.640 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=258
+05-31 12:15:47.640 23290-24558 DepthFrameProducer: Before: calling App callback, sn=258
+05-31 12:15:47.643 23290-24559 DepthFrameProducer: After: calling PC callback, sn=258
+05-31 12:15:47.643 23290-24558 DepthFrameProducer: After: calling App callback, sn=258
+05-31 12:15:47.643 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.650 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.650 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.650 23290-24560 DepthFrameProducer: After readFrame, sn=259
+05-31 12:15:47.650 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.650 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.650 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.654 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.655 23290-24558 DepthFrameProducer: Before: calling App callback, sn=259
+05-31 12:15:47.655 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=259
+05-31 12:15:47.658 23290-24559 DepthFrameProducer: After: calling PC callback, sn=259
+05-31 12:15:47.658 23290-24558 DepthFrameProducer: After: calling App callback, sn=259
+05-31 12:15:47.658 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.666 23290-24560 DepthFrameProducer: After readFrame, sn=260
+05-31 12:15:47.666 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.666 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.666 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.668 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.668 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.671 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.671 23290-24558 DepthFrameProducer: Before: calling App callback, sn=260
+05-31 12:15:47.671 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=260
+05-31 12:15:47.675 23290-24558 DepthFrameProducer: After: calling App callback, sn=260
+05-31 12:15:47.675 23290-24559 DepthFrameProducer: After: calling PC callback, sn=260
+05-31 12:15:47.675 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.682 23290-24560 DepthFrameProducer: After readFrame, sn=261
+05-31 12:15:47.682 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.682 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.682 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.683 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.683 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.690 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.690 23290-24558 DepthFrameProducer: Before: calling App callback, sn=261
+05-31 12:15:47.690 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=261
+05-31 12:15:47.696 23290-24558 DepthFrameProducer: After: calling App callback, sn=261
+05-31 12:15:47.696 23290-24559 DepthFrameProducer: After: calling PC callback, sn=261
+05-31 12:15:47.696 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.699 23290-24560 DepthFrameProducer: After readFrame, sn=262
+05-31 12:15:47.699 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.699 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.699 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.699 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.699 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.705 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.705 23290-24558 DepthFrameProducer: Before: calling App callback, sn=262
+05-31 12:15:47.705 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=262
+05-31 12:15:47.709 23290-24559 DepthFrameProducer: After: calling PC callback, sn=262
+05-31 12:15:47.709 23290-24558 DepthFrameProducer: After: calling App callback, sn=262
+05-31 12:15:47.709 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.717 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.717 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.718 23290-24560 DepthFrameProducer: After readFrame, sn=263
+05-31 12:15:47.718 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.718 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.718 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.722 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.722 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=263
+05-31 12:15:47.722 23290-24558 DepthFrameProducer: Before: calling App callback, sn=263
+05-31 12:15:47.729 23290-24559 DepthFrameProducer: After: calling PC callback, sn=263
+05-31 12:15:47.729 23290-24558 DepthFrameProducer: After: calling App callback, sn=263
+05-31 12:15:47.729 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.734 23290-24560 DepthFrameProducer: After readFrame, sn=264
+05-31 12:15:47.734 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.734 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.734 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.735 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.735 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.740 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.740 23290-24558 DepthFrameProducer: Before: calling App callback, sn=264
+05-31 12:15:47.740 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=264
+05-31 12:15:47.744 23290-24559 DepthFrameProducer: After: calling PC callback, sn=264
+05-31 12:15:47.744 23290-24558 DepthFrameProducer: After: calling App callback, sn=264
+05-31 12:15:47.744 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.748 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.748 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.750 23290-24560 DepthFrameProducer: After readFrame, sn=265
+05-31 12:15:47.750 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.750 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.750 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.755 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.755 23290-24558 DepthFrameProducer: Before: calling App callback, sn=265
+05-31 12:15:47.755 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=265
+05-31 12:15:47.758 23290-24558 DepthFrameProducer: After: calling App callback, sn=265
+05-31 12:15:47.759 23290-24559 DepthFrameProducer: After: calling PC callback, sn=265
+05-31 12:15:47.759 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.766 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.766 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.767 23290-24560 DepthFrameProducer: After readFrame, sn=266
+05-31 12:15:47.767 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.767 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.767 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.772 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.772 23290-24558 DepthFrameProducer: Before: calling App callback, sn=266
+05-31 12:15:47.772 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=266
+05-31 12:15:47.775 23290-24558 DepthFrameProducer: After: calling App callback, sn=266
+05-31 12:15:47.775 23290-24559 DepthFrameProducer: After: calling PC callback, sn=266
+05-31 12:15:47.776 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.783 23290-24560 DepthFrameProducer: After readFrame, sn=267
+05-31 12:15:47.783 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.783 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.783 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.784 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.784 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.789 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.789 23290-24558 DepthFrameProducer: Before: calling App callback, sn=267
+05-31 12:15:47.789 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=267
+05-31 12:15:47.793 23290-24559 DepthFrameProducer: After: calling PC callback, sn=267
+05-31 12:15:47.793 23290-24558 DepthFrameProducer: After: calling App callback, sn=267
+05-31 12:15:47.793 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.798 23290-24560 DepthFrameProducer: After readFrame, sn=268
+05-31 12:15:47.798 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.798 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.798 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.802 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.802 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.802 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.802 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=268
+05-31 12:15:47.802 23290-24558 DepthFrameProducer: Before: calling App callback, sn=268
+05-31 12:15:47.808 23290-24558 DepthFrameProducer: After: calling App callback, sn=268
+05-31 12:15:47.808 23290-24559 DepthFrameProducer: After: calling PC callback, sn=268
+05-31 12:15:47.808 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.814 23290-24560 DepthFrameProducer: After readFrame, sn=269
+05-31 12:15:47.814 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.814 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.814 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.815 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.815 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.817 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.817 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=269
+05-31 12:15:47.817 23290-24558 DepthFrameProducer: Before: calling App callback, sn=269
+05-31 12:15:47.822 23290-24559 DepthFrameProducer: After: calling PC callback, sn=269
+05-31 12:15:47.822 23290-24558 DepthFrameProducer: After: calling App callback, sn=269
+05-31 12:15:47.822 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.833 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.833 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.834 23290-24560 DepthFrameProducer: After readFrame, sn=270
+05-31 12:15:47.834 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.834 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.834 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.837 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.837 23290-24558 DepthFrameProducer: Before: calling App callback, sn=270
+05-31 12:15:47.837 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=270
+05-31 12:15:47.841 23290-24559 DepthFrameProducer: After: calling PC callback, sn=270
+05-31 12:15:47.841 23290-24558 DepthFrameProducer: After: calling App callback, sn=270
+05-31 12:15:47.841 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.850 23290-24560 DepthFrameProducer: After readFrame, sn=271
+05-31 12:15:47.850 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.850 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.850 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.851 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.851 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.853 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.853 23290-24558 DepthFrameProducer: Before: calling App callback, sn=271
+05-31 12:15:47.853 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=271
+05-31 12:15:47.859 23290-24559 DepthFrameProducer: After: calling PC callback, sn=271
+05-31 12:15:47.859 23290-24558 DepthFrameProducer: After: calling App callback, sn=271
+05-31 12:15:47.859 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.864 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.864 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.866 23290-24560 DepthFrameProducer: After readFrame, sn=272
+05-31 12:15:47.866 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.866 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.866 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.870 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.870 23290-24558 DepthFrameProducer: Before: calling App callback, sn=272
+05-31 12:15:47.870 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=272
+05-31 12:15:47.874 23290-24558 DepthFrameProducer: After: calling App callback, sn=272
+05-31 12:15:47.874 23290-24559 DepthFrameProducer: After: calling PC callback, sn=272
+05-31 12:15:47.874 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.882 23290-24560 DepthFrameProducer: After readFrame, sn=273
+05-31 12:15:47.882 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.882 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.882 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.882 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.882 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.885 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.885 23290-24558 DepthFrameProducer: Before: calling App callback, sn=273
+05-31 12:15:47.885 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=273
+05-31 12:15:47.888 23290-24558 DepthFrameProducer: After: calling App callback, sn=273
+05-31 12:15:47.888 23290-24559 DepthFrameProducer: After: calling PC callback, sn=273
+05-31 12:15:47.889 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.898 23290-24560 DepthFrameProducer: After readFrame, sn=274
+05-31 12:15:47.898 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.898 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.898 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.900 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.900 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.902 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.902 23290-24558 DepthFrameProducer: Before: calling App callback, sn=274
+05-31 12:15:47.902 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=274
+05-31 12:15:47.908 23290-24558 DepthFrameProducer: After: calling App callback, sn=274
+05-31 12:15:47.908 23290-24559 DepthFrameProducer: After: calling PC callback, sn=274
+05-31 12:15:47.908 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.914 23290-24560 DepthFrameProducer: After readFrame, sn=275
+05-31 12:15:47.914 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.914 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.914 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.917 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.917 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.918 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.919 23290-24558 DepthFrameProducer: Before: calling App callback, sn=275
+05-31 12:15:47.919 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=275
+05-31 12:15:47.922 23290-24559 DepthFrameProducer: After: calling PC callback, sn=275
+05-31 12:15:47.922 23290-24558 DepthFrameProducer: After: calling App callback, sn=275
+05-31 12:15:47.922 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.930 23290-24560 DepthFrameProducer: After readFrame, sn=276
+05-31 12:15:47.930 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.930 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.930 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.931 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.931 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.933 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.933 23290-24558 DepthFrameProducer: Before: calling App callback, sn=276
+05-31 12:15:47.933 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=276
+05-31 12:15:47.936 23290-24558 DepthFrameProducer: After: calling App callback, sn=276
+05-31 12:15:47.939 23290-24559 DepthFrameProducer: After: calling PC callback, sn=276
+05-31 12:15:47.939 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.949 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.949 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.951 23290-24560 DepthFrameProducer: After readFrame, sn=277
+05-31 12:15:47.951 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.951 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.951 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.957 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.957 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=277
+05-31 12:15:47.957 23290-24558 DepthFrameProducer: Before: calling App callback, sn=277
+05-31 12:15:47.961 23290-24559 DepthFrameProducer: After: calling PC callback, sn=277
+05-31 12:15:47.962 23290-24558 DepthFrameProducer: After: calling App callback, sn=277
+05-31 12:15:47.962 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.966 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.966 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.966 23290-24560 DepthFrameProducer: After readFrame, sn=278
+05-31 12:15:47.966 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.966 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.966 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.969 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.969 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=278
+05-31 12:15:47.969 23290-24558 DepthFrameProducer: Before: calling App callback, sn=278
+05-31 12:15:47.976 23290-24558 DepthFrameProducer: After: calling App callback, sn=278
+05-31 12:15:47.976 23290-24559 DepthFrameProducer: After: calling PC callback, sn=278
+05-31 12:15:47.976 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.983 23290-24560 DepthFrameProducer: After readFrame, sn=279
+05-31 12:15:47.984 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.984 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.984 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:47.984 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.984 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.987 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:47.987 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=279
+05-31 12:15:47.987 23290-24558 DepthFrameProducer: Before: calling App callback, sn=279
+05-31 12:15:47.992 23290-24559 DepthFrameProducer: After: calling PC callback, sn=279
+05-31 12:15:47.994 23290-24558 DepthFrameProducer: After: calling App callback, sn=279
+05-31 12:15:47.994 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:47.998 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:47.998 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:47.998 23290-24560 DepthFrameProducer: After readFrame, sn=280
+05-31 12:15:47.998 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:47.998 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:47.998 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.001 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.001 23290-24558 DepthFrameProducer: Before: calling App callback, sn=280
+05-31 12:15:48.001 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=280
+05-31 12:15:48.005 23290-24559 DepthFrameProducer: After: calling PC callback, sn=280
+05-31 12:15:48.005 23290-24558 DepthFrameProducer: After: calling App callback, sn=280
+05-31 12:15:48.005 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.015 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.015 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.015 23290-24560 DepthFrameProducer: After readFrame, sn=281
+05-31 12:15:48.016 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.016 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.016 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.026 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.027 23290-24558 DepthFrameProducer: Before: calling App callback, sn=281
+05-31 12:15:48.027 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=281
+05-31 12:15:48.031 23290-24560 DepthFrameProducer: After readFrame, sn=282
+05-31 12:15:48.031 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.031 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.031 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.034 23290-24559 DepthFrameProducer: After: calling PC callback, sn=281
+05-31 12:15:48.034 23290-24558 DepthFrameProducer: After: calling App callback, sn=281
+05-31 12:15:48.035 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.035 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.035 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.040 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.040 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=282
+05-31 12:15:48.040 23290-24558 DepthFrameProducer: Before: calling App callback, sn=282
+05-31 12:15:48.044 23290-24558 DepthFrameProducer: After: calling App callback, sn=282
+05-31 12:15:48.044 23290-24559 DepthFrameProducer: After: calling PC callback, sn=282
+05-31 12:15:48.044 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.046 23290-24560 DepthFrameProducer: After readFrame, sn=283
+05-31 12:15:48.046 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.046 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.046 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.047 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.047 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.052 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.052 23290-24558 DepthFrameProducer: Before: calling App callback, sn=283
+05-31 12:15:48.052 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=283
+05-31 12:15:48.058 23290-24559 DepthFrameProducer: After: calling PC callback, sn=283
+05-31 12:15:48.060 23290-24558 DepthFrameProducer: After: calling App callback, sn=283
+05-31 12:15:48.060 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.064 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.064 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.066 23290-24560 DepthFrameProducer: After readFrame, sn=284
+05-31 12:15:48.066 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.066 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.066 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.072 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.072 23290-24558 DepthFrameProducer: Before: calling App callback, sn=284
+05-31 12:15:48.072 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=284
+05-31 12:15:48.079 23290-24558 DepthFrameProducer: After: calling App callback, sn=284
+05-31 12:15:48.081 23290-24559 DepthFrameProducer: After: calling PC callback, sn=284
+05-31 12:15:48.082 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.082 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.082 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.082 23290-24560 DepthFrameProducer: After readFrame, sn=285
+05-31 12:15:48.082 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.083 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.083 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.092 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.093 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=285
+05-31 12:15:48.093 23290-24558 DepthFrameProducer: Before: calling App callback, sn=285
+05-31 12:15:48.097 23290-24558 DepthFrameProducer: After: calling App callback, sn=285
+05-31 12:15:48.097 23290-24559 DepthFrameProducer: After: calling PC callback, sn=285
+05-31 12:15:48.097 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.098 23290-24560 DepthFrameProducer: After readFrame, sn=286
+05-31 12:15:48.098 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.098 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.098 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.100 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.100 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.109 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.109 23290-24558 DepthFrameProducer: Before: calling App callback, sn=286
+05-31 12:15:48.109 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=286
+05-31 12:15:48.114 23290-24558 DepthFrameProducer: After: calling App callback, sn=286
+05-31 12:15:48.114 23290-24559 DepthFrameProducer: After: calling PC callback, sn=286
+05-31 12:15:48.114 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.114 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.114 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.114 23290-24560 DepthFrameProducer: After readFrame, sn=287
+05-31 12:15:48.115 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.115 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.115 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.121 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.122 23290-24558 DepthFrameProducer: Before: calling App callback, sn=287
+05-31 12:15:48.122 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=287
+05-31 12:15:48.127 23290-24559 DepthFrameProducer: After: calling PC callback, sn=287
+05-31 12:15:48.131 23290-24560 DepthFrameProducer: After readFrame, sn=288
+05-31 12:15:48.132 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.132 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.132 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.134 23290-24558 DepthFrameProducer: After: calling App callback, sn=287
+05-31 12:15:48.134 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.134 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.134 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.141 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.141 23290-24558 DepthFrameProducer: Before: calling App callback, sn=288
+05-31 12:15:48.141 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=288
+05-31 12:15:48.145 23290-24559 DepthFrameProducer: After: calling PC callback, sn=288
+05-31 12:15:48.145 23290-24558 DepthFrameProducer: After: calling App callback, sn=288
+05-31 12:15:48.145 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.146 23290-24560 DepthFrameProducer: After readFrame, sn=289
+05-31 12:15:48.146 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.146 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.146 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.149 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.149 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.152 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.152 23290-24558 DepthFrameProducer: Before: calling App callback, sn=289
+05-31 12:15:48.152 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=289
+05-31 12:15:48.159 23290-24559 DepthFrameProducer: After: calling PC callback, sn=289
+05-31 12:15:48.159 23290-24558 DepthFrameProducer: After: calling App callback, sn=289
+05-31 12:15:48.159 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.167 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.167 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.167 23290-24560 DepthFrameProducer: After readFrame, sn=290
+05-31 12:15:48.167 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.167 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.167 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.174 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.174 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=290
+05-31 12:15:48.174 23290-24558 DepthFrameProducer: Before: calling App callback, sn=290
+05-31 12:15:48.182 23290-24559 DepthFrameProducer: After: calling PC callback, sn=290
+05-31 12:15:48.183 23290-24560 DepthFrameProducer: After readFrame, sn=291
+05-31 12:15:48.183 23290-24558 DepthFrameProducer: After: calling App callback, sn=290
+05-31 12:15:48.183 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.183 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.183 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.183 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.183 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.183 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.187 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.187 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=291
+05-31 12:15:48.187 23290-24558 DepthFrameProducer: Before: calling App callback, sn=291
+05-31 12:15:48.191 23290-24558 DepthFrameProducer: After: calling App callback, sn=291
+05-31 12:15:48.194 23290-24559 DepthFrameProducer: After: calling PC callback, sn=291
+05-31 12:15:48.194 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.198 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.198 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.198 23290-24560 DepthFrameProducer: After readFrame, sn=292
+05-31 12:15:48.198 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.198 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.198 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.202 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.203 23290-24558 DepthFrameProducer: Before: calling App callback, sn=292
+05-31 12:15:48.203 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=292
+05-31 12:15:48.209 23290-24558 DepthFrameProducer: After: calling App callback, sn=292
+05-31 12:15:48.210 23290-24559 DepthFrameProducer: After: calling PC callback, sn=292
+05-31 12:15:48.210 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.214 23290-24560 DepthFrameProducer: After readFrame, sn=293
+05-31 12:15:48.214 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.214 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.214 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.216 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.216 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.220 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.221 23290-24558 DepthFrameProducer: Before: calling App callback, sn=293
+05-31 12:15:48.221 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=293
+05-31 12:15:48.227 23290-24559 DepthFrameProducer: After: calling PC callback, sn=293
+05-31 12:15:48.227 23290-24558 DepthFrameProducer: After: calling App callback, sn=293
+05-31 12:15:48.227 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.229 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.229 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.230 23290-24560 DepthFrameProducer: After readFrame, sn=294
+05-31 12:15:48.230 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.230 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.230 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.234 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.234 23290-24558 DepthFrameProducer: Before: calling App callback, sn=294
+05-31 12:15:48.234 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=294
+05-31 12:15:48.239 23290-24559 DepthFrameProducer: After: calling PC callback, sn=294
+05-31 12:15:48.239 23290-24558 DepthFrameProducer: After: calling App callback, sn=294
+05-31 12:15:48.239 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.246 23290-24560 DepthFrameProducer: After readFrame, sn=295
+05-31 12:15:48.246 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.246 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.246 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.248 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.248 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.249 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.249 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=295
+05-31 12:15:48.249 23290-24558 DepthFrameProducer: Before: calling App callback, sn=295
+05-31 12:15:48.254 23290-24559 DepthFrameProducer: After: calling PC callback, sn=295
+05-31 12:15:48.254 23290-24558 DepthFrameProducer: After: calling App callback, sn=295
+05-31 12:15:48.254 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.262 23290-24560 DepthFrameProducer: After readFrame, sn=296
+05-31 12:15:48.262 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.262 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.262 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.265 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.265 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.266 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.267 23290-24558 DepthFrameProducer: Before: calling App callback, sn=296
+05-31 12:15:48.267 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=296
+05-31 12:15:48.273 23290-24558 DepthFrameProducer: After: calling App callback, sn=296
+05-31 12:15:48.273 23290-24559 DepthFrameProducer: After: calling PC callback, sn=296
+05-31 12:15:48.274 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.282 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.282 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.282 23290-24560 DepthFrameProducer: After readFrame, sn=297
+05-31 12:15:48.282 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.282 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.282 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.285 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.285 23290-24558 DepthFrameProducer: Before: calling App callback, sn=297
+05-31 12:15:48.285 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=297
+05-31 12:15:48.290 23290-24559 DepthFrameProducer: After: calling PC callback, sn=297
+05-31 12:15:48.290 23290-24558 DepthFrameProducer: After: calling App callback, sn=297
+05-31 12:15:48.290 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.296 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.296 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.298 23290-24560 DepthFrameProducer: After readFrame, sn=298
+05-31 12:15:48.298 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.298 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.298 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.302 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.302 23290-24558 DepthFrameProducer: Before: calling App callback, sn=298
+05-31 12:15:48.302 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=298
+05-31 12:15:48.305 23290-24559 DepthFrameProducer: After: calling PC callback, sn=298
+05-31 12:15:48.305 23290-24558 DepthFrameProducer: After: calling App callback, sn=298
+05-31 12:15:48.305 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.314 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.314 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.314 23290-24560 DepthFrameProducer: After readFrame, sn=299
+05-31 12:15:48.314 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.314 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.314 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.317 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.317 23290-24558 DepthFrameProducer: Before: calling App callback, sn=299
+05-31 12:15:48.317 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=299
+05-31 12:15:48.322 23290-24558 DepthFrameProducer: After: calling App callback, sn=299
+05-31 12:15:48.322 23290-24559 DepthFrameProducer: After: calling PC callback, sn=299
+05-31 12:15:48.322 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.330 23290-24560 DepthFrameProducer: After readFrame, sn=300
+05-31 12:15:48.331 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.331 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.331 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.331 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.331 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.333 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.333 23290-24558 DepthFrameProducer: Before: calling App callback, sn=300
+05-31 12:15:48.333 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=300
+05-31 12:15:48.337 23290-24558 DepthFrameProducer: After: calling App callback, sn=300
+05-31 12:15:48.337 23290-24559 DepthFrameProducer: After: calling PC callback, sn=300
+05-31 12:15:48.337 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.346 23290-24560 DepthFrameProducer: After readFrame, sn=301
+05-31 12:15:48.346 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.346 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.346 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.349 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.349 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.349 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.349 23290-24558 DepthFrameProducer: Before: calling App callback, sn=301
+05-31 12:15:48.349 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=301
+05-31 12:15:48.354 23290-24558 DepthFrameProducer: After: calling App callback, sn=301
+05-31 12:15:48.355 23290-24559 DepthFrameProducer: After: calling PC callback, sn=301
+05-31 12:15:48.355 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.363 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.363 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.363 23290-24560 DepthFrameProducer: After readFrame, sn=302
+05-31 12:15:48.363 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.363 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.363 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.369 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.369 23290-24558 DepthFrameProducer: Before: calling App callback, sn=302
+05-31 12:15:48.369 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=302
+05-31 12:15:48.374 23290-24558 DepthFrameProducer: After: calling App callback, sn=302
+05-31 12:15:48.374 23290-24559 DepthFrameProducer: After: calling PC callback, sn=302
+05-31 12:15:48.374 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.378 23290-24560 DepthFrameProducer: After readFrame, sn=303
+05-31 12:15:48.379 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.379 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.379 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.380 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.380 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.385 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.385 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=303
+05-31 12:15:48.385 23290-24558 DepthFrameProducer: Before: calling App callback, sn=303
+05-31 12:15:48.389 23290-24558 DepthFrameProducer: After: calling App callback, sn=303
+05-31 12:15:48.389 23290-24559 DepthFrameProducer: After: calling PC callback, sn=303
+05-31 12:15:48.390 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.398 23290-24560 DepthFrameProducer: After readFrame, sn=304
+05-31 12:15:48.398 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.398 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.398 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.398 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.398 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.402 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.402 23290-24558 DepthFrameProducer: Before: calling App callback, sn=304
+05-31 12:15:48.402 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=304
+05-31 12:15:48.409 23290-24558 DepthFrameProducer: After: calling App callback, sn=304
+05-31 12:15:48.409 23290-24559 DepthFrameProducer: After: calling PC callback, sn=304
+05-31 12:15:48.409 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.412 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.412 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.414 23290-24560 DepthFrameProducer: After readFrame, sn=305
+05-31 12:15:48.414 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.414 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.414 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.418 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.418 23290-24558 DepthFrameProducer: Before: calling App callback, sn=305
+05-31 12:15:48.418 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=305
+05-31 12:15:48.422 23290-24558 DepthFrameProducer: After: calling App callback, sn=305
+05-31 12:15:48.422 23290-24559 DepthFrameProducer: After: calling PC callback, sn=305
+05-31 12:15:48.422 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.429 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.429 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.430 23290-24560 DepthFrameProducer: After readFrame, sn=306
+05-31 12:15:48.430 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.430 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.430 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.433 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.433 23290-24558 DepthFrameProducer: Before: calling App callback, sn=306
+05-31 12:15:48.433 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=306
+05-31 12:15:48.438 23290-24558 DepthFrameProducer: After: calling App callback, sn=306
+05-31 12:15:48.438 23290-24559 DepthFrameProducer: After: calling PC callback, sn=306
+05-31 12:15:48.438 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.447 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.447 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.447 23290-24560 DepthFrameProducer: After readFrame, sn=307
+05-31 12:15:48.447 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.447 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.447 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.455 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.455 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=307
+05-31 12:15:48.455 23290-24558 DepthFrameProducer: Before: calling App callback, sn=307
+05-31 12:15:48.461 23290-24558 DepthFrameProducer: After: calling App callback, sn=307
+05-31 12:15:48.461 23290-24559 DepthFrameProducer: After: calling PC callback, sn=307
+05-31 12:15:48.461 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.464 23290-24560 DepthFrameProducer: After readFrame, sn=308
+05-31 12:15:48.464 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.464 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.464 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.465 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.465 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.470 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.470 23290-24558 DepthFrameProducer: Before: calling App callback, sn=308
+05-31 12:15:48.470 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=308
+05-31 12:15:48.475 23290-24558 DepthFrameProducer: After: calling App callback, sn=308
+05-31 12:15:48.475 23290-24559 DepthFrameProducer: After: calling PC callback, sn=308
+05-31 12:15:48.475 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.478 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.478 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.479 23290-24560 DepthFrameProducer: After readFrame, sn=309
+05-31 12:15:48.479 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.479 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.479 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.483 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.483 23290-24558 DepthFrameProducer: Before: calling App callback, sn=309
+05-31 12:15:48.483 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=309
+05-31 12:15:48.489 23290-24559 DepthFrameProducer: After: calling PC callback, sn=309
+05-31 12:15:48.489 23290-24558 DepthFrameProducer: After: calling App callback, sn=309
+05-31 12:15:48.490 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.494 23290-24560 DepthFrameProducer: After readFrame, sn=310
+05-31 12:15:48.495 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.495 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.495 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.496 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.496 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.500 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.500 23290-24558 DepthFrameProducer: Before: calling App callback, sn=310
+05-31 12:15:48.500 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=310
+05-31 12:15:48.506 23290-24559 DepthFrameProducer: After: calling PC callback, sn=310
+05-31 12:15:48.512 23290-24558 DepthFrameProducer: After: calling App callback, sn=310
+05-31 12:15:48.512 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.514 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.514 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.514 23290-24560 DepthFrameProducer: After readFrame, sn=311
+05-31 12:15:48.514 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.514 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.514 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.520 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.520 23290-24558 DepthFrameProducer: Before: calling App callback, sn=311
+05-31 12:15:48.520 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=311
+05-31 12:15:48.524 23290-24559 DepthFrameProducer: After: calling PC callback, sn=311
+05-31 12:15:48.524 23290-24558 DepthFrameProducer: After: calling App callback, sn=311
+05-31 12:15:48.524 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.531 23290-24560 DepthFrameProducer: After readFrame, sn=312
+05-31 12:15:48.531 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.531 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.531 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.532 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.532 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.538 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.538 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=312
+05-31 12:15:48.538 23290-24558 DepthFrameProducer: Before: calling App callback, sn=312
+05-31 12:15:48.542 23290-24558 DepthFrameProducer: After: calling App callback, sn=312
+05-31 12:15:48.542 23290-24559 DepthFrameProducer: After: calling PC callback, sn=312
+05-31 12:15:48.542 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.545 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.545 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.546 23290-24560 DepthFrameProducer: After readFrame, sn=313
+05-31 12:15:48.546 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.546 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.546 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.553 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.554 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=313
+05-31 12:15:48.554 23290-24558 DepthFrameProducer: Before: calling App callback, sn=313
+05-31 12:15:48.561 23290-24558 DepthFrameProducer: After: calling App callback, sn=313
+05-31 12:15:48.561 23290-24559 DepthFrameProducer: After: calling PC callback, sn=313
+05-31 12:15:48.562 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.563 23290-24560 DepthFrameProducer: After readFrame, sn=314
+05-31 12:15:48.563 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.563 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.563 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.563 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.563 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.570 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.572 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=314
+05-31 12:15:48.572 23290-24558 DepthFrameProducer: Before: calling App callback, sn=314
+05-31 12:15:48.578 23290-24560 DepthFrameProducer: After readFrame, sn=315
+05-31 12:15:48.579 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.579 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.579 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.579 23290-24558 DepthFrameProducer: After: calling App callback, sn=314
+05-31 12:15:48.579 23290-24559 DepthFrameProducer: After: calling PC callback, sn=314
+05-31 12:15:48.579 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.581 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.581 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.586 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.586 23290-24558 DepthFrameProducer: Before: calling App callback, sn=315
+05-31 12:15:48.586 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=315
+05-31 12:15:48.595 23290-24558 DepthFrameProducer: After: calling App callback, sn=315
+05-31 12:15:48.595 23290-24560 DepthFrameProducer: After readFrame, sn=316
+05-31 12:15:48.595 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.595 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.595 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.598 23290-24559 DepthFrameProducer: After: calling PC callback, sn=315
+05-31 12:15:48.598 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.598 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.598 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.601 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.601 23290-24558 DepthFrameProducer: Before: calling App callback, sn=316
+05-31 12:15:48.601 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=316
+05-31 12:15:48.608 23290-24558 DepthFrameProducer: After: calling App callback, sn=316
+05-31 12:15:48.610 23290-24559 DepthFrameProducer: After: calling PC callback, sn=316
+05-31 12:15:48.610 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.612 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.612 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.618 23290-24560 DepthFrameProducer: After readFrame, sn=317
+05-31 12:15:48.618 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.618 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.618 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.627 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.627 23290-24558 DepthFrameProducer: Before: calling App callback, sn=317
+05-31 12:15:48.627 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=317
+05-31 12:15:48.634 23290-24560 DepthFrameProducer: After readFrame, sn=318
+05-31 12:15:48.635 23290-24558 DepthFrameProducer: After: calling App callback, sn=317
+05-31 12:15:48.641 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.642 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.642 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.644 23290-24559 DepthFrameProducer: After: calling PC callback, sn=317
+05-31 12:15:48.644 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.644 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.644 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.644 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.644 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=318
+05-31 12:15:48.644 23290-24558 DepthFrameProducer: Before: calling App callback, sn=318
+05-31 12:15:48.646 23290-24560 DepthFrameProducer: After readFrame, sn=319
+05-31 12:15:48.647 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.647 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.647 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.648 23290-24558 DepthFrameProducer: After: calling App callback, sn=318
+05-31 12:15:48.653 23290-24559 DepthFrameProducer: After: calling PC callback, sn=318
+05-31 12:15:48.654 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.654 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.654 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.654 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.654 23290-24558 DepthFrameProducer: Before: calling App callback, sn=319
+05-31 12:15:48.654 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=319
+05-31 12:15:48.658 23290-24559 DepthFrameProducer: After: calling PC callback, sn=319
+05-31 12:15:48.658 23290-24558 DepthFrameProducer: After: calling App callback, sn=319
+05-31 12:15:48.658 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.661 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.661 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.663 23290-24560 DepthFrameProducer: After readFrame, sn=320
+05-31 12:15:48.664 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.664 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.664 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.670 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.670 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=320
+05-31 12:15:48.670 23290-24558 DepthFrameProducer: Before: calling App callback, sn=320
+05-31 12:15:48.674 23290-24559 DepthFrameProducer: After: calling PC callback, sn=320
+05-31 12:15:48.680 23290-24558 DepthFrameProducer: After: calling App callback, sn=320
+05-31 12:15:48.680 23290-24560 DepthFrameProducer: After readFrame, sn=321
+05-31 12:15:48.680 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.680 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.680 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.681 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.681 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.681 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.686 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.686 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=321
+05-31 12:15:48.686 23290-24558 DepthFrameProducer: Before: calling App callback, sn=321
+05-31 12:15:48.692 23290-24558 DepthFrameProducer: After: calling App callback, sn=321
+05-31 12:15:48.692 23290-24559 DepthFrameProducer: After: calling PC callback, sn=321
+05-31 12:15:48.692 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.696 23290-24560 DepthFrameProducer: After readFrame, sn=322
+05-31 12:15:48.696 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.696 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.696 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.697 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.697 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.701 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.702 23290-24558 DepthFrameProducer: Before: calling App callback, sn=322
+05-31 12:15:48.702 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=322
+05-31 12:15:48.710 23290-24558 DepthFrameProducer: After: calling App callback, sn=322
+05-31 12:15:48.712 23290-24560 DepthFrameProducer: After readFrame, sn=323
+05-31 12:15:48.712 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.712 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.712 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.713 23290-24559 DepthFrameProducer: After: calling PC callback, sn=322
+05-31 12:15:48.713 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.714 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.714 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.716 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.717 23290-24558 DepthFrameProducer: Before: calling App callback, sn=323
+05-31 12:15:48.717 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=323
+05-31 12:15:48.724 23290-24558 DepthFrameProducer: After: calling App callback, sn=323
+05-31 12:15:48.725 23290-24559 DepthFrameProducer: After: calling PC callback, sn=323
+05-31 12:15:48.726 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.730 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.730 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.731 23290-24560 DepthFrameProducer: After readFrame, sn=324
+05-31 12:15:48.731 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.731 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.731 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.737 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.737 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=324
+05-31 12:15:48.737 23290-24558 DepthFrameProducer: Before: calling App callback, sn=324
+05-31 12:15:48.743 23290-24559 DepthFrameProducer: After: calling PC callback, sn=324
+05-31 12:15:48.744 23290-24558 DepthFrameProducer: After: calling App callback, sn=324
+05-31 12:15:48.744 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.745 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.745 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.746 23290-24560 DepthFrameProducer: After readFrame, sn=325
+05-31 12:15:48.746 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.746 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.746 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.751 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.751 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=325
+05-31 12:15:48.751 23290-24558 DepthFrameProducer: Before: calling App callback, sn=325
+05-31 12:15:48.757 23290-24559 DepthFrameProducer: After: calling PC callback, sn=325
+05-31 12:15:48.757 23290-24558 DepthFrameProducer: After: calling App callback, sn=325
+05-31 12:15:48.757 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.763 23290-24560 DepthFrameProducer: After readFrame, sn=326
+05-31 12:15:48.763 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.763 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.763 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.763 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.764 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.770 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.770 23290-24558 DepthFrameProducer: Before: calling App callback, sn=326
+05-31 12:15:48.770 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=326
+05-31 12:15:48.774 23290-24559 DepthFrameProducer: After: calling PC callback, sn=326
+05-31 12:15:48.774 23290-24558 DepthFrameProducer: After: calling App callback, sn=326
+05-31 12:15:48.775 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.777 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.777 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.778 23290-24560 DepthFrameProducer: After readFrame, sn=327
+05-31 12:15:48.778 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.778 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.778 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.783 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.783 23290-24558 DepthFrameProducer: Before: calling App callback, sn=327
+05-31 12:15:48.784 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=327
+05-31 12:15:48.791 23290-24559 DepthFrameProducer: After: calling PC callback, sn=327
+05-31 12:15:48.791 23290-24558 DepthFrameProducer: After: calling App callback, sn=327
+05-31 12:15:48.791 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.796 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.796 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.796 23290-24560 DepthFrameProducer: After readFrame, sn=328
+05-31 12:15:48.796 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.796 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.796 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.805 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.806 23290-24558 DepthFrameProducer: Before: calling App callback, sn=328
+05-31 12:15:48.806 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=328
+05-31 12:15:48.812 23290-24560 DepthFrameProducer: After readFrame, sn=329
+05-31 12:15:48.812 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.812 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.812 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.816 23290-24558 DepthFrameProducer: After: calling App callback, sn=328
+05-31 12:15:48.817 23290-24559 DepthFrameProducer: After: calling PC callback, sn=328
+05-31 12:15:48.817 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.817 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.817 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.818 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.818 23290-24558 DepthFrameProducer: Before: calling App callback, sn=329
+05-31 12:15:48.818 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=329
+05-31 12:15:48.824 23290-24559 DepthFrameProducer: After: calling PC callback, sn=329
+05-31 12:15:48.824 23290-24558 DepthFrameProducer: After: calling App callback, sn=329
+05-31 12:15:48.824 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.827 23290-24560 DepthFrameProducer: After readFrame, sn=330
+05-31 12:15:48.827 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.827 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.827 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.830 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.830 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.834 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.835 23290-24558 DepthFrameProducer: Before: calling App callback, sn=330
+05-31 12:15:48.835 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=330
+05-31 12:15:48.842 23290-24558 DepthFrameProducer: After: calling App callback, sn=330
+05-31 12:15:48.844 23290-24559 DepthFrameProducer: After: calling PC callback, sn=330
+05-31 12:15:48.844 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.844 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.844 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.847 23290-24560 DepthFrameProducer: After readFrame, sn=331
+05-31 12:15:48.848 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.848 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.848 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.856 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.856 23290-24558 DepthFrameProducer: Before: calling App callback, sn=331
+05-31 12:15:48.856 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=331
+05-31 12:15:48.861 23290-24558 DepthFrameProducer: After: calling App callback, sn=331
+05-31 12:15:48.861 23290-24559 DepthFrameProducer: After: calling PC callback, sn=331
+05-31 12:15:48.861 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.861 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.861 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.862 23290-24560 DepthFrameProducer: After readFrame, sn=332
+05-31 12:15:48.862 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.862 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.862 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.868 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.869 23290-24558 DepthFrameProducer: Before: calling App callback, sn=332
+05-31 12:15:48.869 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=332
+05-31 12:15:48.875 23290-24559 DepthFrameProducer: After: calling PC callback, sn=332
+05-31 12:15:48.875 23290-24558 DepthFrameProducer: After: calling App callback, sn=332
+05-31 12:15:48.875 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.879 23290-24560 DepthFrameProducer: After readFrame, sn=333
+05-31 12:15:48.879 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.879 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.879 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.879 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.879 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.884 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.884 23290-24558 DepthFrameProducer: Before: calling App callback, sn=333
+05-31 12:15:48.884 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=333
+05-31 12:15:48.889 23290-24559 DepthFrameProducer: After: calling PC callback, sn=333
+05-31 12:15:48.889 23290-24558 DepthFrameProducer: After: calling App callback, sn=333
+05-31 12:15:48.889 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.894 23290-24560 DepthFrameProducer: After readFrame, sn=334
+05-31 12:15:48.895 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.895 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.895 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.897 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.897 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.898 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.898 23290-24558 DepthFrameProducer: Before: calling App callback, sn=334
+05-31 12:15:48.898 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=334
+05-31 12:15:48.903 23290-24558 DepthFrameProducer: After: calling App callback, sn=334
+05-31 12:15:48.904 23290-24559 DepthFrameProducer: After: calling PC callback, sn=334
+05-31 12:15:48.904 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.910 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.910 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.910 23290-24560 DepthFrameProducer: After readFrame, sn=335
+05-31 12:15:48.910 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.910 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.910 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.914 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.914 23290-24558 DepthFrameProducer: Before: calling App callback, sn=335
+05-31 12:15:48.914 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=335
+05-31 12:15:48.923 23290-24559 DepthFrameProducer: After: calling PC callback, sn=335
+05-31 12:15:48.923 23290-24558 DepthFrameProducer: After: calling App callback, sn=335
+05-31 12:15:48.923 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.926 23290-24560 DepthFrameProducer: After readFrame, sn=336
+05-31 12:15:48.926 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.926 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.926 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.928 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.928 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.929 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.929 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=336
+05-31 12:15:48.929 23290-24558 DepthFrameProducer: Before: calling App callback, sn=336
+05-31 12:15:48.934 23290-24559 DepthFrameProducer: After: calling PC callback, sn=336
+05-31 12:15:48.934 23290-24558 DepthFrameProducer: After: calling App callback, sn=336
+05-31 12:15:48.934 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.942 23290-24560 DepthFrameProducer: After readFrame, sn=337
+05-31 12:15:48.942 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.942 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.942 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.946 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.946 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.946 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.946 23290-24558 DepthFrameProducer: Before: calling App callback, sn=337
+05-31 12:15:48.946 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=337
+05-31 12:15:48.951 23290-24559 DepthFrameProducer: After: calling PC callback, sn=337
+05-31 12:15:48.951 23290-24558 DepthFrameProducer: After: calling App callback, sn=337
+05-31 12:15:48.951 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.959 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.959 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.962 23290-24560 DepthFrameProducer: After readFrame, sn=338
+05-31 12:15:48.962 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.962 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.962 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.968 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.969 23290-24558 DepthFrameProducer: Before: calling App callback, sn=338
+05-31 12:15:48.969 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=338
+05-31 12:15:48.972 23290-24559 DepthFrameProducer: After: calling PC callback, sn=338
+05-31 12:15:48.972 23290-24558 DepthFrameProducer: After: calling App callback, sn=338
+05-31 12:15:48.972 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.977 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.977 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.979 23290-24560 DepthFrameProducer: After readFrame, sn=339
+05-31 12:15:48.980 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.980 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.980 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.984 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.984 23290-24558 DepthFrameProducer: Before: calling App callback, sn=339
+05-31 12:15:48.984 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=339
+05-31 12:15:48.986 23290-24559 DepthFrameProducer: After: calling PC callback, sn=339
+05-31 12:15:48.986 23290-24558 DepthFrameProducer: After: calling App callback, sn=339
+05-31 12:15:48.986 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:48.995 23290-24560 DepthFrameProducer: After readFrame, sn=340
+05-31 12:15:48.995 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:48.995 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:48.995 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:48.995 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:48.995 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:48.998 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:48.998 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=340
+05-31 12:15:48.998 23290-24558 DepthFrameProducer: Before: calling App callback, sn=340
+05-31 12:15:49.004 23290-24558 DepthFrameProducer: After: calling App callback, sn=340
+05-31 12:15:49.004 23290-24559 DepthFrameProducer: After: calling PC callback, sn=340
+05-31 12:15:49.004 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:49.011 23290-24560 DepthFrameProducer: After readFrame, sn=341
+05-31 12:15:49.011 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:49.011 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:49.011 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:49.013 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:49.013 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:49.014 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:49.014 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=341
+05-31 12:15:49.014 23290-24558 DepthFrameProducer: Before: calling App callback, sn=341
+05-31 12:15:49.021 23290-24559 DepthFrameProducer: After: calling PC callback, sn=341
+05-31 12:15:49.021 23290-24558 DepthFrameProducer: After: calling App callback, sn=341
+05-31 12:15:49.021 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:49.026 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:49.026 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:49.026 23290-24560 DepthFrameProducer: After readFrame, sn=342
+05-31 12:15:49.026 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:49.026 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:49.026 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:49.031 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:49.031 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=342
+05-31 12:15:49.031 23290-24558 DepthFrameProducer: Before: calling App callback, sn=342
+05-31 12:15:49.035 23290-24558 DepthFrameProducer: After: calling App callback, sn=342
+05-31 12:15:49.035 23290-24559 DepthFrameProducer: After: calling PC callback, sn=342
+05-31 12:15:49.035 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:49.043 23290-24560 DepthFrameProducer: After readFrame, sn=343
+05-31 12:15:49.043 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:49.043 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:49.044 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:49.044 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:49.044 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:49.047 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:49.047 23290-24558 DepthFrameProducer: Before: calling App callback, sn=343
+05-31 12:15:49.047 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=343
+05-31 12:15:49.053 23290-24559 DepthFrameProducer: After: calling PC callback, sn=343
+05-31 12:15:49.053 23290-24558 DepthFrameProducer: After: calling App callback, sn=343
+05-31 12:15:49.053 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:49.062 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:49.062 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:49.063 23290-24560 DepthFrameProducer: After readFrame, sn=344
+05-31 12:15:49.063 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:49.063 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:49.063 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:49.069 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:49.070 23290-24558 DepthFrameProducer: Before: calling App callback, sn=344
+05-31 12:15:49.070 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=344
+05-31 12:15:49.074 23290-24558 DepthFrameProducer: After: calling App callback, sn=344
+05-31 12:15:49.076 23290-24559 DepthFrameProducer: After: calling PC callback, sn=344
+05-31 12:15:49.076 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:49.079 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:49.079 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:49.080 23290-24560 DepthFrameProducer: After readFrame, sn=345
+05-31 12:15:49.080 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:49.080 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:49.080 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:49.087 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:49.087 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=345
+05-31 12:15:49.087 23290-24558 DepthFrameProducer: Before: calling App callback, sn=345
+05-31 12:15:49.092 23290-24558 DepthFrameProducer: After: calling App callback, sn=345
+05-31 12:15:49.092 23290-24559 DepthFrameProducer: After: calling PC callback, sn=345
+05-31 12:15:49.092 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:49.093 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:49.093 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:49.094 23290-24560 DepthFrameProducer: After readFrame, sn=346
+05-31 12:15:49.094 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:49.094 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:49.094 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:49.099 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:49.100 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=346
+05-31 12:15:49.100 23290-24558 DepthFrameProducer: Before: calling App callback, sn=346
+05-31 12:15:49.103 23290-24558 DepthFrameProducer: After: calling App callback, sn=346
+05-31 12:15:49.105 23290-24559 DepthFrameProducer: After: calling PC callback, sn=346
+05-31 12:15:49.105 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:49.110 23290-24560 DepthFrameProducer: After readFrame, sn=347
+05-31 12:15:49.111 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:49.111 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:49.111 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:49.111 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:49.111 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:49.116 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:49.116 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=347
+05-31 12:15:49.116 23290-24558 DepthFrameProducer: Before: calling App callback, sn=347
+05-31 12:15:49.119 23290-24558 DepthFrameProducer: After: calling App callback, sn=347
+05-31 12:15:49.119 23290-24559 DepthFrameProducer: After: calling PC callback, sn=347
+05-31 12:15:49.119 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:49.127 23290-24560 DepthFrameProducer: After readFrame, sn=348
+05-31 12:15:49.127 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:49.127 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:49.127 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:49.128 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:49.128 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:49.132 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:49.132 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=348
+05-31 12:15:49.132 23290-24558 DepthFrameProducer: Before: calling App callback, sn=348
+05-31 12:15:49.138 23290-24558 DepthFrameProducer: After: calling App callback, sn=348
+05-31 12:15:49.138 23290-24559 DepthFrameProducer: After: calling PC callback, sn=348
+05-31 12:15:49.138 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:49.142 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:49.142 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:49.142 23290-24560 DepthFrameProducer: After readFrame, sn=349
+05-31 12:15:49.143 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:49.143 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:49.143 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:49.146 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:49.146 23290-24558 DepthFrameProducer: Before: calling App callback, sn=349
+05-31 12:15:49.146 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=349
+05-31 12:15:49.151 23290-24559 DepthFrameProducer: After: calling PC callback, sn=349
+05-31 12:15:49.151 23290-24558 DepthFrameProducer: After: calling App callback, sn=349
+05-31 12:15:49.151 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:49.159 23290-24560 DepthFrameProducer: After readFrame, sn=350
+05-31 12:15:49.159 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:49.159 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:49.159 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:49.159 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:49.159 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:49.162 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:49.162 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=350
+05-31 12:15:49.162 23290-24558 DepthFrameProducer: Before: calling App callback, sn=350
+05-31 12:15:49.164 23290-24559 DepthFrameProducer: After: calling PC callback, sn=350
+05-31 12:15:49.170 23290-24558 DepthFrameProducer: After: calling App callback, sn=350
+05-31 12:15:49.170 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:49.177 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:49.177 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:49.179 23290-24560 DepthFrameProducer: After readFrame, sn=351
+05-31 12:15:49.180 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:49.180 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:49.180 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:49.183 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:49.184 23290-24558 DepthFrameProducer: Before: calling App callback, sn=351
+05-31 12:15:49.184 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=351
+05-31 12:15:49.189 23290-24559 DepthFrameProducer: After: calling PC callback, sn=351
+05-31 12:15:49.189 23290-24558 DepthFrameProducer: After: calling App callback, sn=351
+05-31 12:15:49.189 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:49.194 23290-24560 DepthFrameProducer: After readFrame, sn=352
+05-31 12:15:49.195 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:49.195 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:49.195 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:49.195 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:49.195 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:49.201 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:49.201 23290-24558 DepthFrameProducer: Before: calling App callback, sn=352
+05-31 12:15:49.201 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=352
+05-31 12:15:49.204 23290-24559 DepthFrameProducer: After: calling PC callback, sn=352
+05-31 12:15:49.204 23290-24558 DepthFrameProducer: After: calling App callback, sn=352
+05-31 12:15:49.204 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:49.208 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:49.208 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:49.210 23290-24560 DepthFrameProducer: After readFrame, sn=353
+05-31 12:15:49.210 23290-24560 DepthFrameProducer: Before: request Frame from mFreeQueue
+05-31 12:15:49.210 23290-24560 DepthFrameProducer: After:  request Frame from mFreeQueue
+05-31 12:15:49.210 23290-24560 DepthFrameProducer: Before readFrame
+05-31 12:15:49.212 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:49.212 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=353
+05-31 12:15:49.212 23290-24558 DepthFrameProducer: Before: calling App callback, sn=353
+05-31 12:15:49.216 23290-24558 DepthFrameProducer: After: calling App callback, sn=353
+05-31 12:15:49.216 23290-24559 DepthFrameProducer: After: calling PC callback, sn=353
+05-31 12:15:49.216 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:49.226 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue
+05-31 12:15:49.226 23290-24557 DepthFrameProducer: Before: request Frame from mDataQueue
+05-31 12:15:49.226 23290-24560 DepthFrameProducer: After readFrame, sn=354
+05-31 12:15:49.231 23290-24557 DepthFrameProducer: After:  request Frame from mDataQueue
+05-31 12:15:49.231 23290-24559 DepthFrameProducer: Before: calling PC callback, sn=354
+05-31 12:15:49.232 23290-24559 DepthFrameProducer: After: calling PC callback, sn=354
+05-31 12:15:49.232 23290-24557 DepthFrameProducer: Before: request SDS from mSensorDataSetQueue
+05-31 12:15:49.309 23290-24557 DepthFrameProducer: After:  request SDS from mSensorDataSetQueue

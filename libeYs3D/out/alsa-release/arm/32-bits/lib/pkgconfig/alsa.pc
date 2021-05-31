@@ -1,0 +1,14 @@
+prefix=/home/michaelwu/HD-DM-Linux-SDK-3.0.22.01/EtronSDK_Linux/eSPDI_source/util/alsa-lib-1.1.6/../../../eSPDI/alsa-release/arm/32-bits
+exec_prefix=/home/michaelwu/HD-DM-Linux-SDK-3.0.22.01/EtronSDK_Linux/eSPDI_source/util/alsa-lib-1.1.6/../../../eSPDI/alsa-release/arm/32-bits
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: alsa
+Description: Advanced Linux Sound Architecture (ALSA) - Library
+Version: 1.1.6
+Requires: 
+Libs: -L${libdir} -lasound
+Libs.private: -lm -ldl -lpthread -lrt
+# -I${includedir}/alsa below is just for backward compatibility
+# (it was set so mistakely in the older version)
+Cflags: -I${includedir} -I${includedir}/alsa
