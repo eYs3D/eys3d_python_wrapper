@@ -92,7 +92,7 @@ class Device(object):
                     IMUDataCallback=None):
         """Open camera device with Config and callback function.
 
-        It would call EtronDI_OpenDevice by stream setting.
+        It would call APC_OpenDevice by stream setting.
         In the meantime, it also registers the callback function to get frame data.
 
         Args:
@@ -129,21 +129,34 @@ class Device(object):
         else:
             self.__camera_device.enable_interleave_mode(False)
 
-    def open_device_with_pipeline(self, config):
+    def open_device_with_pipeline(self, config, sync=0):
         conf = config.get_config()
-        logger.info(conf)
-        pipeline = self.__camera_device.init_stream(
-            conf['colorFormat'],
-            conf['colorWidth'],
-            conf['colorHeight'],
-            conf['actualFps'],
-            conf['depthFormat'],
-            conf['depthWidth'],
-            conf['depthHeight'],
-            conf['depthStreamFormat'],  # depthDataTransferCtrl
-            eys3dPy.CONTROL_MODE.IMAGE_SN_SYNC,  # ctrlMode
-            self.__rectLogIndex,  # #rectifyLogIndex
-        )
+        if sync:
+            pipeline = self.__camera_device.init_stream_with_frameset(
+                conf['colorFormat'],
+                conf['colorWidth'],
+                conf['colorHeight'],
+                conf['actualFps'],
+                conf['depthFormat'],
+                conf['depthWidth'],
+                conf['depthHeight'],
+                conf['depthStreamFormat'],  # depthDataTransferCtrl
+                eys3dPy.CONTROL_MODE.IMAGE_SN_SYNC,  # ctrlMode
+                self.__rectLogIndex,  # #rectifyLogIndex
+            )
+        else:
+            pipeline = self.__camera_device.init_stream(
+                conf['colorFormat'],
+                conf['colorWidth'],
+                conf['colorHeight'],
+                conf['actualFps'],
+                conf['depthFormat'],
+                conf['depthWidth'],
+                conf['depthHeight'],
+                conf['depthStreamFormat'],  # depthDataTransferCtrl
+                eys3dPy.CONTROL_MODE.IMAGE_SN_SYNC,  # ctrlMode
+                self.__rectLogIndex,  # #rectifyLogIndex
+            )
         if conf['actualFps'] == conf['ILM']:
             self.__camera_device.enable_interleave_mode(True)
         else:

@@ -7,7 +7,7 @@ from datetime import datetime
 import cv2
 import numpy as np
 
-from eys3d import Pipeline, Config
+from eys3d import FrameSetPipeline, Config
 from eys3d import LIGHT_SOURCE_VALUE
 from eys3d import logger
 from eys3d.utils import get_EYS3D_HOME
@@ -90,11 +90,12 @@ class RecordStream:
         then concatenated color and depth frame into new frame to cv2.imshow.
         New frame size is (W * 2 * ratio^2, H).
         """
-        cret, cframe = self.pipe.wait_color_frame()
-        dret, dframe = self.pipe.wait_depth_frame()
-        if not cret or not dret:
+        ret, frameset = self.pipe.wait_frameset()
+        if not ret:
             return False, None
         try:
+            cframe = frameset.color_frame
+            dframe = frameset.depth_frame
             color_rgb_image = cframe.get_rgb_data().reshape(
                 cframe.get_height(), cframe.get_width(), 3)
             depth_rgb_image = dframe.get_rgb_data().reshape(
@@ -498,13 +499,12 @@ def record_playback_sample(device, config):
             logger.info("Should be recorded file? {}.".format(record))
             break
 
-    pipe = Pipeline(device=device)
+    pipe = FrameSetPipeline(device=device)
     conf = config
     # Getting size from config
     height_color_frame, width_color_frame = conf.get_color_stream_resolution()
     height_depth_frame, width_depth_frame = conf.get_depth_stream_resolution()
     pipe.start(conf)
-    # Enable interleave if interleave mode
     pipe.reset()
     stream = RecordStream(pipe,
                           record=record,

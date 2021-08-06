@@ -1,6 +1,13 @@
 PYTHON_EXECUTE=$(which python3.7)
 VENDOR_SDK_ROOT=../../../..
-export PYTHONPATH=$VENDOR_SDK_ROOT/libeYs3D/wrapper/python:$VENDOR_SDK_ROOT/libeYs3D/out:$PYTHONPATH
+EYS3D_PYTHON_LIB="$VENDOR_SDK_ROOT/libeYs3D/wrapper/python"
+export PYTHONPATH="$PYTHONPATH:$VENDOR_SDK_ROOT/libeYs3D/out:$EYS3D_PYTHON_LIB:."
 
-sudo --preserve-env=PYTHONPATH $PYTHON_EXECUTE scripts/eYs3Dcli --version
+# C++ Engine config path
+export EYS3D_HOME="$VENDOR_SDK_ROOT/libeYs3D/out/eYs3D"
+
+# Python Engine config path
+export EYS3D_SDK_HOME="$VENDOR_SDK_ROOT/libeYs3D/out/eYs3D"
+
+sudo --preserve-env=EYS3D_HOME --preserve-env=EYS3D_SDK_HOME --preserve-env=PYTHONPATH $PYTHON_EXECUTE scripts/eYs3Dcli --version
 

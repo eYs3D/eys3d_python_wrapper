@@ -28,19 +28,31 @@ def preview_config(config):
             DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_8_BITS,
             DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_8_BITS_RAW,
             DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_ILM_8_BITS,
-            DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_ILM_8_BITS_RAW):
+            DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_ILM_8_BITS_RAW,
+            DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_SCALE_DOWN_8_BITS,
+            DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_SCALE_DOWN_8_BITS_RAW,
+            DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_SCALE_DOWN_ILM_8_BITS,
+            DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_SCALE_DOWN_ILM_8_BITS_RAW):
         depth_format_bit = 8
     elif config_dict['depthFormat'] in (
             DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_11_BITS,
             DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_11_BITS_RAW,
             DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_ILM_11_BITS,
-            DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_ILM_11_BITS_RAW):
+            DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_ILM_11_BITS_RAW,
+            DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_SCALE_DOWN_11_BITS,
+            DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_SCALE_DOWN_11_BITS_RAW,
+            DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_SCALE_DOWN_ILM_11_BITS,
+            DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_SCALE_DOWN_ILM_11_BITS_RAW):
         depth_format_bit = 11
     elif config_dict['depthFormat'] in (
             DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_14_BITS,
             DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_14_BITS_RAW,
             DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_ILM_14_BITS,
-            DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_ILM_14_BITS_RAW):
+            DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_ILM_14_BITS_RAW,
+            DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_SCALE_DOWN_14_BITS,
+            DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_SCALE_DOWN_14_BITS_RAW,
+            DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_SCALE_DOWN_ILM_14_BITS,
+            DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_SCALE_DOWN_ILM_14_BITS_RAW):
         depth_format_bit = 14
     else:
         depth_format_bit = None
@@ -48,6 +60,7 @@ def preview_config(config):
     print("\tDepthmap Bits: {}".format(depth_format_bit))
     print("\tFps: {}".format(config_dict["actualFps"]))
     print("\tRectify: {}".format(config_dict['rectify']))
+    print("\tVideo Mode: {}".format(config_dict['depthFormat']))
     print("\tInterleave mode: {}\n\n".format(
         True if config_dict["ILM"] == config_dict["actualFps"] else False))
 
@@ -127,21 +140,31 @@ if __name__ == '__main__':
         # conf.set_depth_data_type_with_advanced_setting(11, is_rectify=True, is_interleave_mode=True)
 
         conf.set_preset_mode_config(0x138, args.index, device.get_usb_type())
+
+    elif "8052" == args.module:
+        # conf.set_color_stream(
+        #     COLOR_RAW_DATA_TYPE.COLOR_RAW_DATA_YUY2,
+        #     1280,
+        #     720,
+        #     fps=60,
+        # )
+        # conf.set_depth_stream(
+        #     DEPTH_TRANSFER_CTRL.DEPTH_IMG_COLORFUL_TRANSFER,
+        #     1280,
+        #     720,
+        #     fps=60,
+        # )
+        # conf.set_depth_data_type_with_advanced_setting(11, is_rectify=True, is_interleave_mode=False)
+        conf.set_preset_mode_config(0x137, args.index, device.get_usb_type())
+
+    elif "8059" == args.module:
+        conf.set_preset_mode_config(0x146, args.index, device.get_usb_type())
+    elif "8067" == args.module:
+        conf.set_preset_mode_config(0x12C, args.index, device.get_usb_type())
+    elif "HYPATIA" == args.module: # 8071
+        conf.set_preset_mode_config(0x160, args.index, device.get_usb_type()) 
     elif "8036" == args.module:
-        conf.set_color_stream(
-            COLOR_RAW_DATA_TYPE.COLOR_RAW_DATA_YUY2,
-            1280,
-            720,
-            fps=30,
-        )
-        conf.set_depth_stream(
-            DEPTH_TRANSFER_CTRL.
-            DEPTH_IMG_COLORFUL_TRANSFER,  # DEPTH_TRANSFER_CTRL
-            1280,
-            720,
-            fps=30,
-        )
-        conf.set_depth_data_type_with_advanced_setting(14, is_rectify=False, is_interleave_mode=False)
+        conf.set_preset_mode_config(0x120, args.index, device.get_usb_type())
     elif "8062" == args.module:
         # conf.set_color_stream(
         #     COLOR_RAW_DATA_TYPE.COLOR_RAW_DATA_YUY2,

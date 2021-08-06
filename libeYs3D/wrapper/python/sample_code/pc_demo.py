@@ -38,10 +38,6 @@ import cv2
 
 from eys3d import Pipeline, Config, logger
 
-xLen = 1280
-yLen = 720
-ptLen = xLen * yLen
-
 aMaxBox = [-1e10] * 3
 aMinBox = [1e10] * 3
 aObjCnt = [90, 97, 500]
@@ -191,7 +187,7 @@ def MoveMouse(window, x, y):
         mOut[1] = y
         SetRot()
 
-
+# @logger.catch
 def DrawPCloud():
     global aXyz, aRgb, pcframe, pc
     try:
@@ -211,9 +207,9 @@ def DrawPCloud():
         glDisableClientState(GL_VERTEX_ARRAY)
         glDisableClientState(GL_COLOR_ARRAY)
         lock.release()
-    except:
+    except Exception as e:
         lock.release()
-        pass
+        logger.warning(e)
 
 
 def ScrollMouse(window, x, y):
@@ -266,7 +262,7 @@ def pc_frame_callback(pcframe):
 
 
 def pc_sample(device, config):
-    global point_cloud_viewer_format, ZNEAR_DEFAULT, ZFAR_DEFAULT
+    global point_cloud_viewer_format, ZNEAR_DEFAULT, ZFAR_DEFAULT, H, W, ptLen
     while True:
         point_cloud_viewer_format = input(
             "Please input point cloud viewer format(0: Color, 1: Depth input, 2: Single color)? "
@@ -292,6 +288,7 @@ def pc_sample(device, config):
     # Enable interleave if interleave mode
     (H, W) = config.get_color_stream_resolution(
     )  # Get the resolution of color stream
+    ptLen = H * W
     # W = 1280
     # H = 760
 
@@ -301,8 +298,6 @@ def pc_sample(device, config):
     ZFAR_DEFAULT = z_range["Far"]
     logger.info("Default ZNear: {}, ZFar: {}".format(ZNEAR_DEFAULT,
                                                      ZFAR_DEFAULT))
-
-    global aXyz, aRgb, pc
 
     # Initialize the library
     if not glfw.init():
@@ -337,6 +332,7 @@ def pc_sample(device, config):
 
     t1 = time.time()
     logger.info("GLFW start to preview")
+    time.sleep(0.5) # wait for aXyz ready
     while not glfw.window_should_close(window):
 
         # Render here, e.g. using pyOpenGL
@@ -344,7 +340,6 @@ def pc_sample(device, config):
 
         DrawAxis()
         DrawPCloud()
-
         # Swap front and back buffers
         glfw.swap_buffers(window)
 

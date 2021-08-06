@@ -8,6 +8,7 @@ os.environ['EYS3D_SDK_HOME'] = cfg_path
 
 from eys3dPy import LIGHT_SOURCE_VALUE, COLOR_RAW_DATA_TYPE, DEPTH_RAW_DATA_TYPE, SENSORMODE_INFO, DEPTH_TRANSFER_CTRL, PIPELINE_RESULT, USB_PORT_TYPE, DECODE_TYPE
 from .pipeline import Pipeline
+from .frameset_pipeline import FrameSetPipeline
 from .config import Config, ModeConfig
 from .device import Device, EYS3DSystem
 from .depthFilter import DepthFilterOptions
@@ -17,7 +18,7 @@ from .utils import *
 
 __all__ = [
     "Pipeline", "Config", "ModeConfig", "Device", "DepthFilterOptions",
-    "DepthAccuracy", "CameraProperty"
+    "DepthAccuracy", "CameraProperty", "FrameSetPipeline"
 ]
 
 __version__ = "1.0.1"

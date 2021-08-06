@@ -178,7 +178,7 @@ class Config():
         """
         modeConfig = ModeConfig(pid, index, usb_type)
         mode_info = modeConfig.get_current_mode_info()
-        self.__update_config(mode_info)
+        self.__update_config(mode_info, pid)
 
     def enable_rectify(self):
         self.rectify = True
@@ -186,7 +186,8 @@ class Config():
     def disable_rectify(self):
         self.rectify = False
 
-    def __update_config(self, mode_info):
+    def __update_config(self, mode_info, pid):
+        self.pid = pid
         self.colorStreamFormat = COLOR_RAW_DATA_TYPE.COLOR_RAW_DATA_YUY2 if mode_info.eDecodeType_L == 0 else COLOR_RAW_DATA_TYPE.COLOR_RAW_DATA_MJPG
         self.ep0Height = mode_info.L_Resolution.Height
         self.ep0Width = mode_info.L_Resolution.Width
@@ -210,6 +211,7 @@ class Config():
         DepthData,
     ):
         DEPTH_RAW_DATA_INTERLEAVE_MODE_OFFSET = 16  # refer video.h:28
+        DEPTH_RAW_DATA_SCALE_DOWN_MODE_OFFSET = 32  # refer video.h:28
         if DepthData == 8:
             depth_data_bit = DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_8_BITS if self.rectify else DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_8_BITS_RAW
         elif DepthData == 11:
@@ -221,9 +223,12 @@ class Config():
         else:  # Default
             depth_data_bit = DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_DEFAULT if self.rectify else DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_OFF_RECTIFY
 
-        if self.interleavefps == (self.ep0fps if self.ep0fps else self.ep1fps):  #ILM
-            depth_data_bit = int(
-                depth_data_bit) + DEPTH_RAW_DATA_INTERLEAVE_MODE_OFFSET
+        if self.pid == 0x120 and 360 == self.ep1Height:  # This block for 8036 scale down mode
+            depth_data_bit = int(depth_data_bit) + DEPTH_RAW_DATA_SCALE_DOWN_MODE_OFFSET
+            depth_data_bit = eys3dPy.DEPTH_RAW_DATA_TYPE(depth_data_bit)
+
+        if self.interleavefps == (self.ep0fps if self.ep0fps else self.ep1fps):  # ILM
+            depth_data_bit = int(depth_data_bit) + DEPTH_RAW_DATA_INTERLEAVE_MODE_OFFSET
             depth_data_bit = DEPTH_RAW_DATA_TYPE(depth_data_bit)
 
         return depth_data_bit
@@ -253,7 +258,7 @@ class ModeConfig():
             logger.exception(e)
             raise e
         if self.__modeConfig.select_current_index(
-                self.__index) != 0:  # 0 is EtronDI_OK in eSPDI_def.h
+                self.__index) != 0:  # 0 is APC_OK in eSPDI_def.h
             self.__index = self.__modeConfig.get_current_index()
             logger.warning(
                 "Alert!!Index is not in database. Default is the first config setting."
@@ -328,7 +333,7 @@ class ModeConfig():
             IndexError: If no index in modeConfig.db.
         """
         if self.__modeConfig.select_current_index(
-                index) != 0:  # 0 is EtronDI_OK in eSPDI_def.h
+                index) != 0:  # 0 is APC_OK in eSPDI_def.h
             raise IndexError
         self.__mode_info = self.__update_mode_info()
 

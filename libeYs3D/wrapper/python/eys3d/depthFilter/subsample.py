@@ -5,8 +5,8 @@ class Subsample:
 
     This function mainly scales the depth image down to reduce the computational loading.
     It provides users two kinds of filtering methods (median and mean filtering) to subsample the depth image. 
-    Furthermore, this function should be used with “EtronDI_ApplyFilters”. 
-    Then, you have to call “EtronDI_ApplyFilters” before finishing the process of depth filtering, if you have
+    Furthermore, this function should be used with “APC_ApplyFilters”. 
+    Then, you have to call “APC_ApplyFilters” before finishing the process of depth filtering, if you have
     called this function at the beginning of the process of depth filtering.
 
     Args:

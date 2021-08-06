@@ -2293,24 +2293,17 @@ int EtronDI_TableToData(void *pHandleEtronDI, PDEVSELINFO pDevSelInfo, int width
 
 }// extern "C" 03
 
-/*! \fn int EtronDI_AdjustFocalLength(void *pHandleEtronDI, PDEVSELINFO pDevSelInfo, int width, int height);
+/*! \fn EtronDI_InitPostProcess(void **ppPostProcessHandle, unsigned int
+   nWidth, unsigned int nHeight, EtronDIImageType::Value imageType);
 */
-int EtronDI_AdjustFocalLength(void *pHandleEtronDI, PDEVSELINFO pDevSelInfo, int width, int height);
-
-/*! \fn int EtronDI_AdjustFocalLength(void *pHandleEtronDI, PDEVSELINFO pDevSelInfo, int width, int height, int pixelUnit);
-*/
-int EtronDI_AdjustFocalLength(void *pHandleEtronDI, PDEVSELINFO pDevSelInfo, int width, int height, int pixelUnit);
-
-/*! \fn int EtronDI_GetDeviceFocalLength(void *pHandleEtronDI, PDEVSELINFO pDevSelInfo, 
-                                 int *pLeftFx, int *pLeftFy, int *pRightFx, int *pRightFy);
-*/
-int EtronDI_GetDeviceFocalLength(void *pHandleEtronDI, PDEVSELINFO pDevSelInfo, 
-                                 int *pLeftFx, int *pLeftFy, int *pRightFx, int *pRightFy);
-
-/*! \fn EtronDI_GetFlashFocalLength(void *pHandleEtronDI, PDEVSELINFO pDevSelInfo, int width, int height,
-                                int *pLeftFx, int *pLeftFy, int *pRightFx, int *pRightFy, int *pPixelUnit);
-*/
-int EtronDI_GetFlashFocalLength(void *pHandleEtronDI, PDEVSELINFO pDevSelInfo, int width, int height,
-                                int *pLeftFx, int *pLeftFy, int *pRightFx, int *pRightFy, int *pPixelUnit);
-
+int EtronDI_InitPostProcess(void **ppPostProcessHandle, unsigned int nWidth,
+                            unsigned int nHeight,
+                            EtronDIImageType::Value imageType);
+/*! \fn EtronDI_PostProcess(void *pPostProcessHandle, unsigned char
+ * *pDepthData);
+ */
+int EtronDI_PostProcess(void *pPostProcessHandle, unsigned char *pDepthData);
+/*! \fn EtronDI_ReleasePostProcess(void *pPostProcessHandle);
+ */
+int EtronDI_ReleasePostProcess(void *pPostProcessHandle);
 #endif // LIB_ESPDI_H

@@ -1,4 +1,4 @@
-# Feature
+### Feature
 * Frame callback
 * Pipeline
 * Compatible with openCV
@@ -9,15 +9,21 @@
 * DepthFilter 
 * Accuracy
 
-# Prerequisite
+### Getting the code
+
+### Clone this repository with submodules
+```git clone git@github.com:eYs3D/eys3d_python_wrapper.git```
+
+### Prerequisite
 * eYs3D camera module 
 
-## Primary required software packages
+### Primary required software packages
 * python3.7
 * python3.7-venv
 * eSPDI SDK
 * cmake 3.20
 * pkg-config
+* libdc1394 package
 
 ```console
 # Install required packages with the following command
@@ -35,9 +41,10 @@ $ sudo apt install liblog4cplus-dev
 $ sudo apt install cgroup-tools
 $ sudo apt install libcgroup-dev
 $ sudo apt install libssl-dev
+$ sudo apt-get install -y libdc1394-22
 ```
 
-## OpenCL
+### OpenCL
 The following OpenCL packages on host machine are required for eYs3D python wrapper project
 * ICD loader runtime
 * Vendor specific compute runtime for openCL driver
@@ -62,118 +69,17 @@ $ sudo apt install clinfo
 $ sudo clinfo
 ```
 
-## Configure Python Environment
+# Configure Python Environment
 
 ### Create Python virtual environment
 ```console 
-$ python3.7 -m venv ./pyEnv
-$ source ./pyEnv/bin/activate 
-```
-Windows
-```
-pyEnv\Scripts\activate
-```
-If you want to exit python virtual environment <br>
-```console
-$ deactivate 
+$ python3.7 -m venv ./venv
+$ source ./venv/bin/activate
 ```
 
 ### install required Python packages with pip
 ```console
 $ python3.7 -m pip install -r requirements.txt 
-```
-
-## make shared object Linux
-> mkdir build && cd build  <br>
-> cmake ../ -DSupport=general && make install -j16
-
-## make shared object Linux for Python
-> mkdir build && cd build  <br>
-> cmake ../ && make install -j16
-
-## Make log4cplus before building DLL Windows
-> cd log4cplus\msvc14 <br>
-> msbuild /P:Configuration=Release log4cplusS.vcxproj /p:CharacterSet=MBCS
-
-## Make DLL Windows
-> mkdir build && cd build  <br>
-> cmake ..\ -G"Visual Studio 15 2017 Win64" -DSupport=general && msbuild /P:Configuration=Release INSTALL.vcxproj
-
-## Make DLL Windows for Python
-> mkdir build && cd build  <br>
-> cmake ..\ -G"Visual Studio 15 2017 Win64" && msbuild /P:Configuration=Release INSTALL.vcxproj
-
-# Save File 
-> Default is at $HOME/.eYs3D
-> If user want to specify save folder.
->```console
->export EYS3D_HOME="The directory user would like"
->```
-
-## Snapshot 
-> `$HOME/.eYs3D/snapshots`
-
-## Log file. (Register)
-> `$HOME/.eYs3D/logs`
-
-## ModeConfig.db
-> Please copy `ModeConfig.db` to `${EYS3D_HOME}/cfg` or `$HOME/.eYs3D`
-
-## test function
-> cd libeYs3D/wrapper/python <br>
-> sh run_pytest.sh
-
-# Getting the code
-
-## Clone this repository with submodules
-* git clone git@github.com:eYs3D/python-wrapper.git --recursiv
-
-## Clone this repository and init submodules
-* git clone git@github.com:eYs3D/python-wrapper.git
-* git submodule init
-* git submodule update --init --recursive
-
-# Build the project
-## In Windows environment
->     build OpenCV DLL: build.bat
->     build Unity DLL : build_unity.bat
-## In Linux environment
-```console
-$ sh build.sh
-```
-## build the wrapper
-```console
-$ cmake .. -DCMAKE_CXX_FLAGS="-Wno-format-truncation -Wno-unused-result -O1 -g "
-$ make install -j$(nproc)
-
-# For Debugging PCFrame With SHA256
-$ cmake .. -DCMAKE_CXX_FLAGS="-Wno-format-truncation -Wno-unused-result -O1 -g" -DPIPELINE_PCFRAME_SHA_DEBUG=1
-$ make install -j$(nproc)
-```
-## make clean
-``` console
-$ cd libeYs3D/build
-$ cmake --build . --target clean
-```
-
-# Code
-## test function
-```console 
-$ cd libeYs3D/wrapper/python
-$ sh run_pytest.sh [camera_module]
-Ex: 
-$ sh run_pytest.sh 8062
-```
-#### in Windows environment
-> libeYs3D\run_callback.bat
-> libeYs3D\run_frameset_pipeline.bat
-> libeYs3D\run_pipeline.bat
-#### in Linux environment
-```console
-$ cd libeYs3D
-$ sh run_callback.sh
-$ sh run_frameset_pipeline.sh
-$ sh run_frameset_pipeline.sh
 ```
 
 ## Run demo code
@@ -188,10 +94,55 @@ Then select index to execute sample code.
 5. record_playback_demo
 ```
 ex: If your module is 8062, mode index 1 on ModeConfig.db.<br>
-```console 
-sh run_demo.sh 8062 1 
+```console
+sh run_demo.sh 8062 1 14
 ```
 
+ex: If your module is 8071, mode index 1 on ModeConfig.db.<br>
+```console
+sh run_demo.sh HYPATIA 1 11
+```
+
+ex: If your module is 8067, mode index 1 on ModeConfig.db.<br>
+```console
+sh run_demo.sh 8067 1 11
+```
+
+ex: If your module is 8059, mode index 5 on ModeConfig.db.<br>
+```console
+sh run_demo.sh 8059 5 11
+```
+
+ex: If your module is 8036, mode index 1 on ModeConfig.db.<br>
+```console
+sh run_demo.sh 8036 1 14
+```
+
+ex: If your module is 8052, mode index 1 on ModeConfig.db.<br>
+```console
+sh run_demo.sh 8052 1 14
+```
+
+If you want to exit python virtual environment <br>
+```console
+$ deactivate 
+```
+
+# Save File
+Default is at $HOME/.eYs3D
+If user want to specify save folder.
+```console
+export EYS3D_HOME="The directory user would like"
+```
+
+## Snapshot
+`$EYS3D_HOME/.eYs3D/snapshots`
+
+## Log file. (Register)
+`$EYS3D_HOME/.eYs3D/logs`
+
+## ModeConfig.db
+Please copy `ModeConfig.db` to `${EYS3D_HOME}/cfg` or `$HOME/.eYs3D`
 ### If user would like to set depth data type manually
 Please read PIF and check which bit is acceptable in advance. 
 ```console
@@ -236,4 +187,18 @@ $ cd libeYs3D && sh run_test.sh
 ## Monitor memory usage of eYs3D.test
 ```console
 $ sudo pmap ${PID_OF_eYs3D.test} | tail -n 1
+```
+
+## Not showing up preview window in some OS
+```console
+Error: BadDrawable (invalid Pixmap or Window parameter) 9 Major opcode: 62 (X_CopyArea)Resource id: 0x3800056]
+```
+Please follow the instructions to add environment variable in your system.<br>
+```console
+sudo nano /etc/environment
+```
+
+Adding in the /etc/environment file.
+```
+QT_X11_NO_MITSHM=1
 ```

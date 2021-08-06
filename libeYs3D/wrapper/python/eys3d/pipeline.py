@@ -59,7 +59,7 @@ class Pipeline():
         if not self.__status:
             self.__status = True
             self.__pipe = self.__dev.open_device_with_pipeline(
-                config=self.__config, )
+                config=self.__config, sync=False)
             self.__color_frame_shape = self.__config.get_color_stream_resolution(
             )
             self.__depth_frame_shape = self.__config.get_depth_stream_resolution(
