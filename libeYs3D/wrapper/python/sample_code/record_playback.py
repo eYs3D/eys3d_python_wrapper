@@ -505,6 +505,7 @@ def record_playback_sample(device, config):
     height_color_frame, width_color_frame = conf.get_color_stream_resolution()
     height_depth_frame, width_depth_frame = conf.get_depth_stream_resolution()
     pipe.start(conf)
+    # Enable interleave if interleave mode
     pipe.reset()
     stream = RecordStream(pipe,
                           record=record,

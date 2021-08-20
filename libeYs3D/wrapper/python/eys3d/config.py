@@ -223,7 +223,7 @@ class Config():
         else:  # Default
             depth_data_bit = DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_DEFAULT if self.rectify else DEPTH_RAW_DATA_TYPE.DEPTH_RAW_DATA_OFF_RECTIFY
 
-        if self.pid == 0x120 and 360 == self.ep1Height:  # This block for 8036 scale down mode
+        if self.pid == 0x120 or self.pid == 0x137 and 360 == self.ep1Height:  # This block for 8036/8052 scale down mode
             depth_data_bit = int(depth_data_bit) + DEPTH_RAW_DATA_SCALE_DOWN_MODE_OFFSET
             depth_data_bit = eys3dPy.DEPTH_RAW_DATA_TYPE(depth_data_bit)
 
