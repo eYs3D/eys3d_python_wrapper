@@ -1,12 +1,12 @@
 ### Feature
 * Frame callback
 * Pipeline
-* Compatible with openCV
-* Numpy supported 
-* Preview Pointcloud with openGL.
+* Compatible with OpenCV
+* Numpy supported
+* Preview point cloud with openGL.
 * Support 8053, 8062
-* Interleave mode 
-* DepthFilter 
+* Interleave mode
+* DepthFilter
 * Accuracy
 
 ### Getting the code
@@ -15,7 +15,7 @@
 ```git clone git@github.com:eYs3D/eys3d_python_wrapper.git```
 
 ### Prerequisite
-* eYs3D camera module 
+* eYs3D camera module
 
 ### Primary required software packages
 * python3.7
@@ -93,12 +93,12 @@ Then select index to execute sample code.
 4. accuracy_demo
 5. record_playback_demo
 ```
-ex: If your module is 8062, mode index 1 on ModeConfig.db.<br>
+ex: If your module is G100i, mode index 1 on ModeConfig.db.<br>
 ```console
 sh run_demo.sh 8062 1 14
 ```
 
-ex: If your module is 8071, mode index 1 on ModeConfig.db.<br>
+ex: If your module is G53, mode index 1 on ModeConfig.db.<br>
 ```console
 sh run_demo.sh HYPATIA 1 11
 ```
@@ -113,7 +113,7 @@ ex: If your module is 8059, mode index 5 on ModeConfig.db.<br>
 sh run_demo.sh 8059 5 11
 ```
 
-ex: If your module is 8036, mode index 1 on ModeConfig.db.<br>
+ex: If your module is G100, mode index 1 on ModeConfig.db.<br>
 ```console
 sh run_demo.sh 8036 1 14
 ```
@@ -127,22 +127,71 @@ If you want to exit python virtual environment <br>
 ```console
 $ deactivate 
 ```
+###OpenCV preview demo: cv_demo
+![Imgur](https://imgur.com/G5lhQZQ.png)
 
-# Save File
-Default is at $HOME/.eYs3D
-If user want to specify save folder.
+Hotkeys listen by OpenCV window:
+
+* M/m: Increase IR level make your depth more accurate
+* N/n: Decrease IR level
+* Q/q/Esc: Quit
+* E/e: Enable/Disable AE
+* \<F1\>: Perform snapshot
+* \<F2\>: Dump frame info
+* \<F3\>: Dump IMU data
+* \<F4\>: Dump eYs3D system info
+* \<F5\>: Save rectify log data
+* \<F6\>: Dump camera properties info
+* I/i: Enable/Disable extend maximum IR value
+* L/l: Increase Z-roi
+* K/k: Decrease Z-roi
+* P/p: Enable / Disable Hardware Post-processing
+* 0: Reset Z range
+* 1: Z range setting 1 with ZNear=1234 and ZFar=5678
+* 2: Z range setting 2 with ZNear=1200 and ZFar=1600
+
+### OpenGL point cloud demo: pc_demo
+
+![Imgur](https://imgur.com/lBuSmhS.png)
+
+Hot Keys:
+* Q\q\Esc: Quit
+* M/m: Increase IR level
+* N/n: Decrease IR level
+* \<F1\>: Perform snapshot
+* \<F2\>: Dump frame info
+* \<F3\>: Dump IMU data
+* \<F4\>: Dump eYs3D system info
+* \<F5\>: Save rectify log 
+* \<F6\>: Dump camera properties info
+* F/f: Enable/Disable Ply filter
+* I/i: Enable/Disable extend maximum IR value
+* 0: Reset Z range
+* 1: Z range setting 1 with ZNear=1234 and ZFar=5678
+* 2: Z range setting 2 with ZNear=1200 and ZFar=1600
+
+Mouse:
+* Scroll: Zoom In / Out
+* Left click: Rotate
+* Double left click: Reset position
+
+
+## Environment variable for saving path
+If the EYS3D_HOME is not set, default value is at $HOME/.eYs3D
+If user want to specify saving folder, we could modify the line in libeYs3D/wrapper/python/run_demo.sh
 ```console
 export EYS3D_HOME="The directory user would like"
 ```
 
-## Snapshot
-`$EYS3D_HOME/.eYs3D/snapshots`
+#### Saving snapshot path
+```$EYS3D_HOME/snapshots```
 
-## Log file. (Register)
-`$EYS3D_HOME/.eYs3D/logs`
+#### Log file. (Register)
+`$EYS3D_HOME/logs`
 
-## ModeConfig.db
-Please copy `ModeConfig.db` to `${EYS3D_HOME}/cfg` or `$HOME/.eYs3D`
+#### ModeConfig.db
+`${EYS3D_HOME}/cfg/ModeConfig.db` record the camera parameters for streaming, which is corresponded to PIF document. 
+
 ### If user would like to set depth data type manually
 Please read PIF and check which bit is acceptable in advance. 
 ```console
