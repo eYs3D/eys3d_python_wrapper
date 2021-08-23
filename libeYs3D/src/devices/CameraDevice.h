@@ -219,6 +219,14 @@ public:
     virtual bool isInterleaveModeSupported()    { return false; }
     virtual bool isInterleaveModeEnabled();
     virtual int enableInterleaveMode(bool enable);
+    
+    // set the base, color or depth frame to generate PC frame 
+    enum PCFRAME_PRODUCING_BASE    {
+        COLOR_FRAME_AS_BASE = 0,
+        DEPTH_FRAME_AS_BASE = 1,
+    };
+    virtual void setPCFrameProducingBase(PCFRAME_PRODUCING_BASE base);
+    virtual PCFRAME_PRODUCING_BASE getPCFrameProducingBase();
 
     // return a copy of current device DepthFilterOptions
     virtual DepthFilterOptions getDepthFilterOptions();
@@ -365,6 +373,8 @@ protected:
 public:
     RegisterReadWriteOptions mRegisterReadWriteOptions;
     RegisterReadWriteController mRegisterReadWriteController;
+    
+    PCFRAME_PRODUCING_BASE mPCFrameProducingBase = PCFRAME_PRODUCING_BASE::COLOR_FRAME_AS_BASE;
     
     // ROI Support
     int mDepthROICenterPointX = 0;

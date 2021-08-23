@@ -251,7 +251,7 @@ private:
     libeYs3D::video::Producer::Callback mDepthImageCallback;
     libeYs3D::video::PCProducer::PCCallback mPCFrameCallback;
     
-    static constexpr int kMaxFrameCount = 64; // 1 seconds @ 60FPS
+    static constexpr int kMaxFrameCount = 3; // 1 seconds @ 60FPS
     CircularQueue<libeYs3D::video::Frame, kMaxFrameCount> mColorFrameQueue;
     CircularQueue<libeYs3D::video::Frame, kMaxFrameCount> mDepthFrameQueue;
     CircularQueue<libeYs3D::video::PCFrame, (kMaxFrameCount >> 1)> mPCFrameQueue;

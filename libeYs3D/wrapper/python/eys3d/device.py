@@ -403,6 +403,12 @@ class Device(object):
         """
         self.__camera_device.set_septh_roi_pixels(count)
 
+    def set_PCFrame_producing_base(self, PCFRAME_PRODUCING_BASE):
+        self.__camera_device.set_PCFrame_producing_base(PCFRAME_PRODUCING_BASE)
+
+    def get_PCFrame_producing_base(self,):
+        return self.__camera_device.get_PCFrame_producing_base()
+
     def dump_camera_device_properties(self):
         """
         """

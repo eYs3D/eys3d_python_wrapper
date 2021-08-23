@@ -6,7 +6,7 @@ cfg_path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                         "../../../..")  # The path of python_wrapper
 os.environ['EYS3D_SDK_HOME'] = cfg_path
 
-from eys3dPy import LIGHT_SOURCE_VALUE, COLOR_RAW_DATA_TYPE, DEPTH_RAW_DATA_TYPE, SENSORMODE_INFO, DEPTH_TRANSFER_CTRL, PIPELINE_RESULT, USB_PORT_TYPE, DECODE_TYPE
+from eys3dPy import LIGHT_SOURCE_VALUE, COLOR_RAW_DATA_TYPE, DEPTH_RAW_DATA_TYPE, SENSORMODE_INFO, DEPTH_TRANSFER_CTRL, PIPELINE_RESULT, USB_PORT_TYPE, DECODE_TYPE, PCFRAME_PRODUCING_BASE
 from .pipeline import Pipeline
 from .frameset_pipeline import FrameSetPipeline
 from .config import Config, ModeConfig

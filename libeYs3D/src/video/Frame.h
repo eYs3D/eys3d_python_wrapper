@@ -67,6 +67,18 @@ public:
 #endif
 
     /*
+     * for the case when color resolution != depth resolution,
+     * when displaying PC frame, 
+     * the RGB of depth frame has to be resample to the resolution of color freme
+     *     * these filed won't be cloned when cloning frame 
+     */
+    int32_t rgbResampledWidth;
+    int32_t rgbResampledHeight;
+    uint64_t actualResamledRGBBufferSize; // the actual buffer size when converting the image
+    uint64_t rgbResampledBufferSize;      // the image buffer size of imageVec
+    std::vector<uint8_t> rgbResampledVec;
+
+    /*
      * for color frame:
      *     libeYs3D::video::COLOR_RAW_DATA_TYPE
      * for depth frame:
@@ -116,6 +128,8 @@ public:
     int saveToFile(const char *dirPath) const;
     
     void clone(const Frame *frame);
+    
+    void resampleRGBImage(int32_t newWidth, int32_t newHeight);
 
     // Move constructor
     Frame(Frame&& f) = default;

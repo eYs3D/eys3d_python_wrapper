@@ -35,11 +35,9 @@ public:
     int32_t height;
 
 #ifdef DEVICE_MEMORY_ALLOCATOR
-    std::vector<uint8_t, libeYs3D::devices::MemoryAllocator<uint8_t>> drgbDataVec;
     std::vector<uint8_t, libeYs3D::devices::MemoryAllocator<uint8_t>> rgbDataVec;
     std::vector<float, libeYs3D::devices::MemoryAllocator<float>> xyzDataVec;
 #else
-    std::vector<uint8_t> drgbDataVec;
     std::vector<uint8_t> rgbDataVec;
     std::vector<float> xyzDataVec;
 #endif

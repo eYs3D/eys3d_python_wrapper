@@ -36,7 +36,7 @@ import math
 import threading
 import cv2
 
-from eys3d import Pipeline, Config, logger
+from eys3d import Pipeline, Config, logger, PCFRAME_PRODUCING_BASE
 
 aMaxBox = [-1e10] * 3
 aMinBox = [1e10] * 3
@@ -195,11 +195,13 @@ def DrawPCloud():
         glEnableClientState(GL_VERTEX_ARRAY)
         glVertexPointer(3, GL_FLOAT, 0, aXyz)
         if point_cloud_viewer_format == 0:
+            dev.set_PCFrame_producing_base(PCFRAME_PRODUCING_BASE.COLOR_FRAME_AS_BASE)
             glEnableClientState(GL_COLOR_ARRAY)
             glColorPointer(3, GL_UNSIGNED_BYTE, 0, aRgb)  # aRgb, dRgb
         elif point_cloud_viewer_format == 1:
+            dev.set_PCFrame_producing_base(PCFRAME_PRODUCING_BASE.DEPTH_FRAME_AS_BASE)
             glEnableClientState(GL_COLOR_ARRAY)
-            glColorPointer(3, GL_UNSIGNED_BYTE, 0, dRgb)  # aRgb, dRgb
+            glColorPointer(3, GL_UNSIGNED_BYTE, 0, aRgb)  # aRgb, dRgb
         elif point_cloud_viewer_format == 2:
             glColor4f(0, 1, 0, 0)  # Green
         glPointSize(2.0)
@@ -230,8 +232,9 @@ def DrawAxis():
 
 
 def depth_frame_callback(dframe):
-    global dRgb
+    global dRgb, dRgb_resized
     dRgb = dframe.get_rgb_data()
+    dRgb_resized = dframe.get_resample_data(W, H)
 
 
 def pc_frame_callback(pcframe):
@@ -278,14 +281,16 @@ def pc_sample(device, config):
     global dev
     dev = device
     # pipe = Pipeline(device=device)
-    # if config.get_config()['colorHeight'] is 0:
-    #     config.ep0Width = config.ep1Width
-    #     config.ep0Height = config.ep1Height
+    (H, W) = config.get_color_stream_resolution()
+
+    #open device and init stream
     device.open_device(config,
                        depthFrameCallback=depth_frame_callback,
                        PCFrameCallback=pc_frame_callback)
     device.enable_stream()
     # Enable interleave if interleave mode
+    if config.interleavefps:
+        device.enable_interleave_mode()
     (H, W) = config.get_color_stream_resolution(
     )  # Get the resolution of color stream
     ptLen = H * W

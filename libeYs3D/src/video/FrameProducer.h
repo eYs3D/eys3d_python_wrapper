@@ -152,7 +152,7 @@ private:
     //   1) wait for video frame in mDataQueue
     //   2) process video frame
     //   3) Push frame back to mFreeQueue
-    static constexpr int kMaxFrames = 16;
+    static constexpr int kMaxFrames = 3;
     base::MessageChannel<Frame, kMaxFrames> mDataQueue;
     base::MessageChannel<Frame, kMaxFrames> mStageQueue;
     base::MessageChannel<Frame, kMaxFrames> mStage2Queue;
