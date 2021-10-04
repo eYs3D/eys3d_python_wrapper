@@ -100,7 +100,7 @@ sh run_demo.sh 8062 1 14
 
 ex: If your module is G53, mode index 1 on ModeConfig.db.<br>
 ```console
-sh run_demo.sh HYPATIA 1 11
+sh run_demo.sh 8071 1 11
 ```
 
 ex: If your module is 8067, mode index 1 on ModeConfig.db.<br>
