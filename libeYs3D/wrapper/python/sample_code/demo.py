@@ -161,7 +161,7 @@ if __name__ == '__main__':
         conf.set_preset_mode_config(0x146, args.index, device.get_usb_type())
     elif "8067" == args.module:
         conf.set_preset_mode_config(0x12C, args.index, device.get_usb_type())
-    elif "HYPATIA" == args.module: # 8071
+    elif "8071" == args.module: # 8071
         conf.set_preset_mode_config(0x160, args.index, device.get_usb_type()) 
     elif "8036" == args.module:
         conf.set_preset_mode_config(0x120, args.index, device.get_usb_type())
