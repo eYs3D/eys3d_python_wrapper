@@ -50,6 +50,7 @@
 #define  ETronDI_DEVICE_BUSY		     -33
 #define  ETronDI_DEVICE_TIMEOUT		     -34
 #define  ETronDI_IO_SELECT_EINTR	     -35
+#define ETronDI_IO_SELECT_ERROR          -36
 
 // for 3D Scanner +    
 #define  ETronDI_ILLEGAL_ANGLE                -40
@@ -280,6 +281,7 @@ typedef struct tagDEVINFORMATION {
 #define ETronDI_PID_GRAP_K  0x0183
 #define ETronDI_PID_GRAP_SLAVE   0x0279
 #define ETronDI_PID_GRAP_SLAVE_K 0x0283
+#define ETronDI_PID_SANDRA  0x0167
 //+[Thermal device]
 #define ETronDI_PID_GRAP_THERMAL 0xf9f9
 #define ETronDI_PID_GRAP_THERMAL2 0xf8f8

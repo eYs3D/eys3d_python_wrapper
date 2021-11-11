@@ -1,4 +1,4 @@
 #ifndef LIB_ETRONDI_VERSION_H
 #define LIB_ETRONDI_VERSION_H
-#define ETRONDI_VERSION "4.0.3.6"
+#define ETRONDI_VERSION "4.0.3.10"
 #endif

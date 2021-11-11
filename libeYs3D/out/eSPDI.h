@@ -337,6 +337,52 @@ int  EtronDI_GetHWRegister(void *pHandleEtronDI, PDEVSELINFO pDevSelInfo, unsign
     \return success: EtronDI_OK, others: see eSPDI_ErrCode.h
 */
 int  EtronDI_SetHWRegister(void *pHandleEtronDI, PDEVSELINFO pDevSelInfo, unsigned short address, unsigned short nValue,  int flag);
+
+/*! \fn int EtronDI_GetMultiBytesHWRegister(
+        void *pHandleEtronDI,
+        PDEVSELINFO pDevSelInfo,
+        unsigned short address,
+        unsigned short nValue,
+        int flag)
+    \brief set hardware register
+    \param void *pHandleEtronDI	CEtronDI handler
+    \param PDEVSELINFO pDevSelInfo	pointer of device select index
+    \param unsigned short address	register address
+    \param unsigned char *Data      multiple-bytes regigster value to set
+    \param int      size            multiple-bytes regigster size
+    \param int flag	address and value data length(2 or 1 byte)
+        ie FG_Address_1Byte | FG_Value_1Byte is 1 byte address and 1 byte value
+        #define FG_Address_1Byte 0x01
+        #define FG_Address_2Byte 0x02
+        #define FG_Value_1Byte   0x10
+        #define FG_Value_2Byte   0x20
+    \return success: EtronDI_OK, others: see eSPDI_ErrCode.h
+*/
+int EtronDI_GetMultiBytesHWRegister(void *pHandleEtronDI, PDEVSELINFO pDevSelInfo, unsigned short address, unsigned char *Data, int size, int flag);
+
+/*! \fn int EtronDI_SetMultiBytesHWRegister(
+        void *pHandleEtronDI,
+        PDEVSELINFO pDevSelInfo,
+        unsigned short address,
+        unsigned short nValue,
+        int flag)
+    \brief set hardware register
+    \param void *pHandleEtronDI	CEtronDI handler
+    \param PDEVSELINFO pDevSelInfo	pointer of device select index
+    \param unsigned short address	register address
+    \param unsigned char *Data      multiple-bytes regigster value to set
+    \param int      size            multiple-bytes regigster size
+    \param int flag	address and value data length(2 or 1 byte)
+        ie FG_Address_1Byte | FG_Value_1Byte is 1 byte address and 1 byte value
+        #define FG_Address_1Byte 0x01
+        #define FG_Address_2Byte 0x02
+        #define FG_Value_1Byte   0x10
+        #define FG_Value_2Byte   0x20
+    \return success: EtronDI_OK, others: see eSPDI_ErrCode.h
+*/
+int EtronDI_SetMultiBytesHWRegister(void *pHandleEtronDI, PDEVSELINFO pDevSelInfo, unsigned short address, unsigned char *Data, int size, int flag);
+
+
 // register APIs -
 
 // File ID +
@@ -900,6 +946,37 @@ int  EtronDI_GetColorImage(void *pHandleEtronDI, PDEVSELINFO pDevSelInfo,
                         BYTE *pBuf, unsigned long int *pImageSize,
                         int *pSerial = 0, int nDepthDataType =0);
 
+
+/*! \fn int EtronDI_GetColorImageWithTimestamp(
+        void *pHandleEtronDI,
+        PDEVSELINFO pDevSelInfo,
+        BYTE *pBuf,
+        unsigned long int *pImageSize,
+        int *pSerial, int nDepthDataType,
+        int64_t *pcur_tv_sec,
+        int64_t *pcur_tv_usec)
+    \brief get color image
+        by issuing V4L2's IOCTL to get frame data
+    \param void *pHandleEtronDI	CEtronDI handler
+    \param PDEVSELINFO pDevSelInfo	pointer of device select index
+    \param BYTE *pBuf	buffer to store image data
+    \param unsigned long int *pImageSize	the actual buffer size getting from device
+    \param int *pSerial	the serial number for synchronizing color and depth image
+    \param int nDepthDataType reserved, no used.
+    \param int64_t *pcur_tv_sec seconds in 'v4l2_buffer' timestamp of this image data
+    \param int64_t *pcur_tv_usec microseconds in 'v4l2_buffer' timestamp of this image data
+    \return success: EtronDI_OK, others: see eSPDI_def.h
+*/
+int EtronDI_GetColorImageWithTimestamp(
+    void *pHandleEtronDI,
+    PDEVSELINFO pDevSelInfo,
+    BYTE *pBuf,
+    unsigned long int *pImageSize,
+    int *pSerial,
+    int nDepthDataType,
+    int64_t *pcur_tv_sec,
+    int64_t *pcur_tv_usec);
+
 /*! \fn int EtronDI_GetDepthImage(
         void *pHandleEtronDI,
         PDEVSELINFO pDevSelInfo,
@@ -920,6 +997,35 @@ int  EtronDI_GetDepthImage(void *pHandleEtronDI, PDEVSELINFO pDevSelInfo,
                         BYTE *pBuf, unsigned long int *pImageSize,
                         int *pSerial = 0, int nDepthDataType =0);
 
+/*! \fn int EtronDI_GetDepthImageWithTimestamp(
+        void *pHandleEtronDI,
+        PDEVSELINFO pDevSelInfo,
+        BYTE *pBuf,
+        unsigned long int *pImageSize,
+        int *pSerial, int nDepthDataType,
+        int64_t *pcur_tv_sec,
+        int64_t *pcur_tv_usec)
+    \brief get color image
+        by issuing V4L2's IOCTL to get frame data
+    \param void *pHandleEtronDI	CEtronDI handler
+    \param PDEVSELINFO pDevSelInfo	pointer of device select index
+    \param BYTE *pBuf	buffer to store image data
+    \param unsigned long int *pImageSize	the actual buffer size getting from device
+    \param int *pSerial	the serial number for synchronizing color and depth image
+    \param int nDepthDataType reserved, no used.
+    \param int64_t *pcur_tv_sec seconds in 'v4l2_buffer' timestamp of this image data
+    \param int64_t *pcur_tv_usec microseconds in 'v4l2_buffer' timestamp of this image data
+    \return success: EtronDI_OK, others: see eSPDI_def.h
+*/
+int EtronDI_GetDepthImageWithTimestamp(
+    void *pHandleEtronDI,
+    PDEVSELINFO pDevSelInfo,
+    BYTE *pBuf,
+    unsigned long int *pImageSize,
+    int *pSerial,
+    int nDepthDataType,
+    int64_t *pcur_tv_sec,
+    int64_t *pcur_tv_usec);
 
 /*! \fn int EtronDI_SetupBlock(
         void *pHandleEtronDI,
