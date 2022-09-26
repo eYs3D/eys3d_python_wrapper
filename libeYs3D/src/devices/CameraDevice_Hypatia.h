@@ -1,16 +1,7 @@
 /*
- * Copyright (C) 2015-2019 ICL/ITRI
+ * Copyright (C) 2021 eYs3D Corporation
  * All rights reserved.
- *
- * NOTICE:  All information contained herein is, and remains
- * the property of ICL/ITRI and its suppliers, if any.
- * The intellectual and technical concepts contained
- * herein are proprietary to ICL/ITRI and its suppliers and
- * may be covered by Taiwan and Foreign Patents,
- * patents in process, and are protected by trade secret or copyright law.
- * Dissemination of this information or reproduction of this material
- * is strictly forbidden unless prior written permission is obtained
- * from ICL/ITRI.
+ * This project is licensed under the Apache License, Version 2.0.
  */
 
 #pragma once
@@ -35,13 +26,17 @@ public:
                            libeYs3D::video::Producer::Callback depthImageCallback,
                            libeYs3D::video::PCProducer::PCCallback pcFrameCallback,
                            libeYs3D::sensors::SensorDataProducer::AppCallback imuDataCallback = nullptr) override;
+    virtual int setIRMax(bool ExtendIREnabled);
 
     virtual ~CameraDeviceHypatia() = default;
 
+	explicit CameraDeviceHypatia(DEVSELINFO *devSelInfo, DEVINFORMATION *deviceInfo);
+	explicit CameraDeviceHypatia(DEVSELINFO *devSelInfo, DEVINFORMATION *deviceInfo, COLOR_BYTE_ORDER colorByteOrder);
+
 protected:
-    explicit CameraDeviceHypatia(DEVSELINFO *devSelInfo, DEVINFORMATION *deviceInfo);
 
     virtual int getZDTableIndex();
+    virtual int initIRProperty();
 };
 
 } // end of namespace devices

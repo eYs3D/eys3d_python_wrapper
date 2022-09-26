@@ -21,7 +21,8 @@ class EYS3DSystem:
     Then, it creates device instance by object.
     """
     def __init__(self):
-        self.system = eys3dPy.System.get_eys3d_system()
+        #self.system = eys3dPy.System.get_eys3d_system()
+        self.system = eys3dPy.System(eys3dPy.COLOR_BYTE_ORDER.COLOR_BGR24)
 
     def get_camera_device(self, camera_index):
         """Get the eys3d camera device.
@@ -402,12 +403,6 @@ class Device(object):
         count (int): The count of valuable pixel to calculate.
         """
         self.__camera_device.set_septh_roi_pixels(count)
-
-    def set_PCFrame_producing_base(self, PCFRAME_PRODUCING_BASE):
-        self.__camera_device.set_PCFrame_producing_base(PCFRAME_PRODUCING_BASE)
-
-    def get_PCFrame_producing_base(self,):
-        return self.__camera_device.get_PCFrame_producing_base()
 
     def dump_camera_device_properties(self):
         """

@@ -162,7 +162,7 @@ Hot Keys:
 * \<F2\>: Dump frame info
 * \<F3\>: Dump IMU data
 * \<F4\>: Dump eYs3D system info
-* \<F5\>: Save rectify log 
+* \<F5\>: Save rectify log
 * \<F6\>: Dump camera properties info
 * F/f: Enable/Disable Ply filter
 * I/i: Enable/Disable extend maximum IR value
@@ -190,7 +190,7 @@ export EYS3D_HOME="The directory user would like"
 `$EYS3D_HOME/logs`
 
 #### ModeConfig.db
-`${EYS3D_HOME}/cfg/ModeConfig.db` record the camera parameters for streaming, which is corresponded to PIF document. 
+`${EYS3D_HOME}/cfg/ModeConfig.db` record the camera parameters for streaming, which is corresponded to PIF document.
 
 ### If user would like to set depth data type manually
 Please read PIF and check which bit is acceptable in advance. 
@@ -201,6 +201,46 @@ ex: If your module is 8062, mode index 1 and depth_data_type 14 bits.
 sh run_demo.sh 8062 1 14
 ```
 
+### Callback API
+```python
+def callback_sample(device, config):
+    pipe = Pipeline(device=device)
+    conf = config
+
+    device.open_device(conf,
+                       colorFrameCallback=color_frame_callback,
+                       depthFrameCallback=depth_frame_callback,
+                       IMUDataCallback=imu_data_callback)
+    device.enable_stream()
+    device.pause_stream()
+    device.enable_stream()
+    device.close_stream()
+
+def color_frame_callback(frame):
+    print("[Python][COLOR] The S/N in callback function: {}".format(frame.get_serial_number()))
+
+def depth_frame_callback(frame):
+    print("[Python][DEPTH] The S/N in callback function: {}".format(frame.get_serial_number()))
+```
+### WaitForFrame Code Snippet
+```python
+def pipeline_sample(device, config):
+    pipe = Pipeline(device=device)
+    conf = config
+    pipe.start(conf)
+
+    cframe = pipe.wait_color_frame()
+    bgr_cframe = cv2.cvtColor(cframe.get_rgb_data().reshape(cframe.get_height(), cframe.get_width(), 3),
+                              cv2.COLOR_RGB2BGR)
+    cv2.imshow("Color image", bgr_cframe)
+
+    dframe = pipe.wait_depth_frame()
+    bgr_dframe = cv2.cvtColor(dframe.get_rgb_data().reshape(dframe.get_height(), dframe.get_width(), 3),
+                              cv2.COLOR_RGB2BGR)
+    cv2.imshow("Depth image", bgr_dframe)
+    z_map = dframe.get_depth_ZD_value().reshape(dframe.get_height(), dframe.get_width())
+    pipe.stop()
+```
 ### Depth Accuracy 
 Please execute the `accuracy_demo` to calculate the quality of depth frame. <br>
 User should decide the region ratio and ground truth distance in mm to calculate. <br>

@@ -13,18 +13,9 @@
 // limitations under the License.
 
 /*
- * Copyright (C) 2015-2019 ICL/ITRI
+ * Copyright (C) 2021 eYs3D Corporation
  * All rights reserved.
- *
- * NOTICE:  All information contained herein is, and remains
- * the property of ICL/ITRI and its suppliers, if any.
- * The intellectual and technical concepts contained
- * herein are proprietary to ICL/ITRI and its suppliers and
- * may be covered by Taiwan and Foreign Patents,
- * patents in process, and are protected by trade secret or copyright law.
- * Dissemination of this information or reproduction of this material
- * is strictly forbidden unless prior written permission is obtained
- * from ICL/ITRI.
+ * This project is licensed under the Apache License, Version 2.0.
  */
 
 #pragma once
@@ -55,9 +46,11 @@ class AutoReadLock;
 class StaticLock {
 public:
     using AutoLock = base::AutoLock;
-
+#ifdef _WIN32
+    StaticLock() { ::InitializeSRWLock(&mLock); };
+#else
     constexpr StaticLock() = default;
-
+#endif
     // Acquire the lock.
     void lock() {
 #ifdef _WIN32
@@ -127,7 +120,7 @@ public:
     using AutoReadLock = base::AutoReadLock;
 
 #ifdef _WIN32
-    constexpr ReadWriteLock() = default;
+    ReadWriteLock() { ::InitializeSRWLock(&mLock); }
     ~ReadWriteLock() = default;
     void lockRead() { ::AcquireSRWLockShared(&mLock); }
     void unlockRead() { ::ReleaseSRWLockShared(&mLock); }
@@ -203,7 +196,7 @@ public:
     }
 
     void unlockWrite() {
-        assert(mWriteLocked);
+		assert(mWriteLocked);
         mLock.unlockWrite();
         mWriteLocked = false;
     }

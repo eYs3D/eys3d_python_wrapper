@@ -1,16 +1,7 @@
 /*
- * Copyright (C) 2015-2017 ICL/ITRI
+ * Copyright (C) 2021 eYs3D Corporation
  * All rights reserved.
- *
- * NOTICE:  All information contained herein is, and remains
- * the property of ICL/ITRI and its suppliers, if any.
- * The intellectual and technical concepts contained
- * herein are proprietary to ICL/ITRI and its suppliers and
- * may be covered by Taiwan and Foreign Patents,
- * patents in process, and are protected by trade secret or copyright law.
- * Dissemination of this information or reproduction of this material
- * is strictly forbidden unless prior written permission is obtained
- * from ICL/ITRI.
+ * This project is licensed under the Apache License, Version 2.0.
  */
 
 #pragma once
@@ -20,6 +11,7 @@
 #include "sensors/SensorData.h"
 #include "base/synchronization/Lock.h"
 #include "GeneralFrame.h"
+#include "video/video.h"
 
 #include <cstdint>                // for uint8_t, uint32_t, uint64_t
 #include <vector>                 // for vector
@@ -40,7 +32,13 @@ public:
     int32_t height;
     uint64_t actualDataBufferSize;  // the actual buffer size getting from device
     uint64_t dataBufferSize;        // the data length of dataVec
-    
+    uint16_t nDevType;
+    int32_t nZDTableSize;// = APC_ZD_TABLE_FILE_SIZE_11_BITS;
+    std::vector<uint8_t> nZDTable;
+    uint16_t getDepth( int x, int y) const;
+    uint16_t getZValue(uint16_t depth) const;
+    uint64_t processedBufferSize;   // e.g. 720p Decimation filter resized dataVec to 360p, but capacity is still the same.
+
 #ifdef DEVICE_MEMORY_ALLOCATOR
     std::vector<uint8_t, libeYs3D::devices::MemoryAllocator<uint8_t>> dataVec;
 #else
@@ -67,18 +65,6 @@ public:
 #endif
 
     /*
-     * for the case when color resolution != depth resolution,
-     * when displaying PC frame, 
-     * the RGB of depth frame has to be resample to the resolution of color freme
-     *     * these filed won't be cloned when cloning frame 
-     */
-    int32_t rgbResampledWidth;
-    int32_t rgbResampledHeight;
-    uint64_t actualResamledRGBBufferSize; // the actual buffer size when converting the image
-    uint64_t rgbResampledBufferSize;      // the image buffer size of imageVec
-    std::vector<uint8_t> rgbResampledVec;
-
-    /*
      * for color frame:
      *     libeYs3D::video::COLOR_RAW_DATA_TYPE
      * for depth frame:
@@ -86,7 +72,7 @@ public:
      */
     uint32_t dataFormat;
     
-    /* TODO:
+    /*
      * the format of RGB transcoding format 
      */
     uint32_t rgbFormat;
@@ -114,8 +100,12 @@ public:
           uint64_t rgbBufferSize = 0, uint8_t initRGBVal = 0);
     
 #ifdef DEVICE_MEMORY_ALLOCATOR
-    Frame(uint64_t dataBufferSize, uint64_t rgbBufferSize, uint8_t val,
-          libeYs3D::devices::MemoryAllocator<uint8_t> &allocator);
+
+	Frame(uint64_t dataBufferSize, uint8_t initDataVal,
+		  uint64_t zdDepthBufferSize, uint16_t initZDDepthVal,
+		  uint64_t rgbBufferSize, uint8_t initRGBVal,
+		  libeYs3D::devices::MemoryAllocator<uint8_t> &byte_allocator,
+		  libeYs3D::devices::MemoryAllocator<uint16_t> &word_allocator);
 #endif
 
     int toString(char *buffer, int bufferLength) const;
@@ -128,8 +118,6 @@ public:
     int saveToFile(const char *dirPath) const;
     
     void clone(const Frame *frame);
-    
-    void resampleRGBImage(int32_t newWidth, int32_t newHeight);
 
     // Move constructor
     Frame(Frame&& f) = default;

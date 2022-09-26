@@ -13,18 +13,9 @@
 // limitations under the License.
 
 /*
- * Copyright (C) 2015-2019 ICL/ITRI
+ * Copyright (C) 2021 eYs3D Corporation
  * All rights reserved.
- *
- * NOTICE:  All information contained herein is, and remains
- * the property of ICL/ITRI and its suppliers, if any.
- * The intellectual and technical concepts contained
- * herein are proprietary to ICL/ITRI and its suppliers and
- * may be covered by Taiwan and Foreign Patents,
- * patents in process, and are protected by trade secret or copyright law.
- * Dissemination of this information or reproduction of this material
- * is strictly forbidden unless prior written permission is obtained
- * from ICL/ITRI.
+ * This project is licensed under the Apache License, Version 2.0.
  */
 
 #pragma once
@@ -96,6 +87,10 @@ public:
     // (e.g. if the thread was already started or terminated).
     bool start();
 
+	// Teminate a thread. Return true on success, false otherwise
+	// NB: noop for non-Win32
+	bool terminate();
+
     // Wait for thread termination and retrieve exist status into
     // |*exitStatus|. Return true on success, false otherwise.
     // NOTE: |exitStatus| can be NULL.
@@ -157,6 +152,7 @@ public:
         Thread(flags, stackSize) { }
 
     virtual void interrupt() = 0;
+	
 };
 
 }  // namespace base

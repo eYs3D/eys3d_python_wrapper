@@ -1,16 +1,7 @@
 /*
- * Copyright (C) 2015-2019 ICL/ITRI
+ * Copyright (C) 2021 eYs3D Corporation
  * All rights reserved.
- *
- * NOTICE:  All information contained herein is, and remains
- * the property of ICL/ITRI and its suppliers, if any.
- * The intellectual and technical concepts contained
- * herein are proprietary to ICL/ITRI and its suppliers and
- * may be covered by Taiwan and Foreign Patents,
- * patents in process, and are protected by trade secret or copyright law.
- * Dissemination of this information or reproduction of this material
- * is strictly forbidden unless prior written permission is obtained
- * from ICL/ITRI.
+ * This project is licensed under the Apache License, Version 2.0.
  */
 
 #pragma once
@@ -18,8 +9,12 @@
 #include <stdint.h>
 #include <cstdio>
 #include <ctime>
+#include <iostream>
+#include <chrono>
+#include <thread>
 
 #ifdef WIN32
+#  include <winsock.h>
 #  include "eSPDI_Common.h"
 #else
 #  include "eSPDI_def.h"
@@ -79,6 +74,8 @@ int get_model_name(const char *devPath, char *out, int length, const char *log_t
 #endif
 USB_PORT_TYPE get_usb_type(const char *devPath);
 
+void reschedule(std::chrono::microseconds us);
+
 #ifdef WIN32
 #define ushort USHORT
 int gettimeofday(struct timeval *tp, void *tzp);
@@ -88,5 +85,3 @@ int is_big_endian(void);
 char* dirname(char *path);
 int clock_gettime(int, struct timespec *tv);
 #endif
-void sha256_buffer(const void *buffer, size_t bufferLength,
-                   char *outputBuffer, size_t outputBufferLength);

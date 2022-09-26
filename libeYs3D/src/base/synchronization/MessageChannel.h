@@ -13,18 +13,9 @@
 // limitations under the License.
 
 /*
- * Copyright (C) 2015-2019 ICL/ITRI
+ * Copyright (C) 2021 eYs3D Corporation
  * All rights reserved.
- *
- * NOTICE:  All information contained herein is, and remains
- * the property of ICL/ITRI and its suppliers, if any.
- * The intellectual and technical concepts contained
- * herein are proprietary to ICL/ITRI and its suppliers and
- * may be covered by Taiwan and Foreign Patents,
- * patents in process, and are protected by trade secret or copyright law.
- * Dissemination of this information or reproduction of this material
- * is strictly forbidden unless prior written permission is obtained
- * from ICL/ITRI.
+ * This project is licensed under the Apache License, Version 2.0.
  */
 
 #pragma once
@@ -135,7 +126,7 @@ public:
 
     bool send(const T& msg) {
         const size_t pos = beforeWrite();
-        const bool res = !isStoppedLocked();
+        const bool res = !isStoppedLocked() && (capacity() != pos);
         if (res) {
             mItems[pos] = msg;
         }
@@ -145,7 +136,7 @@ public:
 
     bool send(T&& msg) {
         const size_t pos = beforeWrite();
-        const bool res = !isStoppedLocked();
+        const bool res = !isStoppedLocked() && (capacity() != pos);
         if (res) {
             mItems[pos] = std::move(msg);
         }
@@ -155,25 +146,27 @@ public:
 
     bool trySend(const T& msg) {
         const auto pos = beforeTryWrite();
-        if (pos) {
+		const bool res = !isStoppedLocked() && (capacity() != pos);
+        if (res) {
             mItems[*pos] = msg;
         }
-        afterWrite(pos);
-        return pos;
+        afterWrite(res);
+        return res;
     }
 
     bool trySend(T&& msg) {
         const auto pos = beforeTryWrite();
-        if (pos) {
+		const bool res = !isStoppedLocked() && (capacity() != pos);
+        if (res) {
             mItems[*pos] = std::move(msg);
         }
-        afterWrite(pos);
-        return pos;
+        afterWrite(res);
+        return res;
     }
 
     bool receive(T* msg) {
         const size_t pos = beforeRead();
-        const bool res = !isStoppedLocked();
+        const bool res = !isStoppedLocked() && (capacity() != pos);
         if (res) {
             *msg = std::move(mItems[pos]);
         }
@@ -183,7 +176,8 @@ public:
 
     Optional<T> receive() {
         const size_t pos = beforeRead();
-        if (!isStoppedLocked()) {
+		const bool res = !isStoppedLocked() && (capacity() != pos);
+        if (res) {
             Optional<T> msg(std::move(mItems[pos]));
             afterRead(true);
             return msg;
@@ -195,19 +189,21 @@ public:
 
     bool tryReceive(T* msg) {
         const auto pos = beforeTryRead();
-        if (pos) {
+		const bool res = !isStoppedLocked() && (capacity() != pos);
+        if (res) {
             *msg = std::move(mItems[*pos]);
         }
-        afterRead(pos);
-        return pos;
+        afterRead(res);
+        return res;
     }
 
     Optional<T> timedReceive(int64_t wallTimeUs) {
         const auto pos = beforeTimedRead(wallTimeUs);
-        if (pos && !isStoppedLocked()) {
-            Optional<T> res(std::move(mItems[*pos]));
+		const bool res = !isStoppedLocked() && (capacity() != pos);
+        if (res) {
+            Optional<T> item(std::move(mItems[*pos]));
             afterRead(true);
-            return res;
+            return item;
         }
         afterRead(false);
         return {};

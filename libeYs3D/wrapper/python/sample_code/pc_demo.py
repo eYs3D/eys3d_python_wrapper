@@ -36,7 +36,11 @@ import math
 import threading
 import cv2
 
-from eys3d import Pipeline, Config, logger, PCFRAME_PRODUCING_BASE
+from eys3d import Pipeline, Config, logger
+
+xLen = 1280
+yLen = 720
+# ptLen = xLen * yLen
 
 aMaxBox = [-1e10] * 3
 aMinBox = [1e10] * 3
@@ -187,21 +191,24 @@ def MoveMouse(window, x, y):
         mOut[1] = y
         SetRot()
 
-# @logger.catch
-def DrawPCloud():
+
+def DrawPCloud(config):
     global aXyz, aRgb, pcframe, pc
     try:
         lock.acquire()
         glEnableClientState(GL_VERTEX_ARRAY)
         glVertexPointer(3, GL_FLOAT, 0, aXyz)
+
+        (colorH, colorW) = config.get_color_stream_resolution()
+        (depthH, depthW) = config.get_depth_stream_resolution()
+        ptLen = colorH*colorW
         if point_cloud_viewer_format == 0:
-            dev.set_PCFrame_producing_base(PCFRAME_PRODUCING_BASE.COLOR_FRAME_AS_BASE)
             glEnableClientState(GL_COLOR_ARRAY)
             glColorPointer(3, GL_UNSIGNED_BYTE, 0, aRgb)  # aRgb, dRgb
         elif point_cloud_viewer_format == 1:
-            dev.set_PCFrame_producing_base(PCFRAME_PRODUCING_BASE.DEPTH_FRAME_AS_BASE)
             glEnableClientState(GL_COLOR_ARRAY)
-            glColorPointer(3, GL_UNSIGNED_BYTE, 0, aRgb)  # aRgb, dRgb
+            glColorPointer(3, GL_UNSIGNED_BYTE, 0, dRgb)  # aRgb, dRgb
+            ptLen = depthH*depthW
         elif point_cloud_viewer_format == 2:
             glColor4f(0, 1, 0, 0)  # Green
         glPointSize(2.0)
@@ -209,9 +216,9 @@ def DrawPCloud():
         glDisableClientState(GL_VERTEX_ARRAY)
         glDisableClientState(GL_COLOR_ARRAY)
         lock.release()
-    except Exception as e:
+    except:
         lock.release()
-        logger.warning(e)
+        pass
 
 
 def ScrollMouse(window, x, y):
@@ -232,9 +239,8 @@ def DrawAxis():
 
 
 def depth_frame_callback(dframe):
-    global dRgb, dRgb_resized
+    global dRgb
     dRgb = dframe.get_rgb_data()
-    dRgb_resized = dframe.get_resample_data(W, H)
 
 
 def pc_frame_callback(pcframe):
@@ -265,7 +271,7 @@ def pc_frame_callback(pcframe):
 
 
 def pc_sample(device, config):
-    global point_cloud_viewer_format, ZNEAR_DEFAULT, ZFAR_DEFAULT, H, W, ptLen
+    global point_cloud_viewer_format, ZNEAR_DEFAULT, ZFAR_DEFAULT
     while True:
         point_cloud_viewer_format = input(
             "Please input point cloud viewer format(0: Color, 1: Depth input, 2: Single color)? "
@@ -281,19 +287,16 @@ def pc_sample(device, config):
     global dev
     dev = device
     # pipe = Pipeline(device=device)
-    (H, W) = config.get_color_stream_resolution()
-
-    #open device and init stream
+    # if config.get_config()['colorHeight'] is 0:
+    #     config.ep0Width = config.ep1Width
+    #     config.ep0Height = config.ep1Height
     device.open_device(config,
                        depthFrameCallback=depth_frame_callback,
                        PCFrameCallback=pc_frame_callback)
     device.enable_stream()
     # Enable interleave if interleave mode
-    if config.interleavefps:
-        device.enable_interleave_mode()
     (H, W) = config.get_color_stream_resolution(
     )  # Get the resolution of color stream
-    ptLen = H * W
     # W = 1280
     # H = 760
 
@@ -303,6 +306,8 @@ def pc_sample(device, config):
     ZFAR_DEFAULT = z_range["Far"]
     logger.info("Default ZNear: {}, ZFar: {}".format(ZNEAR_DEFAULT,
                                                      ZFAR_DEFAULT))
+
+    global aXyz, aRgb, pc
 
     # Initialize the library
     if not glfw.init():
@@ -337,14 +342,14 @@ def pc_sample(device, config):
 
     t1 = time.time()
     logger.info("GLFW start to preview")
-    time.sleep(0.5) # wait for aXyz ready
     while not glfw.window_should_close(window):
 
         # Render here, e.g. using pyOpenGL
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
 
         DrawAxis()
-        DrawPCloud()
+        DrawPCloud(config)
+
         # Swap front and back buffers
         glfw.swap_buffers(window)
 

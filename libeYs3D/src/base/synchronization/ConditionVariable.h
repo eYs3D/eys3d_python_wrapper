@@ -13,18 +13,9 @@
 // limitations under the License.
 
 /*
- * Copyright (C) 2015-2019 ICL/ITRI
+ * Copyright (C) 2021 eYs3D Corporation
  * All rights reserved.
- *
- * NOTICE:  All information contained herein is, and remains
- * the property of ICL/ITRI and its suppliers, if any.
- * The intellectual and technical concepts contained
- * herein are proprietary to ICL/ITRI and its suppliers and
- * may be covered by Taiwan and Foreign Patents,
- * patents in process, and are protected by trade secret or copyright law.
- * Dissemination of this information or reproduction of this material
- * is strictly forbidden unless prior written permission is obtained
- * from ICL/ITRI.
+ * This project is licensed under the Apache License, Version 2.0.
  */
 
 #pragma once
@@ -61,9 +52,13 @@ public:
     // for each platform and abstract it out from the user.
     void signalAndUnlock(StaticLock* lock);
     void signalAndUnlock(AutoLock* lock);
+    void signalAndUnlock(AutoWriteLock* lock);
+	void signalAndUnlock(AutoReadLock* lock);
 
     void broadcastAndUnlock(StaticLock* lock);
     void broadcastAndUnlock(AutoLock* lock);
+	void broadcastAndUnlock(AutoWriteLock* lock);
+	void broadcastAndUnlock(AutoReadLock* lock);
 
     void wait(AutoLock* userLock) {
         assert(userLock->mLocked);
@@ -100,6 +95,12 @@ public:
         this->wait(&lock->mLock, pred);
     }
 
+	
+    template <class Predicate>
+    void wait(ReadWriteLock* lock, Predicate pred) {
+        this->wait(&lock->mLock, pred);
+    }
+
 #ifdef _WIN32
 
     ConditionVariable() {
@@ -124,7 +125,22 @@ public:
     }
 
     bool timedWait(StaticLock *userLock, int64_t waitUntilUs) {
-        //const auto now = System::get()->getUnixTimeUs();
+        const auto now = now_in_microsecond_unix_time();
+        const auto timeout =
+                std::max<int64_t>(0, waitUntilUs  - now) / 1000;
+        return ::SleepConditionVariableSRW(
+                    &mCond, &userLock->mLock, timeout, 0) != 0;
+    }
+
+    bool timedWaitDebug(StaticLock* userLock, int64_t waitUntilUs) {
+        const auto now = now_in_microsecond_unix_time();
+        const auto timeout =
+                std::max<int64_t>(0, waitUntilUs  - now) / 1000;
+        return ::SleepConditionVariableSRW(
+                    &mCond, &userLock->mLock, timeout, 0) != 0;
+    }
+
+    bool timedWaitDebug(ReadWriteLock* userLock, int64_t waitUntilUs) {
         const auto now = now_in_microsecond_unix_time();
         const auto timeout =
                 std::max<int64_t>(0, waitUntilUs  - now) / 1000;
@@ -171,7 +187,7 @@ private:
     void wait(StaticLock* userLock) {
         pthread_cond_wait(&mCond, &userLock->mLock);
     }
-    
+
     bool timedWait(StaticLock* userLock, int64_t waitUntilUs) {
         timespec abstime;
         abstime.tv_sec = waitUntilUs / 1000000LL;
@@ -241,13 +257,28 @@ inline void ConditionVariable::signalAndUnlock(AutoLock* lock) {
     lock->unlock();
     signal();
 }
-
+inline void ConditionVariable::signalAndUnlock(AutoWriteLock* lock) {
+    lock->unlockWrite();
+    signal();
+}
+inline void ConditionVariable::signalAndUnlock(AutoReadLock* lock) {
+    lock->unlockRead();
+    signal();
+}
 inline void ConditionVariable::broadcastAndUnlock(StaticLock* lock) {
     lock->unlock();
     broadcast();
 }
 inline void ConditionVariable::broadcastAndUnlock(AutoLock* lock) {
     lock->unlock();
+    broadcast();
+}
+inline void ConditionVariable::broadcastAndUnlock(AutoWriteLock* lock) {
+    lock->unlockWrite();
+    broadcast();
+}
+inline void ConditionVariable::broadcastAndUnlock(AutoReadLock* lock) {
+    lock->unlockRead();
     broadcast();
 }
 #else  // !_WIN32
@@ -259,6 +290,14 @@ inline void ConditionVariable::signalAndUnlock(AutoLock* lock) {
     signal();
     lock->unlock();
 }
+inline void ConditionVariable::signalAndUnlock(AutoWriteLock* lock) {
+    signal();
+    lock->unlockWrite();
+}
+inline void ConditionVariable::signalAndUnlock(AutoReadLock* lock) {
+    signal();
+    lock->unlockRead();
+}
 inline void ConditionVariable::broadcastAndUnlock(StaticLock* lock) {
     broadcast();
     lock->unlock();
@@ -266,6 +305,14 @@ inline void ConditionVariable::broadcastAndUnlock(StaticLock* lock) {
 inline void ConditionVariable::broadcastAndUnlock(AutoLock* lock) {
     broadcast();
     lock->unlock();
+}
+inline void ConditionVariable::broadcastAndUnlock(AutoWriteLock* lock) {
+    broadcast();
+    lock->unlockWrite();
+}
+inline void ConditionVariable::broadcastAndUnlock(AutoReadLock* lock) {
+    broadcast();
+    lock->unlockRead();
 }
 #endif  // !_WIN32
 

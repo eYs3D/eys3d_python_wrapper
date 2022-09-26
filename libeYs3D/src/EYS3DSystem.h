@@ -1,16 +1,7 @@
 /*
- * Copyright (C) 2015-2019 ICL/ITRI
+ * Copyright (C) 2021 eYs3D Corporation
  * All rights reserved.
- *
- * NOTICE:  All information contained herein is, and remains
- * the property of ICL/ITRI and its suppliers, if any.
- * The intellectual and technical concepts contained
- * herein are proprietary to ICL/ITRI and its suppliers and
- * may be covered by Taiwan and Foreign Patents,
- * patents in process, and are protected by trade secret or copyright law.
- * Dissemination of this information or reproduction of this material
- * is strictly forbidden unless prior written permission is obtained
- * from ICL/ITRI.
+ * This project is licensed under the Apache License, Version 2.0.
  */
 
 #pragma once
@@ -63,57 +54,52 @@ struct DeviceSellectInfo    {
 
 class EYS3DSystem    {
 public:
-    static std::shared_ptr<EYS3DSystem> getEYS3DSystem();
+    enum class COLOR_BYTE_ORDER {
+        COLOR_RGB24,
+        COLOR_BGR24
+    };
+    COLOR_BYTE_ORDER mColorByteOrder;
 
     int getCameraDeviceCount()    { return mDeviceCount; }
     std::shared_ptr<CameraDevice> getCameraDevice(int index);
-    void *getEYS3DDIHandle();
+    static void *getEYS3DDIHandle();
 	int getDeviceCount();
 
-    std::vector<std::string> getHIDDeviceList(uint16_t nVID, uint16_t nPID);
-    uint8_t generateModelID();
+    static uint8_t generateModelID();
     
     void dumpSystemInfo();
+
+    static char *getSDKHomePath();
+    static char *getHomePath();
+    static char *getLogPath();
+    static char *getFramePath();
+    static char *getVideoRecordingPath();
+    static char *getSnapshotPath();
+    static char *getIMULogPath();
+    static char *getReadRegisterLogsPath();
     
-    const char *getSDKHomePath();
-    const char *getHomePath() const   { return mHomePath; }
-    const char *getLogPath() const   { return mLogPath; }
-    const char *getFramePath() const    { return mFramePath; }
-    const char *getVideoRecordingPath() const    { return mVideoRecordingPath; }
-    const char *getSnapshotPath() const    { return mSnapshotPath; }
-    const char *getIMULogPath() const    { return mIMULogPath; }
-    
-    int getFPSWindowSize()    { return mFPSWindowSize; }
-    
+    static int getFPSWindowSize();
+
+    explicit EYS3DSystem();
+    explicit EYS3DSystem(COLOR_BYTE_ORDER colorByteOrder);
+	
     virtual ~EYS3DSystem();
 
-private:
-    explicit EYS3DSystem();
+	static void initHID();
+	static void clearHID();
+	static std::vector<std::string> getHIDDeviceList(uint16_t nVID, uint16_t nPID);
 
-    int initialize();
+	int initialize();
+
+private:
+
     int createEYS3DHome();
 
-    void initHID();
-    void clearHID();
-
 private:
-    static std::shared_ptr<EYS3DSystem> sEYS3DSystem;
 
-    void *mEYS3DDIHandle;
     int mDeviceCount;
     std::map<DeviceSellectInfo, std::shared_ptr<CameraDevice>>mDeviceMap;
 
-    std::map<std::pair<uint16_t, uint16_t>, std::vector<std::string>> mHidDeviceMap;
-    
-    char mSDKHomePath[PATH_MAX];
-    char mHomePath[PATH_MAX];
-    char mLogPath[PATH_MAX];
-    char mFramePath[PATH_MAX];
-    char mVideoRecordingPath[PATH_MAX];
-    char mSnapshotPath[PATH_MAX];
-    char mIMULogPath[PATH_MAX];
-    
-    int mFPSWindowSize;
 };
 
 } // end of namespace libeYs3D

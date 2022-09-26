@@ -2,8 +2,8 @@
 #define COLORPALETTEGENERATOR_H
 
 #define COLOR_PALETTE_MAX_COUNT 16384
-
 #ifdef WIN32
+#include <windows.h>
 #else
 typedef struct tagRGBQUARD {
     unsigned char rgbBlue;

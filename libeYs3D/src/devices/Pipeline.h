@@ -1,16 +1,7 @@
 /*
- * Copyright (C) 2015-2019 ICL/ITRI
+ * Copyright (C) 2021 eYs3D Corporation
  * All rights reserved.
- *
- * NOTICE:  All information contained herein is, and remains
- * the property of ICL/ITRI and its suppliers, if any.
- * The intellectual and technical concepts contained
- * herein are proprietary to ICL/ITRI and its suppliers and
- * may be covered by Taiwan and Foreign Patents,
- * patents in process, and are protected by trade secret or copyright law.
- * Dissemination of this information or reproduction of this material
- * is strictly forbidden unless prior written permission is obtained
- * from ICL/ITRI.
+ * This project is licensed under the Apache License, Version 2.0.
  */
 
 #pragma once
@@ -26,6 +17,8 @@
 #include "macros.h"
 
 #include <stdio.h>
+
+#define DEBUGGING false
 
 #define DEFAULT_TIMEOUT_MS   3200
 #define DEFAULT_TIMEOUT_US   3200000
@@ -47,6 +40,157 @@ public:
 template <typename T, size_t CAPACITY>
 class CircularQueue    {
 public:
+#ifdef _WIN32
+    Pipeline::RESULT enQueue(const T *item, int32_t timeoutMs = DEFAULT_TIMEOUT_MS)    {
+
+		if(mStopped)    return Pipeline::RESULT::STOPPED;
+
+		mLock.lockWrite();
+
+		Pipeline::RESULT ret = Pipeline::RESULT::OK;
+
+        while(mCount == mCapacity && Pipeline::RESULT::OK == ret)    { // queue full, mRear == mFront
+
+            if (mStopped) {
+				ret = Pipeline::RESULT::STOPPED;
+				break;
+            }
+
+			if (timeoutMs == 0) {
+				mFront = (mFront + 1) % mCapacity;
+				mRear = (mRear + 1) % mCapacity;
+				mItems[mRear].clone(item);
+
+				LOG_INFO("enQueue" , "%s: queue is full, mFront=%d, mRear = %d, mCount=%d", mName, mFront, mRear, mCount);
+				ret = Pipeline::RESULT::QUEUE_FULL;
+			} else if (timeoutMs < 0) { // wait forever
+				 // instead of using wait() to check if the queue is stopped
+				if(false == mReadyToProduce.timedWaitDebug(&mLock,
+									  now_in_microsecond_unix_time() +
+									  (DEFAULT_TIMEOUT_MS * 1000))) {
+					LOG_INFO("enQueue" , "%s: sync error, mFront=%d, mRear = %d, mCount=%d", mName, mFront, mRear, mCount);
+					ret = Pipeline::RESULT::SYNC_ERROR;
+				}
+			} else {
+                if(false == mReadyToProduce.timedWaitDebug(&mLock,
+                                      now_in_microsecond_unix_time() +
+                                      (timeoutMs * 1000))) {
+					LOG_INFO("enQueue" , "%s: sync error, mFront=%d, mRear = %d, mCount=%d", mName, mFront, mRear, mCount);
+					ret = Pipeline::RESULT::SYNC_ERROR;
+                }
+			}
+
+			if (DEBUGGING && Pipeline::RESULT::OK == ret)
+				LOG_INFO("enQueue" , "%s: loop again, mFront=%d, mRear = %d, mCount=%d", mName, mFront, mRear, mCount);
+        } // end of while(true)
+
+
+		if (Pipeline::RESULT::OK == ret) {
+		   mRear = (mRear + 1) % mCapacity;
+		   mItems[mRear].clone(item);
+		   mCount += 1;
+		}
+
+		if (DEBUGGING)
+			LOG_INFO("enQueue" , "%s: mCount=%d", mName, mCount);
+
+		mLock.unlockWrite();
+
+		if (Pipeline::RESULT::STOPPED == ret)
+			mReadyToProduce.broadcast();
+		else
+			mReadyToConsume.broadcast();
+
+        return Pipeline::RESULT::OK;
+    }
+    
+    Pipeline::RESULT deQueue(T *item, int32_t timeoutMs = DEFAULT_TIMEOUT_MS)    {
+
+        if(mStopped)    return Pipeline::RESULT::STOPPED;
+
+		mLock.lockRead();
+
+		Pipeline::RESULT ret = Pipeline::RESULT::OK;
+		
+        while(mCount == 0 && Pipeline::RESULT::OK == ret)    {
+
+            if(mStopped) {
+				ret = Pipeline::RESULT::STOPPED;
+				break;
+            }
+            
+            if(timeoutMs == 0)    {
+				LOG_INFO("deQueue" , "%s: queue is empty, mFront=%d, mRear = %d, mCount=%d", mName, mFront, mRear, mCount);
+                ret = Pipeline::RESULT::QUEUE_EMPTY;
+            } else if(timeoutMs > 0)    {
+                if(false == mReadyToConsume.timedWaitDebug(&mLock,
+                                      now_in_microsecond_unix_time() +
+                                      (timeoutMs * 1000))) {
+					LOG_INFO("deQueue" , "%s: sync error, mFront=%d, mRear = %d, mCount=%d", mName, mFront, mRear, mCount);
+                    ret = Pipeline::RESULT::SYNC_ERROR;
+                }
+            } else if (timeoutMs < 0) { // wait forever
+                 // instead of using wait() to check if the queue is stopped
+                if(false == mReadyToConsume.timedWaitDebug(&mLock,
+                                      now_in_microsecond_unix_time() +
+                                      (DEFAULT_TIMEOUT_MS * 1000))) {
+					LOG_INFO("deQueue" , "%s: sync error, mFront=%d, mRear = %d, mCount=%d", mName, mFront, mRear, mCount);
+                    ret = Pipeline::RESULT::SYNC_ERROR;
+                }
+            }
+
+			if (DEBUGGING && Pipeline::RESULT::OK == ret)
+				LOG_INFO("deQueue" , "%s: loop again, mFront=%d, mRear = %d, mCount=%d", mName, mFront, mRear, mCount);
+
+        }
+
+		if (Pipeline::RESULT::OK == ret) {
+    		mFront = (mFront + 1) % mCapacity;
+    		item->clone(&mItems[mFront]);
+    		mCount -= 1;
+		}
+
+		if (DEBUGGING)
+			LOG_INFO("deQueue" , "%s: mCount=%d", mName, mCount);
+
+		mLock.unlockRead();
+
+		if (Pipeline::RESULT::STOPPED == ret)
+			mReadyToConsume.signal();
+		else
+			mReadyToProduce.signal();
+
+        return ret;
+    }
+	
+	void reset()    {
+        libeYs3D::base::AutoWriteLock lock(mLock);
+
+		LOG_INFO("reset" , "%s: mFront=%d, mRear=%d, mCount=%d", mName, mFront, mRear, mCount);
+		
+        mFront = 0;
+        mRear = 0;
+        mCount = 0;
+    }
+    
+    void stop()    {
+        
+        if(mStopped)    return;
+        
+        mStopped = true;
+
+		{
+			libeYs3D::base::AutoWriteLock lock(mLock);
+
+			LOG_INFO("stop" , "%s: mFront=%d, mRear=%d, mCount=%d", mName, mFront, mRear, mCount);
+			
+			mCount = 0;
+		}
+
+        mReadyToConsume.broadcast();
+		mReadyToProduce.broadcast();
+    }
+#else  // !_WIN32
     Pipeline::RESULT enQueue(const T *item, int32_t timeoutMs = DEFAULT_TIMEOUT_MS)    {
         libeYs3D::base::AutoLock lock(mLock);
         
@@ -69,29 +213,17 @@ public:
 
                     break;
                 } else if(timeoutMs > 0)    {
-#ifndef WIN32
                     if(false == mCond.timedWaitDebug(&mLock,
                                           now_in_microsecond_high_res_time_REALTIME() +
                                           (timeoutMs * 1000)))
-#else
-                    if(false == mCond.timedWait(&mLock,
-                                          now_in_microsecond_high_res_time_REALTIME() +
-                                          (timeoutMs * 1000)))
-#endif
                         return RESULT::SYNC_ERROR;
                     else
                         if(mCount == mCapacity)    return Pipeline::RESULT::TIMEOUT;
                 } else    { // timeoutMs < 0, wait forever
                     // instead of using mCond.wait(), checking if queue is stopped is required
-#ifndef WIN32
                     if(false == mCond.timedWaitDebug(&mLock,
                                           now_in_microsecond_high_res_time_REALTIME() +
                                           DEFAULT_TIMEOUT_US))
-#else
-                    if(false == mCond.timedWait(&mLock,
-                                          now_in_microsecond_high_res_time_REALTIME() +
-                                          DEFAULT_TIMEOUT_US))
-#endif
                         return RESULT::SYNC_ERROR;
                 }
             }
@@ -111,29 +243,17 @@ public:
             if(timeoutMs == 0)    {
                 return Pipeline::RESULT::QUEUE_EMPTY;
             } else if(timeoutMs > 0)    {
-#ifndef WIN32
                 if(false == mCond.timedWaitDebug(&mLock,
                                       now_in_microsecond_high_res_time_REALTIME() +
                                       (timeoutMs * 1000)))
-#else
-                if(false == mCond.timedWait(&mLock,
-                                      now_in_microsecond_high_res_time_REALTIME() +
-                                      (timeoutMs * 1000)))
-#endif
                     return Pipeline::RESULT::SYNC_ERROR;
                     
                 if(mCount == 0)    return Pipeline::RESULT::TIMEOUT;
             } else    { // wait forever
                 // instead of using mCond.wait() to check if the queue is stopped
-#ifndef WIN32
                 if(false == mCond.timedWaitDebug(&mLock,
                                       now_in_microsecond_high_res_time_REALTIME() +
                                       (DEFAULT_TIMEOUT_MS * 1000)))
-#else
-                if(false == mCond.timedWait(&mLock,
-                                      now_in_microsecond_high_res_time_REALTIME() +
-                                      (DEFAULT_TIMEOUT_MS * 1000)))
-#endif
                     return Pipeline::RESULT::SYNC_ERROR;
             }
         }
@@ -163,6 +283,7 @@ public:
         mStopped = true;
         mCond.broadcast();
     }
+#endif
     
     CircularQueue(const char *name)    {
         snprintf(mName, sizeof(mName), "%s", name);
@@ -173,8 +294,14 @@ public:
 private:
     char mName[128];
     T mItems[CAPACITY];
+#ifdef _WIN32
+	libeYs3D::base::ReadWriteLock mLock;
+	libeYs3D::base::ConditionVariable mReadyToConsume;
+	libeYs3D::base::ConditionVariable mReadyToProduce;
+#else
     libeYs3D::base::Lock mLock;
     libeYs3D::base::ConditionVariable mCond;
+#endif
     size_t mFront = 0;
     size_t mRear = 0;
     size_t mCount = 0;
@@ -257,7 +384,7 @@ private:
     libeYs3D::video::PCProducer::PCCallback mPCFrameCallback;
     libeYs3D::sensors::SensorDataProducer::AppCallback mIMUDataCallback;
     
-    static constexpr int kMaxFrameCount = 3; // 1 seconds @ 60FPS
+    static constexpr int kMaxFrameCount = 2; // 1 seconds @ 60FPS
     static constexpr int kMaxIMUDataCount = (kMaxFrameCount << 2);
     CircularQueue<libeYs3D::video::Frame, kMaxFrameCount> mColorFrameQueue;
     CircularQueue<libeYs3D::video::Frame, kMaxFrameCount> mDepthFrameQueue;

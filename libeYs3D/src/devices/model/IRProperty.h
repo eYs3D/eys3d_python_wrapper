@@ -1,16 +1,7 @@
 /*
- * Copyright (C) 2015-2019 ICL/ITRI
+ * Copyright (C) 2021 eYs3D Corporation
  * All rights reserved.
- *
- * NOTICE:  All information contained herein is, and remains
- * the property of ICL/ITRI and its suppliers, if any.
- * The intellectual and technical concepts contained
- * herein are proprietary to ICL/ITRI and its suppliers and
- * may be covered by Taiwan and Foreign Patents,
- * patents in process, and are protected by trade secret or copyright law.
- * Dissemination of this information or reproduction of this material
- * is strictly forbidden unless prior written permission is obtained
- * from ICL/ITRI.
+ * This project is licensed under the Apache License, Version 2.0.
  */
 
 #pragma once
@@ -38,6 +29,8 @@ public:
     
     void enableExtendIR(bool enabled)    { mExtendIREnabled = enabled; }
     bool isExtendIREnabled()    { return mExtendIREnabled; }
+    void enableExtendIRSupport(bool enabled)   { mExtendIRSupport = enabled; }
+    bool isExtendIRSupport()    { return mExtendIRSupport; }
     
     void setIRValue(uint16_t value)    { mIRValue = value; }
     uint16_t getIRValue()    { return mIRValue; }
@@ -49,11 +42,12 @@ public:
     
     bool operator==(const IRProperty &rhs) const;
 
-protected:
+//protected:
     IRProperty(uint16_t initValue = (1 << 16 - 1), bool extendIR = false);
 
 private:
     bool mExtendIREnabled;
+    bool mExtendIRSupport;
     uint16_t mIRMax;
     uint16_t mIRMin;
     uint16_t mIRValue;

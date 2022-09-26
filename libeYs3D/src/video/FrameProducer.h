@@ -1,16 +1,7 @@
 /*
- * Copyright (C) 2015-2017 ICL/ITRI
+ * Copyright (C) 2021 eYs3D Corporation
  * All rights reserved.
- *
- * NOTICE:  All information contained herein is, and remains
- * the property of ICL/ITRI and its suppliers, if any.
- * The intellectual and technical concepts contained
- * herein are proprietary to ICL/ITRI and its suppliers and
- * may be covered by Taiwan and Foreign Patents,
- * patents in process, and are protected by trade secret or copyright law.
- * Dissemination of this information or reproduction of this material
- * is strictly forbidden unless prior written permission is obtained
- * from ICL/ITRI.
+ * This project is licensed under the Apache License, Version 2.0.
  */
 
 #pragma once
@@ -82,7 +73,9 @@ public:
     virtual void pausePCCallback();
     
     void dumpFrameInfo(int frameCount = 60);
-    void doSnapshot();
+    void doSnapshot(int StreamType);
+    bool doColorSnapShot = false;
+    bool doDepthSnapShot = false;
 
 protected:
     FrameProducer(libeYs3D::devices::CameraDevice *cameraDevice,
@@ -91,6 +84,23 @@ protected:
     virtual int getRawFormatBytesPerPixel(uint32_t format) = 0;
     virtual int readFrame(Frame *frame) = 0;
     virtual int produceRGBFrame(Frame *frame) = 0;
+    virtual int performPostProcessFilter(Frame *frame) = 0;
+
+    /**
+     * This value is set after Camera::initStream by decimation factor.
+     * It will keep the same as depth width if PostProcessOption !isEnable, and will be resized width if decimation
+     * factor is set >= 2.
+     * @return Decimation filter resized width if PostProcessOption::isEnable().
+     */
+    virtual int getFilteredWidth() = 0;
+    /**
+     * This value is set after Camera::initStream by decimation factor.
+     * It will keep the same as depth height if PostProcessOption !isEnable, and will be resized width if decimation
+     * factor is set >= 2.
+     * @return Decimation filter resized height if PostProcessOption::isEnable().
+     */
+    virtual int getFilteredHeight() = 0;
+
     virtual int performFiltering(Frame *frame) = 0;
     virtual int performInterleave(Frame *frame) = 0;
     virtual int performAccuracyComputation(Frame *frame) = 0;
@@ -124,6 +134,7 @@ protected:
     libeYs3D::sensors::SensorDataProducer::Callback mIMUDataCallback;
     
     uint32_t mFrameProducerState;
+    bool mIsStopped = false;
 
 private:
     void initialize();
@@ -134,10 +145,10 @@ private:
     void rgbFramesWorker();
     // Helper to perfrom filetering
     void frameFilteringWorker();
-    
+  
     // Heper to perfrom snapshot
     virtual void performSnapshotWork(Frame *frame) = 0;
-    
+
     uint32_t mTimeDeltaMs;
     uint8_t  mFps;
     uint8_t  mTimeLimitSecs;
@@ -152,13 +163,15 @@ private:
     //   1) wait for video frame in mDataQueue
     //   2) process video frame
     //   3) Push frame back to mFreeQueue
-    static constexpr int kMaxFrames = 3;
+    static constexpr int kMaxFrames = 2;
     base::MessageChannel<Frame, kMaxFrames> mDataQueue;
     base::MessageChannel<Frame, kMaxFrames> mStageQueue;
     base::MessageChannel<Frame, kMaxFrames> mStage2Queue;
     base::MessageChannel<Frame, kMaxFrames> mFreeQueue;
+	base::MessageChannel<Frame, 1> mSnapQueue;
     base::MessageChannel<int, 4> mSignal;
-    base::MessageChannel<int, 2> mCBFinishSignal; // for callback notification
+    base::MessageChannel<int, 1> mCBFinishSignal; // for callback notification
+	base::MessageChannel<int, 1> mPCCBFinishSignal;
     base::MessageChannel<int, 1> mPauseSignal;
     base::MessageChannel<int, 1> mPauseBackSignal;
     base::MessageChannel<int, 1> mSnapshotSignal;
@@ -166,7 +179,7 @@ private:
     base::MessageChannel<libeYs3D::sensors::SensorDataSet, kMaxFrames> mSensorDataSetQueue;
     base::MessageChannel<libeYs3D::sensors::SensorDataSet, kMaxFrames> mFreeSensorDataSetQueue;
     
-    bool mIsStopped = false;
+
     
     libeYs3D::base::ThreadPool<libeYs3D::video::CallbackWorkItem> mCBThreadPool;
     libeYs3D::base::ThreadPool<libeYs3D::video::CallbackWorkItem> mPCCBThreadPool;

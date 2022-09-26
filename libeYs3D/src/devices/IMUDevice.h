@@ -1,16 +1,7 @@
 /*
- * Copyright (C) 2015-2019 ICL/ITRI
+ * Copyright (C) 2021 eYs3D Corporation
  * All rights reserved.
- *
- * NOTICE:  All information contained herein is, and remains
- * the property of ICL/ITRI and its suppliers, if any.
- * The intellectual and technical concepts contained
- * herein are proprietary to ICL/ITRI and its suppliers and
- * may be covered by Taiwan and Foreign Patents,
- * patents in process, and are protected by trade secret or copyright law.
- * Dissemination of this information or reproduction of this material
- * is strictly forbidden unless prior written permission is obtained
- * from ICL/ITRI.
+ * This project is licensed under the Apache License, Version 2.0.
  */
 
 #pragma once
@@ -73,6 +64,7 @@ public:
         char serialNumber[256];
         char fwVersion[256];
         char moduleName[256];
+        char imuLogPath[4096];
         bool status;
         bool isValid;
         
@@ -110,6 +102,7 @@ public:
     void pauseDepthStream();
     
     virtual void dumpIMUData(int recordCount = 256);
+    char* getIMULogPath() {return mIMUDeviceInfo.imuLogPath;}
                                 
     virtual void closeStream();
 

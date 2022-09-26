@@ -20,9 +20,9 @@ public:
 
     int SelectCurrentIndex(size_t nIndex){
         size_t nVecIndex = TransformDBtoVec(nIndex);
-        if(nVecIndex >= m_modeConfigs.size() ) return ETronDI_NullPtr;
+        if(nVecIndex >= m_modeConfigs.size() ) return APC_NullPtr;
         m_nCurrentIndex = nVecIndex;
-        return ETronDI_OK;
+        return APC_OK;
     }
     int GetCurrentIndex(){ return TransformVectoDB(m_nCurrentIndex); }
     ModeConfig::MODE_CONFIG GetCurrentModeInfo()

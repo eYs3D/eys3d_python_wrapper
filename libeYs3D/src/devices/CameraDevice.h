@@ -1,16 +1,7 @@
 /*
- * Copyright (C) 2015-2019 ICL/ITRI
+ * Copyright (C) 2021 eYs3D Corporation
  * All rights reserved.
- *
- * NOTICE:  All information contained herein is, and remains
- * the property of ICL/ITRI and its suppliers, if any.
- * The intellectual and technical concepts contained
- * herein are proprietary to ICL/ITRI and its suppliers and
- * may be covered by Taiwan and Foreign Patents,
- * patents in process, and are protected by trade secret or copyright law.
- * Dissemination of this information or reproduction of this material
- * is strictly forbidden unless prior written permission is obtained
- * from ICL/ITRI.
+ * This project is licensed under the Apache License, Version 2.0.
  */
 
 #pragma once
@@ -20,6 +11,7 @@
 #include "devices/IMUDevice.h"
 #include "devices/controller/RegisterReadWriteController.h"
 #include "devices/model/DepthFilterOptions.h"
+#include "devices/model/PostProcessOptions.h"
 #include "devices/model/DepthAccuracyOptions.h"
 #include "devices/model/CameraDeviceProperties.h"
 #include "devices/model/IRProperty.h"
@@ -28,9 +20,11 @@
 #include "video/video.h"
 #include "video/FrameProducer.h"
 #include "video/PCProducer.h"
+#include "video/DepthFrameProducer.h"
 #include "sensors/SensorDataProducer.h"
 #include "Constants.h"
 #include "utils.h"
+#include <mutex>
 #ifdef WIN32
 #  include "eSPDI_Common.h"
 #  include "magic.h"
@@ -88,8 +82,8 @@ namespace video    { // forward declaration for friendship assignment
     class ColorFrameProducer;
     class DepthFrameProducer;
     class PCFrameProducer;
-     
-    int color_image_produce_rgb_frame(const libeYs3D::devices::CameraDevice *cameraDevice,
+    class PostProcessHandle;
+    int color_image_produce_bgr_frame(const libeYs3D::devices::CameraDevice *cameraDevice,
                                       libeYs3D::video::Frame *frame);
     int depth_image_produce_rgb_frame(const libeYs3D::devices::CameraDevice *cameraDevice,
                                       libeYs3D::video::Frame *frame);
@@ -107,11 +101,10 @@ struct CameraDeviceInfo    {
     DEVINFORMATION devInfo;
 
 #ifdef WIN32
-    // TODO: windows impl : if not initialize will crash, need rename or place a suitable content
-    char firmwareVersion[PATH_MAX] = "FAKE SN INFO";
-    char serialNumber[PATH_MAX] = "FAKE SN INFO";
-    char busInfo[PATH_MAX] = "FAKE BUS INFO";
-    char modelName[PATH_MAX] = "FAKE MODEL NAME";
+    char firmwareVersion[PATH_MAX] = "Unsupported";
+    char serialNumber[PATH_MAX] = "Unsupported";
+    char busInfo[PATH_MAX] = "Unsupported";
+    char modelName[PATH_MAX] = "Unsupported";
 #else
     char firmwareVersion[PATH_MAX];
     char serialNumber[PATH_MAX];
@@ -135,15 +128,18 @@ struct CameraDeviceInfo    {
 
 struct ZDTableInfo    {
     ZDTABLEINFO nZDTableInfo;
-    int32_t nZDTableSize = ETronDI_ZD_TABLE_FILE_SIZE_11_BITS;
+    int32_t nZDTableSize = APC_ZD_TABLE_FILE_SIZE_11_BITS;
     int32_t nActualZDTableLength;
-    uint8_t nZDTable[ETronDI_ZD_TABLE_FILE_SIZE_11_BITS] = {0};
+    uint8_t nZDTable[APC_ZD_TABLE_FILE_SIZE_11_BITS] = {0};
     uint16_t nZDTableMaxFar;
     uint16_t nZDTableMaxNear;
 };
 
-class CameraDevice     {
+class CameraDevice
+	: public std::enable_shared_from_this<CameraDevice>
+{
 public:
+    using COLOR_BYTE_ORDER = ::libeYs3D::EYS3DSystem::COLOR_BYTE_ORDER;
     CameraDeviceInfo& getCameraDeviceInfo()    { return mCameraDeviceInfo; }
 
     struct FocalLength{
@@ -160,7 +156,7 @@ public:
      *     DEPTH_IMG_COLORFUL_TRANSFER, DEPTH_IMG_GRAY_TRANSFER, DEPTH_IMG_NON_TRANSFER (default)
      * 
      * return
-     *     0 (EtronDI_OK): succeed
+     *     0 (APC_OK): succeed
      *     < 0           : align with with error codes defined in eSPDI_def.h
      *     1:            : enabled, please realease the stream before it can be enabled again.
      */
@@ -219,14 +215,6 @@ public:
     virtual bool isInterleaveModeSupported()    { return false; }
     virtual bool isInterleaveModeEnabled();
     virtual int enableInterleaveMode(bool enable);
-    
-    // set the base, color or depth frame to generate PC frame 
-    enum PCFRAME_PRODUCING_BASE    {
-        COLOR_FRAME_AS_BASE = 0,
-        DEPTH_FRAME_AS_BASE = 1,
-    };
-    virtual void setPCFrameProducingBase(PCFRAME_PRODUCING_BASE base);
-    virtual PCFRAME_PRODUCING_BASE getPCFrameProducingBase();
 
     // return a copy of current device DepthFilterOptions
     virtual DepthFilterOptions getDepthFilterOptions();
@@ -250,7 +238,9 @@ public:
 
     // return a copy of current device IR property
     virtual IRProperty getIRProperty();
+    virtual int setIRMax(bool ExtendIREnabled);
     virtual int setIRProperty(IRProperty property);
+    bool enableExtendIR(bool enabled);
 
     virtual float getManuelExposureTimeMs();
     virtual void setManuelExposureTimeMs(float fMS);
@@ -278,16 +268,18 @@ public:
 
     // IMU
     IMUDevice::IMUDeviceInfo getIMUDeviceInfo();
-    //virtual int ConfigIMU(){ return ETronDI_OK; }
+    //virtual int ConfigIMU(){ return APC_OK; }
     virtual bool isIMUDeviceSupported()    { return false; }
     virtual bool isIMUDevicePresent()    { return (isIMUDeviceSupported() && (mIMUDevice != nullptr)); }
     //virtual CIMUModel *GetIMUModel(){ return m_pIMUModel; }
     //virtual void SetIMUSyncWithFrame(bool bSync);
     //virtual bool IsIMUSyncWithFrame();
     void dumpIMUData(int recordCount = 256);
+    std::vector<IMUDevice::IMU_DATA_FORMAT> getSupportDataFormat() {return mIMUDevice->getSupportDataFormat();}
+    int selectDataFormat(IMUDevice::IMU_DATA_FORMAT format);
     
     void dumpFrameInfo(int frameCount = 60);
-    void doSnapshot();
+    void doSnapshot(int StreamType);
     virtual bool isPlyFilterSupported() { return true; }
     void enablePlyFilter(bool enable);
     bool isPlyFilterEnabled() { return mPlyFilterEnabled; }
@@ -301,7 +293,10 @@ public:
 	int setFWRegister(unsigned short address, unsigned short nValue);
     unsigned short getSensorRegister(unsigned short address, SENSORMODE_INFO sensorMode, int slaveID);
     int setSensorRegister(unsigned short address, unsigned short nValue, SENSORMODE_INFO sensorMode, int slaveID);
-
+	//++Calibration info
+    int  loadRectifyLogData();
+    std::shared_ptr<eSPCtrl_RectLogData> getRectifyLogData(int rect_index);
+    //--Calibration info
     virtual void release();
     virtual ~CameraDevice();
 
@@ -310,17 +305,16 @@ public:
     
     int toString(char *buffer, int bufferLength);
 
-    std::vector<ETRONDI_STREAM_INFO> getColorStreamInfo() { return mColorStreamInfo; }
-    std::vector<ETRONDI_STREAM_INFO> getDepthStreamInfo() { return mDepthStreamInfo; }
-
-	int GetPixelUnit(){ return m_nPixelUnit;} 
-	void UpdatePixelUnit();
-	void SetPixelUnit(short nPixelUnit);
+    std::vector<APC_STREAM_INFO> getColorStreamInfo() { return mColorStreamInfo; }
+    std::vector<APC_STREAM_INFO> getDepthStreamInfo() { return mDepthStreamInfo; }
 
     FocalLength GetFocalLength() { return m_FocalLength; }
 	void UpdateFocalLength();
+    uint16_t nZNear_default;
+    virtual int initIRProperty();
 
 protected:
+    explicit CameraDevice(DEVSELINFO *devSelInfo, DEVINFORMATION *deviceInfo, const COLOR_BYTE_ORDER colorByteOrder = COLOR_BYTE_ORDER::COLOR_RGB24);
     explicit CameraDevice(DEVSELINFO *devSelInfo, DEVINFORMATION *deviceInfo);
 
     virtual int initStreamInfoList();
@@ -331,13 +325,13 @@ protected:
     
     virtual void updateColorPalette();
     
-    virtual int configurePointCloudInfo();
+    virtual int configurePointCloudInfo(bool isUseCached);
     virtual int enableBlockingRead(bool blocking);
-    
+    void initPostProcessOptions();
     virtual int initDepthFilterOptions();
     virtual int initDepthAccuracyOptions();
     virtual int initDepthROIOptions();
-    virtual int initIRProperty();
+    
     virtual int initRegisterReadWriteOptions();
     virtual void adjustDepthInvalidBandPixel();
 
@@ -361,20 +355,22 @@ protected:
 protected:
     DEVSELINFO mDevSelInfo;
     CameraDeviceInfo mCameraDeviceInfo;
-    std::vector<ETRONDI_STREAM_INFO> mColorStreamInfo;
-    std::vector<ETRONDI_STREAM_INFO> mDepthStreamInfo;
+    std::vector<APC_STREAM_INFO> mColorStreamInfo;
+    std::vector<APC_STREAM_INFO> mDepthStreamInfo;
     
     DepthFilterOptions mDepthFilterOptions;
     DepthAccuracyOptions mDepthAccuracyOptions;
     Rect mDepthAccuracyRegion;
     CameraDeviceProperties mCameraDeviceProperties;
     IRProperty mIRProperty;
+    const COLOR_BYTE_ORDER mColorByteOrder;
+    PostProcessOptions mPostProcessOptions;
 
 public:
+    PostProcessOptions &getPostProcessOptions();
+    void setPostProcessOptions(PostProcessOptions &postProcessOptions);
     RegisterReadWriteOptions mRegisterReadWriteOptions;
     RegisterReadWriteController mRegisterReadWriteController;
-    
-    PCFRAME_PRODUCING_BASE mPCFrameProducingBase = PCFRAME_PRODUCING_BASE::COLOR_FRAME_AS_BASE;
     
     // ROI Support
     int mDepthROICenterPointX = 0;
@@ -405,12 +401,18 @@ public:
     int mRectifyLogIndex;
     eSPCtrl_RectLogData mRectifyLogData;
     struct PointCloudInfo mPointCloudInfo;
-    
+
+    //++Calibration info
+     std::vector<std::shared_ptr<eSPCtrl_RectLogData>> mCameraRectifyLogData;
+    //--Calibration info
+
     uint32_t mDepthInvalidBandPixel;
     
     bool mBlockingRead;
     uint32_t mCameraDeviceState;
     bool mInterleaveModeEnabled;
+
+    bool mSupportingInterleave;
 
     // IMU
     IMUDevice *mIMUDevice = nullptr;
@@ -446,7 +448,7 @@ public:
     friend void MemoryAllocator__deallocate(CameraDevice *cameraDevice, void *p, size_t size);
     friend size_t MemoryAllocator__max_size(CameraDevice *cameraDevice);
     
-    friend int libeYs3D::video::color_image_produce_rgb_frame(const CameraDevice *cameraDevice,
+    friend int libeYs3D::video::color_image_produce_bgr_frame(const CameraDevice *cameraDevice,
                                                               libeYs3D::video::Frame *frame);
     friend int libeYs3D::video::depth_image_produce_rgb_frame(const CameraDevice *cameraDevice,
                                                               libeYs3D::video::Frame *frame);
@@ -458,8 +460,15 @@ public:
                                                      int nColorWidth, int nColorHeight,
                                                      bool usePlyFilter);
 
-#ifdef DEVICE_MEMORY_ALLOCATOR
+#ifdef WIN32
+    static constexpr int kMaxFrames = 64;
+    base::MessageChannel<libeYs3D::video::Frame, kMaxFrames> mColorQueue;
+    base::MessageChannel<libeYs3D::video::Frame, kMaxFrames> mDepthQueue;
+    base::MessageChannel<libeYs3D::video::Frame, kMaxFrames> mCFreeQueue;
+    base::MessageChannel<libeYs3D::video::Frame, kMaxFrames> mDFreeQueue;
+#endif
 
+#ifdef DEVICE_MEMORY_ALLOCATOR
 protected:
     // memory allocation
     std::map<void *, size_t>mMemories;
@@ -468,16 +477,22 @@ protected:
     void returnMemory(const void *memory, size_t size);
     int preallocateMemory();
     void releasePreallocatedMemory();
-    
+
+	MemoryAllocator<uint16_t> mPixelWordMemoryAllocator;
     MemoryAllocator<uint8_t> mPixelByteMemoryAllocator;
     MemoryAllocator<float> mPixelFloatMemoryAllocator;
+	
     
-#endif                                        
+#endif
+private:
+    std::mutex mPclInfoLck;
+    int getRectifyMatLogDataTwice();
 };
 
 class CameraDeviceFactory    {
+    using COLOR_BYTE_ORDER = ::libeYs3D::EYS3DSystem::COLOR_BYTE_ORDER;
 public:
-    static CameraDevice *createCameradevice(DEVSELINFO *devSelInfo, DEVINFORMATION *devInfo);
+    static std::shared_ptr<CameraDevice> createCameradevice(DEVSELINFO *devSelInfo, DEVINFORMATION *devInfo, COLOR_BYTE_ORDER colorByteOrder);
 };
 
 } // end of namespace devices

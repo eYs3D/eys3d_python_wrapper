@@ -1,16 +1,7 @@
 /*
- * Copyright (C) 2015-2017 ICL/ITRI
+ * Copyright (C) 2021 eYs3D Corporation
  * All rights reserved.
- *
- * NOTICE:  All information contained herein is, and remains
- * the property of ICL/ITRI and its suppliers, if any.
- * The intellectual and technical concepts contained
- * herein are proprietary to ICL/ITRI and its suppliers and
- * may be covered by Taiwan and Foreign Patents,
- * patents in process, and are protected by trade secret or copyright law.
- * Dissemination of this information or reproduction of this material
- * is strictly forbidden unless prior written permission is obtained
- * from ICL/ITRI.
+ * This project is licensed under the Apache License, Version 2.0.
  */
 
 #pragma once
@@ -35,19 +26,22 @@ public:
 
 protected:
     ColorFrameProducer(CameraDevice *cameraDevice);
-
     virtual int getRawFormatBytesPerPixel(uint32_t format) override;
     virtual int readFrame(Frame *frame) override;
     virtual int produceRGBFrame(Frame *frame) override;
+    virtual int performPostProcessFilter(Frame *frame) override;
+    int getFilteredWidth() override;
+    int getFilteredHeight() override;
     virtual int performFiltering(Frame *frame) override;
     virtual int performInterleave(Frame *frame) override;
     virtual int performAccuracyComputation(Frame *frame) override;
     virtual int performROIComputation(Frame *frame) override;
+    int m_nLastInterLeaveColorSerial;
     
     virtual void checkIMUDeviceCBEnablement() override;
-    
+
     virtual void performSnapshotWork(Frame *frame) override;
-    
+
     virtual void logProducerTick(const char *FMT, ...) override;
     
 protected:

@@ -1,16 +1,7 @@
 /*
- * Copyright (C) 2015-2017 ICL/ITRI
+ * Copyright (C) 2021 eYs3D Corporation
  * All rights reserved.
- *
- * NOTICE:  All information contained herein is, and remains
- * the property of ICL/ITRI and its suppliers, if any.
- * The intellectual and technical concepts contained
- * herein are proprietary to ICL/ITRI and its suppliers and
- * may be covered by Taiwan and Foreign Patents,
- * patents in process, and are protected by trade secret or copyright law.
- * Dissemination of this information or reproduction of this material
- * is strictly forbidden unless prior written permission is obtained
- * from ICL/ITRI.
+ * This project is licensed under the Apache License, Version 2.0.
  */
 
 #pragma once
@@ -33,12 +24,12 @@ namespace libeYs3D    {
     }
 }
 
-using libeYs3D::devices::CameraDevice;
+class CameraDevice;
 
 namespace libeYs3D    {
 namespace video    {
 
-int generate_point_cloud(CameraDevice *cameraDevice, const char *plyFilePath,
+int generate_point_cloud(std::shared_ptr<CameraDevice> cameraDevice, const char *plyFilePath,
                          std::vector<uint8_t> &depthData,
                          int nDepthWidth, int nDepthHeight,
                          std::vector<uint8_t> &colorData,
