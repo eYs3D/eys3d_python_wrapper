@@ -1,0 +1,3 @@
+[submodule "libeYs3D/out/eSPDI"]
+	path = libeYs3D/out/eSPDI
+	url = git@github.com:eYs3D/eSPDI_linux.git
