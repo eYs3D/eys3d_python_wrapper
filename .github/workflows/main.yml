@@ -16,8 +16,8 @@ jobs:
     # Runs a single command using the runners shell
     - name: Take codes greeting
       uses: actions/checkout@v2
-    - name: Take submodules greeting
-      uses: snickerbockers/submodules-init@v4
+      with:
+            submodules: recursive
 
     - name: Get custom tarball name
       id: get_tarball_name
