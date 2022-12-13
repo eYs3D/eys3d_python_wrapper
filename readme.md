@@ -11,8 +11,11 @@
 
 ### Getting the code
 
-### Clone this repository with submodules
+### Clone this repository and update submodules
 ```git clone git@github.com:eYs3D/eys3d_python_wrapper.git```
+```cd  eys3d_python_wrapper```
+```git submodule init```
+```git submodule update```
 
 ### Prerequisite
 * eYs3D camera module
@@ -60,7 +63,7 @@ Developers should check if GPU vendor specific compute runtime for openCL driver
 ```console 
 $ sudo add-apt-repository ppa:intel-opencl/intel-opencl 
 $ sudo apt update
-$ apt install intel-opencl-icd 
+$ sudo apt install intel-opencl-icd 
 ```
 
 ### Verify OpenCL platform and devices available on the host
@@ -79,8 +82,13 @@ $ source ./venv/bin/activate
 
 ### install required Python packages with pip
 ```console
-$ python3.7 -m pip install -r requirements.txt 
+$ sudo python3.7 -m pip install -r requirements.txt 
 ```
+
+### If run demo see error like X Error: BadShmSeg 
+```sudo nano /etc/environment```
+add inside
+``` QT_X11_NO_MITSHM=1```
 
 ## Run demo code
 ```console 
