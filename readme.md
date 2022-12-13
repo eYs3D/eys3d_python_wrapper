@@ -12,10 +12,12 @@
 ### Getting the code
 
 ### Clone this repository and update submodules
-```git clone git@github.com:eYs3D/eys3d_python_wrapper.git```
-```cd  eys3d_python_wrapper```
-```git submodule init```
-```git submodule update```
+```
+git clone git@github.com:eYs3D/eys3d_python_wrapper.git
+cd  eys3d_python_wrapper
+git submodule init
+git submodule update
+```
 
 ### Prerequisite
 * eYs3D camera module
