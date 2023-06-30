@@ -15,6 +15,7 @@
 
 #include <stdint.h>
 
+#define COLOR_ERR_NUM 3
 // forward declaration
 namespace libeYs3D    {
     namespace devices    {

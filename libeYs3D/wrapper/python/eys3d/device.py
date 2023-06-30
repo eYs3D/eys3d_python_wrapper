@@ -172,7 +172,25 @@ class Device(object):
         """
         logger.info("Enable stream")
         self.__camera_device.enable_stream()
+    
+    def enable_PC_stream(self):
+        """Enable stream.
 
+        To enable stream.
+        It would enable color, depth and point cloud streaming.
+        """
+        logger.info("Enable PC stream")
+        self.__camera_device.enable_pc_stream()
+        
+    def enable_color_depth_stream(self):
+        """Enable stream.
+
+        To enable stream.
+        It would enable color, depth and point cloud streaming.
+        """
+        logger.info("Enable stream")
+        self.__camera_device.enable_color_depth_stream()
+        
     def pause_stream(self):
         """Pause stream
 
@@ -181,6 +199,24 @@ class Device(object):
         """
         logger.info("Pause stream")
         self.__camera_device.pause_stream()
+        
+    def pause_PC_stream(self):
+        """Pause stream
+
+        To pause stream.
+        The device would hold the resouce of config and callback function and then wait for next action.
+        """
+        logger.info("Pause PC stream")
+        self.__camera_device.pause_pc_stream()
+        
+    def pause_color_depth_stream(self):
+        """Pause stream
+
+        To pause stream.
+        The device would hold the resouce of config and callback function and then wait for next action.
+        """
+        logger.info("Pause stream")
+        self.__camera_device.pause_color_depth_stream()
 
     def close_stream(self, ):
         """Close stream
@@ -408,3 +444,6 @@ class Device(object):
         """
         """
         self.__camera_device.dump_camera_device_properties()
+
+    def copy_from_G1toG2(self):
+        self.__camera_device.copy_from_G1toG2()

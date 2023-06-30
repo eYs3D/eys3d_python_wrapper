@@ -208,7 +208,7 @@ private:
                 switch (ret)    {
                 case ETIMEDOUT:
                     now2 = now_in_microsecond_high_res_time_REALTIME();
-                    LOG_ERR("ConditionVariable",
+                    LOG_WARN("ConditionVariable",
                             "The time specified by abstime to pthread_cond_timedwait() has passed."
                             "waitUntilUs(%" PRId64 ") : in(%" PRId64 ") : now(%" PRId64 ")",
                             waitUntilUs, now, now2);

@@ -65,7 +65,8 @@ class Pipeline():
             self.__depth_frame_shape = self.__config.get_depth_stream_resolution(
             )
 
-        self.__dev.enable_stream()
+        """self.__dev.enable_stream()"""
+        self.__dev.enable_color_depth_stream()
 
     @logger.catch
     def get_color_frame(self, ):
@@ -183,6 +184,13 @@ class Pipeline():
         To pause the stream.
         """
         self.__dev.pause_stream()
+        
+    def pause_color_depth_stream(self):
+        """Pause the stream.
+
+        To pause the stream.
+        """
+        self.__dev.pause_color_depth_stream()
 
     def reset(self, ):
         self.__pipe.reset()

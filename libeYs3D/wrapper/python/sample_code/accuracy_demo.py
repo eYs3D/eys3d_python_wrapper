@@ -13,6 +13,7 @@ It does not guarantee the performance when depth accuracy is enabled.
 """
 import sys
 import time
+import os
 
 import cv2
 import argparse
@@ -61,8 +62,13 @@ def accuracy_sample(device, config):
         accuracy_info = dframe.get_depth_accuracy_info()
         accuracy_info_str = ""
         for key, value in accuracy_info.items():
-            accuracy_info_str += "{}: {:.4f}\t".format(key, value)
-        cv2.displayStatusBar("Depth image", accuracy_info_str, 1000)
+            accuracy_info_str += "{}: {:.4f} \t".format(key, value)
+        # cv2.displayStatusBar("Depth image", accuracy_info_str, 1000)
+
+        if os.name == "posix":
+            cv2.displayStatusBar("Depth image", accuracy_info_str, 1000)
+        else:
+            cv2.setWindowTitle("Depth image", "{}".format(accuracy_info_str))
         if cv2.waitKey(1) & 0xFF == ord('q'):
             depthAccuracy.disable(
             )  # It need to disable manually to avoid seq fault before pipeline stopped.

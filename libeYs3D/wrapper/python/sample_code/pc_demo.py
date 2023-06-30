@@ -60,6 +60,17 @@ point_cloud_viewer_format = 0  # For PC format
 # Flag defined
 flag = {"filter": True}  #ply filter
 
+def my_try_lock(lock,timeout):
+    count = 0
+    success = False
+    while count < timeout and not success:
+        success = lock.acquire(False)
+        """logger.info("[Python] success: {}".format(success))"""
+        if success:
+            break
+        count = count + 1
+    return success
+
 
 def SetRot():
     xDif = mOut[0] - mIn[0]
@@ -238,10 +249,6 @@ def DrawAxis():
     glEnd()
 
 
-def depth_frame_callback(dframe):
-    global dRgb
-    dRgb = dframe.get_rgb_data()
-
 
 def pc_frame_callback(pcframe):
     """It's a callback function to grab point cloud frame.
@@ -255,11 +262,8 @@ def pc_frame_callback(pcframe):
         get_xyz_data (numpy array)  : The xyz data of this frame. The size is (H * W * 3).
         get_transcoding_time (int)  : For performance benchmark purpose in micro seconds.
     """
-    global aXyz, aRgb, count, timestamp
-    lock.acquire()
-    aXyz = pcframe.get_xyz_data()
-    aRgb = pcframe.get_rgb_data()
-
+    global aXyz, aRgb, count, timestamp, dRgb
+    
     # For calculating PC callback fps
     if (count % DURATION) == 0:
         if count != 0:
@@ -267,6 +271,16 @@ def pc_frame_callback(pcframe):
             logger.info("[FPS][PC Callback] {:.2f}".format(1000.0 / temp))
             timestamp = pcframe.get_timestamp()
     count += 1
+    
+            
+    if my_try_lock(lock, 1) == False:
+        return
+    """lock.acquire()"""
+    aXyz = pcframe.get_xyz_data()
+    aRgb = pcframe.get_rgb_data()
+    dRgb = pcframe.get_drgb_data()
+
+
     lock.release()
 
 
@@ -291,9 +305,8 @@ def pc_sample(device, config):
     #     config.ep0Width = config.ep1Width
     #     config.ep0Height = config.ep1Height
     device.open_device(config,
-                       depthFrameCallback=depth_frame_callback,
                        PCFrameCallback=pc_frame_callback)
-    device.enable_stream()
+    device.enable_PC_stream()
     # Enable interleave if interleave mode
     (H, W) = config.get_color_stream_resolution(
     )  # Get the resolution of color stream

@@ -49,6 +49,11 @@ protected:
     void virtual attachRGBWorkerCGgroup() override;
     void virtual attachFilterWorkerCGgroup() override;
     void virtual attachCallbackWorkerCGgroup() override;
+
+private:
+    std::unique_ptr<AbstractPostProcessFactory> mColorProcessFactory;
+    std::unique_ptr<IImageProcess> mColorProcessHandle;
+    PostProcessHandleCallback mColorProcessCameraParamsUpdateCallback;
 };  // class FrameProducer
 
 

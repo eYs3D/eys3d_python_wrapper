@@ -24,7 +24,7 @@ Usage:
 
 import sys
 import time
-
+import os
 import cv2
 
 from eys3d import Pipeline, logger
@@ -87,11 +87,16 @@ def cv_sample(device, config):
                     z_map = dframe.get_depth_ZD_value().reshape(
                         dframe.get_height(), dframe.get_width())
                     cv2.setMouseCallback("Depth image", depth_roi_callback)
-                    cv2.displayStatusBar(
-                        "Depth image", " Z = {:.2f}, Z-ROI = {}".format(
-                            calculate_roi(x, y, dframe.get_width(),
+
+                    z_value = calculate_roi(x, y, dframe.get_width(),
                                           dframe.get_height(), depth_roi,
-                                          z_map), depth_roi), 1000)
+                                          z_map)
+                    text = " Z = {:.2f}, Z-ROI = {}".format(z_value, depth_roi)
+                    if os.name == "posix":
+                        cv2.displayStatusBar("Depth image", text, 1000)
+                    else:
+                        cv2.setWindowTitle("Depth image", "Depth image  {}".format(text))
+
             status = {
                 -1: status,
                 27: 'exit',  # Esc

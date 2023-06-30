@@ -8,8 +8,7 @@
 #define EYS3DPY_POSTPROCESSOPTIONS_H
 
 class PostProcessOptions {
-public:
-
+private:
     int mSpatialFilterKernelSize = 5;          // 3 - 15 Larger smoother. This value should be in odd.
     float mSpatialFilterOutlierThreshold = 16; // 1 - 64 Smaller filter more
     int mDecimationFactor = 0;                 // Ceil(resolution / factor / 4) * 4
@@ -17,8 +16,16 @@ public:
     int mFilteredWidth = 0;
     int mFilteredHeight = 0;
 
-    bool mEnabled = false;
+    bool mEnabledDecimation = false;
+    bool mEnabledPostProcess = false;
 
+    // Color post process parameter
+    int mResizedWidth = 0;
+    int mResizedHeight = 0;
+    float mColorResizeFactor = 1.0f;
+    bool mColorPostProcessEnabled = false;
+
+public:
     PostProcessOptions() : PostProcessOptions(5, 16.0f, 1) { }
 
     PostProcessOptions(const int spatialKernelSize, const float spatialOutlierThreshold, const int decimationFactor) {
@@ -80,12 +87,24 @@ public:
      * Control over depth post process filter enablement. Could be switched when device is streaming.
      * @param enable
      */
-    void enable(const bool enable) {
-        mEnabled = enable;
+    inline bool isEnabledPostProcess() {
+        return mEnabledPostProcess;
     }
 
-    inline bool isEnabled() const {
-        return mEnabled;
+    void enablePostProcess(const bool enable) {
+        mEnabledPostProcess = enable;
+    }
+
+    /**
+     * Control over depth decimation subsample filter enablement. Could be switched when device is streaming.
+     * @param enable
+     */
+    void enableDepthDecimation(const bool enable) {
+        mEnabledDecimation = enable;
+    }
+
+    inline bool isEnabledDepthDecimation() const {
+        return mEnabledDecimation;
     }
 
     /**
@@ -104,6 +123,55 @@ public:
      */
     inline void setFilteredHeight (int h) {
         mFilteredHeight = h;
+    }
+
+    /**
+     *
+     * @param w Internal updated by CameraDevice, which inform user currently decimation height.
+     * @return
+     */
+    inline void setResizedWidth (int w) {
+        mResizedWidth = w;
+    }
+
+    /**
+     *
+     * @param h Internal updated by CameraDevice, which inform user currently resized color height.
+     * @return
+     */
+    inline void setResizedHeight (int h) {
+        mResizedHeight = h;
+    }
+
+    /**
+     * Control over color post process filter enablement. Could be switched when device is streaming.
+     * @param enable
+     */
+    void enableColorPostProcess(const bool enable) {
+        mColorPostProcessEnabled = enable;
+    }
+
+    /**
+     * Control over color post process filter enablement. Could be switched when device is streaming.
+     * @return Is currently resizing color stream?
+     */
+    inline bool isEnabledColorPostProcess() const {
+        return mColorPostProcessEnabled;
+    }
+
+    /**
+     * Set color resolution factor. Set before Camera::initStream and after initStream is completed.
+     */
+    void setColorResizeFactor(float factor) {
+        mColorResizeFactor = factor;
+    }
+
+    /**
+     * Get current resolution factor. It won't affect anything when streaming.
+     * @return current color resize factor.
+     */
+    inline float getColorResizeFactor () const {
+        return mColorResizeFactor;
     }
 };
 

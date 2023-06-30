@@ -68,6 +68,8 @@
 
 #define DEFAULT_DEPTH_ROI_PIXELS 20
 
+#define APC_USER_SETTING_OFFSET 5
+
 namespace libeYs3D    {
 
 namespace devices    {
@@ -191,6 +193,7 @@ public:
                  int rectifyLogIndex);
 
     void enableStream();
+	void enableColorAndDepthStream_Python();
     void enableColorStream();
     void enableDepthStream();
     void enablePCStream();
@@ -200,6 +203,7 @@ public:
     void pauseDepthStream();
     void pausePCStream();
     void pauseIMUStream();
+	void pauseColorAndDepthStream_Python();
                             
     virtual int closeStream();
     
@@ -302,7 +306,8 @@ public:
 
     int getModuleID();
     int setModuleID(uint8_t nID);
-    
+    void CopyFromG1toG2();
+    void copy_file_to_g2(int fileIndex);
     int toString(char *buffer, int bufferLength);
 
     std::vector<APC_STREAM_INFO> getColorStreamInfo() { return mColorStreamInfo; }

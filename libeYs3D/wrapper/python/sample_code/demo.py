@@ -163,8 +163,18 @@ if __name__ == '__main__':
         conf.set_preset_mode_config(0x12C, args.index, device.get_usb_type())
     elif "HYPATIA" == args.module: # 8071
         conf.set_preset_mode_config(0x160, args.index, device.get_usb_type()) 
+    elif "HYPATIA2" == args.module:
+        conf.set_preset_mode_config(0x173, args.index, device.get_usb_type())
+    elif "Stacy" == args.module: # 8071
+        conf.set_preset_mode_config(0x188, args.index, device.get_usb_type()) 
+    elif "StacyJunior" == args.module:
+        conf.set_preset_mode_config(0x189, args.index, device.get_usb_type())
     elif "8036" == args.module:
         conf.set_preset_mode_config(0x120, args.index, device.get_usb_type())
+    elif "80362" == args.module:
+        conf.set_preset_mode_config(0x181, args.index, device.get_usb_type())
+    elif "8081" == args.module:
+        conf.set_preset_mode_config(0x183, args.index, device.get_usb_type())
     elif "8062" == args.module:
         # conf.set_color_stream(
         #     COLOR_RAW_DATA_TYPE.COLOR_RAW_DATA_YUY2,
@@ -193,7 +203,7 @@ if __name__ == '__main__':
             "pc_demo": pc_sample,
             "callback_demo": callback_sample,
             "accuracy_demo": accuracy_sample,
-            "record_playback_demo": record_playback_sample
+            # "record_playback_demo": record_playback_sample
         }
     elif conf.get_config()['depthHeight']:  # Depth only
         sample_list = {

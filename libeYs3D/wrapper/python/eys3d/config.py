@@ -226,7 +226,9 @@ class Config():
         if (self.pid == 0x120 or self.pid == 0x137) and 360 == self.ep1Height:  # This block for 8036/8052 scale down mode
             depth_data_bit = int(depth_data_bit) + DEPTH_RAW_DATA_SCALE_DOWN_MODE_OFFSET
             depth_data_bit = eys3dPy.DEPTH_RAW_DATA_TYPE(depth_data_bit)
-
+        if self.pid == 0x173 and 460 == self.ep1Height:  # This block for Hypatia2 scale down mode
+            depth_data_bit = int(depth_data_bit) + DEPTH_RAW_DATA_SCALE_DOWN_MODE_OFFSET
+            depth_data_bit = eys3dPy.DEPTH_RAW_DATA_TYPE(depth_data_bit)
         if self.interleavefps == (self.ep0fps if self.ep0fps else self.ep1fps):  # ILM
             depth_data_bit = int(depth_data_bit) + DEPTH_RAW_DATA_INTERLEAVE_MODE_OFFSET
             depth_data_bit = DEPTH_RAW_DATA_TYPE(depth_data_bit)

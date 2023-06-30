@@ -4,20 +4,16 @@
 * Compatible with OpenCV
 * Numpy supported
 * Preview point cloud with openGL.
-* Support 8053, 8062
+* Support 8036(G100),8052(G50),8059(R50),8062(G100i),8081(G62),80362(G100+)
+* HYPATIA(G53),HYPATIA2(R77),Stacy(REF-B6),StacyJunior(REF-B3)
 * Interleave mode
 * DepthFilter
 * Accuracy
 
 ### Getting the code
 
-### Clone this repository and update submodules
-```
-git clone git@github.com:eYs3D/eys3d_python_wrapper.git
-cd  eys3d_python_wrapper
-git submodule init
-git submodule update
-```
+### Clone this repository with submodules
+```git clone git@github.com:eYs3D/eys3d_python_wrapper.git```
 
 ### Prerequisite
 * eYs3D camera module
@@ -28,7 +24,8 @@ git submodule update
 * eSPDI SDK
 * cmake 3.20
 * pkg-config
-* libdc1394 package
+
+### venv can change to conda
 
 ```console
 # Install required packages with the following command
@@ -65,7 +62,7 @@ Developers should check if GPU vendor specific compute runtime for openCL driver
 ```console 
 $ sudo add-apt-repository ppa:intel-opencl/intel-opencl 
 $ sudo apt update
-$ sudo apt install intel-opencl-icd 
+$ apt install intel-opencl-icd 
 ```
 
 ### Verify OpenCL platform and devices available on the host
@@ -84,13 +81,8 @@ $ source ./venv/bin/activate
 
 ### install required Python packages with pip
 ```console
-$ sudo python3.7 -m pip install -r requirements.txt 
+$ python3.7 -m pip install -r requirements.txt 
 ```
-
-### If run demo see error like X Error: BadShmSeg 
-```sudo nano /etc/environment```
-add inside
-``` QT_X11_NO_MITSHM=1```
 
 ## Run demo code
 ```console 
@@ -102,7 +94,30 @@ Then select index to execute sample code.
 3. callback_demo
 4. accuracy_demo
 5. record_playback_demo
+make sure set Hot Keys for good depth:
+* M/m: Increase IR level
+* N/n: Decrease IR level
 ```
+ex: If your module is G100+, mode index 1 on ModeConfig.db.<br>
+```console
+sh run_demo.sh 80362 1 14
+```
+
+ex: If your module is G62, mode index 1 on ModeConfig.db.<br>
+```console
+sh run_demo.sh 8081 1 14
+```
+
+ex: If your module is REF-B6, mode index 1 on ModeConfig.db.<br>
+```console
+sh run_demo.sh Stacy 1 14
+```
+
+ex: If your module is REF-B3, mode index 1 on ModeConfig.db.<br>
+```console
+sh run_demo.sh StacyJunior 1 14
+```
+
 ex: If your module is G100i, mode index 1 on ModeConfig.db.<br>
 ```console
 sh run_demo.sh 8062 1 14
@@ -110,7 +125,7 @@ sh run_demo.sh 8062 1 14
 
 ex: If your module is G53, mode index 1 on ModeConfig.db.<br>
 ```console
-sh run_demo.sh 8071 1 11
+sh run_demo.sh HYPATIA 1 11
 ```
 
 ex: If your module is 8067, mode index 1 on ModeConfig.db.<br>
@@ -118,7 +133,7 @@ ex: If your module is 8067, mode index 1 on ModeConfig.db.<br>
 sh run_demo.sh 8067 1 11
 ```
 
-ex: If your module is 8059, mode index 5 on ModeConfig.db.<br>
+ex: If your module is R50, mode index 5 on ModeConfig.db.<br>
 ```console
 sh run_demo.sh 8059 5 11
 ```
@@ -128,7 +143,7 @@ ex: If your module is G100, mode index 1 on ModeConfig.db.<br>
 sh run_demo.sh 8036 1 14
 ```
 
-ex: If your module is 8052, mode index 1 on ModeConfig.db.<br>
+ex: If your module is G50, mode index 1 on ModeConfig.db.<br>
 ```console
 sh run_demo.sh 8052 1 14
 ```
@@ -238,7 +253,7 @@ def pipeline_sample(device, config):
     pipe = Pipeline(device=device)
     conf = config
     pipe.start(conf)
-
+    
     cframe = pipe.wait_color_frame()
     bgr_cframe = cv2.cvtColor(cframe.get_rgb_data().reshape(cframe.get_height(), cframe.get_width(), 3),
                               cv2.COLOR_RGB2BGR)
