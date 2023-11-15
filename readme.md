@@ -12,7 +12,8 @@
 
 ### Getting the code
 
-### Clone this repository with submodules
+### Clone this repository by http or ssh
+```git clone https://github.com/eYs3D/eys3d_python_wrapper.git```
 ```git clone git@github.com:eYs3D/eys3d_python_wrapper.git```
 
 ### Prerequisite
