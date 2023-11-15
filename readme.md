@@ -43,7 +43,6 @@ $ sudo apt install liblog4cplus-dev
 $ sudo apt install cgroup-tools
 $ sudo apt install libcgroup-dev
 $ sudo apt install libssl-dev
-$ sudo apt-get install -y libdc1394-22
 ```
 
 ### OpenCL
@@ -81,7 +80,11 @@ $ source ./venv/bin/activate
 
 ### install required Python packages with pip
 ```console
-$ python3.7 -m pip install -r requirements.txt 
+cd to eys3d_python_wrapper folder
+$ python3.7 -m pip install -r requirements.txt
+or
+$ python3 -m pip install -r requirements.txt
+make sure install the python3.7 version package 
 ```
 
 ## Run demo code
