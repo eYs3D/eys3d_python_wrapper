@@ -1,3 +1,6 @@
 [submodule "libeYs3D/out/eSPDI"]
 	path = libeYs3D/out/eSPDI
 	url = https://github.com/eYs3D/eSPDI_linux.git
+[submodule "libeYs3D/out/eYs3D/cfg"]
+	path = libeYs3D/out/eYs3D/cfg
+	url = https://github.com/eYs3D/eys3d_config.git
