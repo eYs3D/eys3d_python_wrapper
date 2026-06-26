@@ -1,66 +1,59 @@
+"""Camera property control for eYs3D stereo cameras.
+
+Provides access to camera exposure, white balance, and light source controls.
+"""
+from typing import Dict
 import eys3dPy
 
 
 class CameraProperty:
-    """This class contains the camera properties.
+    """Camera property controller for exposure, white balance, and light settings.
 
-    This class contains the camera properties including auto exposure, auto white balance, 
-    low light compesation, light source switch, and etc.
-    User could controls the propeties by following function.
-    [EYS3D][TODO][DOC]
+    Provides control over UVC camera properties including auto/manual exposure,
+    auto/manual white balance, low light compensation, and light source frequency.
 
     Args:
-        camera_device (obj): CameraDevice.
+        camera_device: Underlying eys3dPy.CameraDevice instance.
 
+    Example:
+        >>> prop = device.get_cameraProperty()
+        >>> prop.enable_AE()  # Enable auto exposure
+        >>> temp = prop.get_white_balance_temperature()  # 2800-6500K
     """
-    def __init__(self, camera_device):
+    def __init__(self, camera_device: eys3dPy.CameraDevice) -> None:
         self.__camera_device = camera_device
 
-    def enable_AE(self, ):
-        """Enable auto exposure mode.
-
-        To enable auto exposure mode.
-        """
+    def enable_AE(self) -> None:
+        """Enable auto exposure mode."""
         self.__camera_device.enable_AE()
 
-    def disable_AE(self, ):
-        """Disable auto exposure mode.
-
-        To disable auto exposure mode.
-        """
+    def disable_AE(self) -> None:
+        """Disable auto exposure mode."""
         self.__camera_device.disable_AE()
 
-    def get_AE_status(self, ):
+    def get_AE_status(self) -> bool:
         """Get the status of auto exposure.
 
-        To get the status of auto exposure.
-
         Returns:
-            bool: The return value. True for enable, False otherwise.
+            True if auto exposure is enabled, False otherwise.
         """
         return self.__camera_device.get_AE_status()
 
-    def get_exposure_value(self, ):
-        """Get the exposure value.
+    def get_exposure_value(self) -> int:
+        """Get the exposure value (log2 scale).
 
-        To get the exposure value.
-        The value is calculated by log2.
-        The range of value is -13 ~ 3.
-
-        Return:
-            int: The exposure value. The range is -13 ~ 3.
+        Returns:
+            Exposure value in range -13 to 3.
         """
         return self.__camera_device.get_exposure_value()
 
-    def set_exposure_value(self, value):
+    def set_exposure_value(self, value: int) -> None:
         """Set the exposure value.
 
-        To set the exposure value.
-        The range of value is -13 ~ 3.
-        It would set to minimun or maximun value if input-value is out of range.
+        Values outside the valid range are clamped to min/max.
 
         Args:
-            value (int): The exposure value. The range is -13 ~ 3.
+            value: Exposure value in range -13 to 3.
         """
         val_range = self.get_exposure_range()
         if value >= val_range['Max']:
@@ -69,182 +62,122 @@ class CameraProperty:
             value = val_range['Min']
         self.__camera_device.set_exposure_value(value)
 
-    def get_manual_exposure_time(self, ):
+    def get_manual_exposure_time(self) -> float:
         """Get the manual exposure time.
 
-        To get the manual exposure time.
-        [EYS3D][TODO][DOC]
-
         Returns:
-            float: The exposure time. [EYS3D][TODO][DOC]
+            Exposure time in device-specific units.
         """
         return self.__camera_device.get_manual_exposure_time()
 
-    def set_manual_exposure_time(self, value):
+    def set_manual_exposure_time(self, value: float) -> None:
         """Set the manual exposure time.
 
-        To set the manual exposure time.
-        [EYS3D][TODO][DOC]
-
         Args:
-            value (float): The manual exposure time.
+            value: Exposure time in device-specific units.
         """
         self.__camera_device.set_manual_exposure_time(value)
 
-    def get_manual_global_gain(self, ):
+    def get_manual_global_gain(self) -> float:
         """Get the manual global gain.
 
-        To get the manual global gain.
-        [EYS3D][TODO][DOC]
-
         Returns:
-            float: The exposure time. [EYS3D][TODO][DOC]
+            Global gain value in device-specific units.
         """
         return self.__camera_device.get_manual_global_gain()
 
-    def set_manual_global_gain(self, value):
+    def set_manual_global_gain(self, value: float) -> None:
         """Set the manual global gain.
 
-        To set the manual global gain.
-        [EYS3D][TODO][DOC]
-
         Args:
-            value (float): The manual global gain.
+            value: Global gain value in device-specific units.
         """
         self.__camera_device.set_manual_global_gain(value)
 
-    def get_exposure_range(self):
-        """Get the exposure range from eYs3D camera module.
-
-        To get the exposure range as a dictionary.
-        The key is following:
-        * Max 
-        * Min
-        * Step
-        * Default
+    def get_exposure_range(self) -> Dict[str, int]:
+        """Get the exposure value range.
 
         Returns:
-            dict: The exposure range. The key is following:
-                * Max 
-                * Min
-                * Step
-                * Default
+            Dictionary with keys: 'Max', 'Min', 'Step', 'Default'.
         """
         return self.__camera_device.get_exposure_range()
 
-    def enable_AWB(self, ):
-        """Enable auto white balance mode.
-
-        To enable auto white balance mode.
-        """
+    def enable_AWB(self) -> None:
+        """Enable auto white balance mode."""
         self.__camera_device.enable_AWB()
 
-    def disable_AWB(self, ):
-        """Disable auto white balance mode.
-
-        To disable auto white balance mode.
-        """
+    def disable_AWB(self) -> None:
+        """Disable auto white balance mode."""
         self.__camera_device.disable_AWB()
 
-    def get_AWB_status(self, ):
+    def get_AWB_status(self) -> bool:
         """Get the status of auto white balance.
 
-        To get the status of auto white balance.
-
         Returns:
-            bool: The return value. True for enable, False otherwise.
-
+            True if auto white balance is enabled, False otherwise.
         """
         return self.__camera_device.get_AWB_status()
 
-    def get_white_balance_temperature(self, ):
+    def get_white_balance_temperature(self) -> int:
         """Get the white balance temperature.
 
-        To get the white balance temperature.
-
         Returns:
-            int: The white balance temperature (the range is 2800 ~ 6500).
+            White balance temperature in Kelvin (2800-6500K).
         """
         return self.__camera_device.get_white_balance_temperature()
 
-    def set_white_balance_temperature(self, value):
+    def set_white_balance_temperature(self, value: int) -> None:
         """Set the white balance temperature.
 
-        To set the white balance temperatue.
-        The range is 2800 ~ 6500.
-
         Args:
-            value: The white balance temperature.The range si 2800 ~ 6500.
+            value: Temperature in Kelvin (2800-6500K).
+
+        Raises:
+            ValueError: If value is outside the valid range.
         """
-        range_temperature = self.__camera_device.get_white_balance_temperature_range(
-        )
+        range_temperature = self.__camera_device.get_white_balance_temperature_range()
         if value not in range(range_temperature['Min'],
                               range_temperature['Max'] + 1):
             raise ValueError("Out of range.")
         self.__camera_device.set_white_balance_temperature(value)
 
-    def get_white_balance_temperature_range(self):
-        """Get the range of white balance temperature.
-        
-        To Get the range of white balance temperature as a dictionary.
-        The key is following :
-        * Max 
-        * Min
-        * Step
-        * Default
+    def get_white_balance_temperature_range(self) -> Dict[str, int]:
+        """Get the white balance temperature range.
 
         Returns:
-            dict: The range of white balance temperature. The key is following:
-                * Max 
-                * Min
-                * Step
-                * Default
-
+            Dictionary with keys: 'Max', 'Min', 'Step', 'Default'.
         """
         return self.__camera_device.get_white_balance_temperature_range()
 
-    def get_low_light_compensation_status(self, ):
+    def get_low_light_compensation_status(self) -> bool:
         """Get the status of low light compensation.
 
-        To get the status of low light compensation.
-
         Returns:
-            bool: The return value. True for enable, False otherwise.
+            True if low light compensation is enabled, False otherwise.
         """
         return self.__camera_device.get_low_light_compensation_status()
 
-    def enable_low_light_compensation(self):
-        """Enable low light compesation mode.
-
-        To enable low light compesation mode.
-        """
+    def enable_low_light_compensation(self) -> None:
+        """Enable low light compensation mode."""
         self.__camera_device.set_low_light_compensation(1)
 
-    def disable_low_light_compensation(self):
-        """Disable low light compesation mode.
-
-        To disable low light compesation mode.
-        """
+    def disable_low_light_compensation(self) -> None:
+        """Disable low light compensation mode."""
         self.__camera_device.set_low_light_compensation(0)
 
-    def get_light_source_status(self, ):
-        """Get the status of light source.
-        
-        To get the status of light source.
-        The options are 50 Hz and 60 Hz.
+    def get_light_source_status(self) -> eys3dPy.LIGHT_SOURCE_VALUE:
+        """Get the light source frequency setting.
 
         Returns:
-            LIGHT_SOURCE_VALUE: VALUE_50HZ is 50 Hz, VALUE_60HZ is 60 Hz.
+            LIGHT_SOURCE_VALUE.VALUE_50HZ or LIGHT_SOURCE_VALUE.VALUE_60HZ.
         """
         return eys3dPy.LIGHT_SOURCE_VALUE(
             self.__camera_device.get_light_source_status())
 
-    def set_light_source(self, value):
-        """Set the light source.
+    def set_light_source(self, value: eys3dPy.LIGHT_SOURCE_VALUE) -> None:
+        """Set the light source frequency.
 
-        To set the light source
-        The options are 50 Hz and 60 Hz.
-
-        value (LIGHT_SOURCE_VALUE): Set to VALUE_50HZ for 50 Hz and VALUE_60HZ for 60 Hz
+        Args:
+            value: LIGHT_SOURCE_VALUE.VALUE_50HZ or LIGHT_SOURCE_VALUE.VALUE_60HZ.
         """
         self.__camera_device.set_light_source(value)

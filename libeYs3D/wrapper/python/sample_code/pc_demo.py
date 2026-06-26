@@ -1,28 +1,52 @@
-"""
-It's a simple demo to preview point cloud with openGL.
-It only has been validated on mode index 1, 2 and 3 with module 8062.(HD frame, 30/60 fps)
+"""OpenGL point cloud viewer demo for eYs3D stereo cameras.
+
+Renders 3D point cloud data in real-time using OpenGL and GLFW.
+Supports multiple visualization modes: color-mapped, depth-mapped, or single color.
 
 Usage:
     Hot Keys:
-        * Q\q\Esc: Quit
-        * <F1>: Perform snapshot
-        * <F2>: Dump frame info
-        * <F3>: Dump IMU data
-        * <F4>: Dump eYs3D system info
-        * <F5>: Save rectify log 
-        * <F6>: Dump camera properties info
-        * F/f: Enable/Disable Ply filter
-        * I/i: Enable/Disable extend maximum IR value
+        * Q/q/Esc: Quit
+        * F1: Perform snapshot (saves to ~/.eYs3D/snapshots/)
+        * F2: Dump frame info (saves to ~/.eYs3D/frames/)
+        * F3: Dump IMU data (saves to ~/.eYs3D/imu_log/)
+        * F4: Dump eYs3D system info
+        * F5: Save rectify log as JSON
+        * F6: Dump camera properties info
+        * F/f: Enable/Disable PLY filter
+        * T/t: Toggle point cloud format (Color/Depth/Single)
+        * I/i: Enable/Disable extended maximum IR value
         * M/m: Increase IR level
         * N/n: Decrease IR level
-        * 0: Reset Z range
-        * 1: Z range setting 1 with ZNear=1234 and ZFar=5678
-        * 2: Z range setting 2 with ZNear=1200 and ZFar=1600
+        * 0: Reset Z range to defaults
+        * 1: Z range setting 1 (ZNear=1234, ZFar=5678)
+        * 2: Z range setting 2 (ZNear=1200, ZFar=1600)
+
     Mouse:
-        * scroll: Zoom in/out
-        * left click: Rotate
-        * Double left click: Reset position
+        * Scroll: Zoom in/out
+        * Left click + drag: Rotate view
+        * Double left click: Reset camera position
+
+PCFrame Data Access Methods - Safe vs Unsafe:
+    The PCFrame object provides two types of data access methods:
+
+    SAFE methods (copy data, can be stored):
+        - get_rgb_data() -> np.ndarray: Returns a COPY of RGB data.
+        - get_xyz_data() -> np.ndarray: Returns a COPY of XYZ coordinates.
+        - get_drgb_data() -> np.ndarray: Returns a COPY of depth-colorized RGB.
+
+    UNSAFE methods (zero-copy, must use immediately):
+        - get_rgb_data_unsafe() -> np.ndarray: Direct pointer to PCFrame memory.
+        - get_xyz_data_unsafe() -> np.ndarray: Direct pointer to PCFrame memory.
+        - get_drgb_data_unsafe() -> np.ndarray: Direct pointer to PCFrame memory.
+
+        WARNING: Unsafe methods return arrays pointing to internal PCFrame buffers.
+        After callback returns, PCFrame may be recycled and data becomes INVALID.
+        Use unsafe methods only for immediate processing without storing references.
+
+Note:
+    Validated on mode index 1, 2, and 3 with module 8062 (HD frame, 30/60 fps).
 """
+
 import sys
 import time
 
@@ -31,12 +55,12 @@ from OpenGL.GLU import *
 import glfw
 
 import numpy as np
-import argparse
 import math
 import threading
 import cv2
 
-from eys3d import Pipeline, Config, logger
+import eys3dPy
+from eys3d import Device, Pipeline, Config, logger
 
 xLen = 1280
 yLen = 720
@@ -60,19 +84,32 @@ point_cloud_viewer_format = 0  # For PC format
 # Flag defined
 flag = {"filter": True}  #ply filter
 
-def my_try_lock(lock,timeout):
+def my_try_lock(lock: threading.Lock, timeout: int) -> bool:
+    """Attempt to acquire lock with timeout (non-blocking retries).
+
+    Args:
+        lock: Threading lock to acquire.
+        timeout: Maximum number of acquire attempts.
+
+    Returns:
+        True if lock acquired, False if timeout reached.
+    """
     count = 0
     success = False
     while count < timeout and not success:
         success = lock.acquire(False)
-        """logger.info("[Python] success: {}".format(success))"""
         if success:
             break
         count = count + 1
     return success
 
 
-def SetRot():
+def SetRot() -> None:
+    """Apply rotation transformation based on mouse drag distance.
+
+    Calculates rotation angle from mouse movement and applies it
+    to the OpenGL modelview matrix around the object center.
+    """
     xDif = mOut[0] - mIn[0]
     yDif = mOut[1] - mIn[1]
     dis = math.sqrt(xDif * xDif + yDif * yDif)
@@ -84,15 +121,27 @@ def SetRot():
     glMultMatrixf(aViewMtx)
 
 
-def InitView():
+def InitView() -> None:
+    """Initialize OpenGL camera view matrix.
+
+    Sets up the modelview matrix with camera looking at the scene center.
+    """
     glMatrixMode(GL_MODELVIEW)
     glLoadIdentity()
     gluLookAt(aEyeCnt[0], aEyeCnt[1], aEyeCnt[2], aEyeCnt[0], aEyeCnt[1],
               aEyeCnt[2] + 100.0, 0, -1, 0)
 
 
-def InputKey(window, key, scancode, action, mods):
-    # global dev
+def InputKey(window, key: int, scancode: int, action: int, mods: int) -> None:
+    """GLFW keyboard callback for hotkey handling.
+
+    Args:
+        window: GLFW window handle.
+        key: GLFW key code.
+        scancode: Platform-specific scancode.
+        action: GLFW_PRESS, GLFW_RELEASE, or GLFW_REPEAT.
+        mods: Modifier keys (Shift, Ctrl, Alt, Super).
+    """
     if action == glfw.PRESS:
         if key in (glfw.KEY_Q, glfw.KEY_ESCAPE):
             glfw.set_window_should_close(window, True)
@@ -174,7 +223,15 @@ def InputKey(window, key, scancode, action, mods):
                     ir_property.get_IR_value()))
 
 
-def InputMouse(window, button, action, mods):
+def InputMouse(window, button: int, action: int, mods: int) -> None:
+    """GLFW mouse button callback for view rotation control.
+
+    Args:
+        window: GLFW window handle.
+        button: Mouse button (MOUSE_BUTTON_LEFT, etc.).
+        action: GLFW_PRESS or GLFW_RELEASE.
+        mods: Modifier keys.
+    """
     global mIn
     global bMMov
     global mouseTime
@@ -194,7 +251,14 @@ def InputMouse(window, button, action, mods):
         mouseTime = mtNow
 
 
-def MoveMouse(window, x, y):
+def MoveMouse(window, x: float, y: float) -> None:
+    """GLFW cursor position callback for drag rotation.
+
+    Args:
+        window: GLFW window handle.
+        x: Cursor X position in window coordinates.
+        y: Cursor Y position in window coordinates.
+    """
     global mIn
     global mOut
     if bMMov:
@@ -203,7 +267,17 @@ def MoveMouse(window, x, y):
         SetRot()
 
 
-def DrawPCloud(config):
+def DrawPCloud(config: Config) -> None:
+    """Render point cloud using OpenGL vertex arrays.
+
+    Draws the 3D point cloud with coloring based on point_cloud_viewer_format:
+        - 0: Color from RGB camera
+        - 1: Color from depth heatmap
+        - 2: Single green color
+
+    Args:
+        config: Stream configuration for resolution info.
+    """
     global aXyz, aRgb, pcframe, pc
     try:
         lock.acquire()
@@ -232,11 +306,25 @@ def DrawPCloud(config):
         pass
 
 
-def ScrollMouse(window, x, y):
+def ScrollMouse(window, x: float, y: float) -> None:
+    """GLFW scroll callback for zoom control.
+
+    Args:
+        window: GLFW window handle.
+        x: Horizontal scroll offset (unused).
+        y: Vertical scroll offset (positive = zoom in).
+    """
     glTranslatef(0, 0, y * 8)
 
 
-def DrawAxis():
+def DrawAxis() -> None:
+    """Render RGB XYZ coordinate axes at the scene origin.
+
+    Draws three colored lines:
+        - Red: X-axis (positive right)
+        - Green: Y-axis (positive down)
+        - Blue: Z-axis (positive into screen)
+    """
     aaA = [[200, 0, 0], [0, -200, 0], [0, 0, -200]]
     aaC = [[1.0, 0, 0], [0, 1.0, 0], [0, 0, 1.0]]
     glLineWidth(3)
@@ -250,41 +338,68 @@ def DrawAxis():
 
 
 
-def pc_frame_callback(pcframe):
-    """It's a callback function to grab point cloud frame.
+def pc_frame_callback(pcframe: eys3dPy.PCFrame) -> None:
+    """Callback to receive point cloud frames from PCFrameProducer.
 
-    PCFrame:
-        get_timestamp (int)         : Timestamp(microsec).
-        get_serial_number (int)     : The serial number of this frame.
-        get_width (int)             : The width of this frame.
-        get_height (int)            : The height of this frame.
-        get_rgb_data (numpy array)  : The rgb data of this frame. The size is (H * W * 3).
-        get_xyz_data (numpy array)  : The xyz data of this frame. The size is (H * W * 3).
-        get_transcoding_time (int)  : For performance benchmark purpose in micro seconds.
+    Called by the C++ PCFrameProducer thread for each generated point cloud.
+    Updates global XYZ and RGB arrays for OpenGL rendering.
+
+    Args:
+        pcframe: eys3dPy.PCFrame object with the following methods:
+            - get_timestamp() -> int: Frame timestamp in microseconds.
+            - get_serial_number() -> int: Frame sequence number.
+            - get_width() -> int: Point cloud width (matches color resolution).
+            - get_height() -> int: Point cloud height.
+            - get_transcoding_time() -> int: Processing time in microseconds.
+
+            Safe methods (copy data, can store):
+            - get_rgb_data() -> np.ndarray: RGB color per point copy (H*W*3).
+            - get_xyz_data() -> np.ndarray: XYZ coordinates copy (H*W*3, float32).
+            - get_drgb_data() -> np.ndarray: Depth-colorized RGB copy (H*W*3).
+
+            Unsafe methods (zero-copy, process immediately):
+            - get_rgb_data_unsafe() -> np.ndarray: Direct pointer to RGB buffer.
+            - get_xyz_data_unsafe() -> np.ndarray: Direct pointer to XYZ buffer.
+            - get_drgb_data_unsafe() -> np.ndarray: Direct pointer to DRGB buffer.
+
+            WARNING: Unsafe methods point directly to PCFrame memory which may
+            be recycled after callback returns. Use only for immediate processing.
     """
     global aXyz, aRgb, count, timestamp, dRgb
-    
-    # For calculating PC callback fps
+
+    # Calculate and log PC callback FPS periodically
     if (count % DURATION) == 0:
         if count != 0:
             temp = (pcframe.get_timestamp() - timestamp) / 1000 / DURATION
             logger.info("[FPS][PC Callback] {:.2f}".format(1000.0 / temp))
             timestamp = pcframe.get_timestamp()
     count += 1
-    
-            
+
+    # Try to acquire lock without blocking (skip frame if busy)
     if my_try_lock(lock, 1) == False:
         return
-    """lock.acquire()"""
+
     aXyz = pcframe.get_xyz_data()
     aRgb = pcframe.get_rgb_data()
     dRgb = pcframe.get_drgb_data()
 
-
     lock.release()
 
 
-def pc_sample(device, config):
+def pc_sample(device: Device, config: Config) -> None:
+    """Run the OpenGL point cloud viewer sample.
+
+    Initializes the camera with point cloud callback, creates a GLFW window,
+    and enters the main rendering loop. User can interact via keyboard and mouse.
+
+    Args:
+        device: Device instance to stream from.
+        config: Stream configuration (must have valid color resolution for PC).
+
+    Note:
+        This function blocks until the user closes the window (Q/Esc).
+        The device stream is stopped and released on exit.
+    """
     global point_cloud_viewer_format, ZNEAR_DEFAULT, ZFAR_DEFAULT
     while True:
         point_cloud_viewer_format = input(

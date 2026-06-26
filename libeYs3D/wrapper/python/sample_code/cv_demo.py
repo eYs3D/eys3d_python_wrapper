@@ -1,39 +1,47 @@
-"""
-It's a demo to preview 2D frame with opencv.
+"""OpenCV preview demo for eYs3D stereo cameras.
+
+Displays color and depth streams in OpenCV windows with interactive controls.
 
 Usage:
     Hot Keys:
         * Q/q/Esc: Quit
-        * E/e: Enable/Disable AE
-        * <F1>: Perform snapshot
-        * <F2>: Dump frame info
-        * <F3>: Dump IMU data
-        * <F4>: Dump eYs3D system info
-        * <F5>: Save rectify log data
-        * <F6>: Dump camera properties info
-        * I/i: Enable/Disable extend maximum IR value
+        * E/e: Enable/Disable Auto Exposure (AE)
+        * W/w: Enable/Disable Auto White Balance (AWB)
+        * F1: Perform snapshot (saves to ~/.eYs3D/snapshots/)
+        * F2: Dump frame info (saves to ~/.eYs3D/frames/)
+        * F3: Dump IMU data (saves to ~/.eYs3D/imu_log/)
+        * F4: Dump eYs3D system info
+        * F5: Save rectify log data as JSON
+        * F6: Dump camera properties info
+        * I/i: Enable/Disable extended maximum IR value
         * M/m: Increase IR level
         * N/n: Decrease IR level
-        * L/l: Increase z-roi
-        * K/k: Decrease z-roi
-        * P/p: Enabel/Disable HW PP
-        * 0: Reset Z range
-        * 1: Z range setting 1 with ZNear=1234 and ZFar=5678
-        * 2: Z range setting 2 with ZNear=1200 and ZFar=1600
+        * L/l: Increase depth ROI size
+        * K/k: Decrease depth ROI size
+        * P/p: Enable/Disable Hardware Post-Processing (HWPP)
+        * 0: Reset Z range to defaults
+        * 1: Z range setting 1 (ZNear=1234, ZFar=5678)
+        * 2: Z range setting 2 (ZNear=1200, ZFar=1600)
+
+Note:
+    pipe.reset() was removed - C++ LatestFrameBuffer design automatically
+    keeps only the latest frame, making manual reset unnecessary.
 """
 
 import sys
 import time
 import os
 import cv2
+import numpy as np
 
-from eys3d import Pipeline, logger
+from eys3d import Device, Pipeline, Config, logger
 
-# For depth-roi calculated
-x = y = 0
+# Global variables for mouse ROI tracking
+x: int = 0
+y: int = 0
 
 
-def cv_sample(device, config):
+def cv_sample(device: Device, config: Config) -> None:
     # For cv preview
     COLOR_ENABLE = DEPTH_ENABLE = False
 
@@ -48,6 +56,7 @@ def cv_sample(device, config):
     # Flag defined
     flag = dict({
         'exposure': True,
+        'white_balance': True,
         'Extend_IR': True,
         'HW_pp': True,
     })
@@ -68,21 +77,16 @@ def cv_sample(device, config):
 
     while 1:
         try:
+            # C++ outputs BGR directly (device.py EYS3DSystem could configure the RGB byte order)
             if COLOR_ENABLE:
                 cret, cframe = pipe.wait_color_frame()
                 if cret:
-                    bgr_cframe = cv2.cvtColor(
-                        cframe.get_rgb_data().reshape(cframe.get_height(),
-                                                      cframe.get_width(), 3),
-                        cv2.COLOR_RGB2BGR)
+                    bgr_cframe = cframe.get_rgb_data().reshape(cframe.get_height(), cframe.get_width(), 3)
                     cv2.imshow("Color image", bgr_cframe)
             if DEPTH_ENABLE:
                 dret, dframe = pipe.wait_depth_frame()
                 if dret:
-                    bgr_dframe = cv2.cvtColor(
-                        dframe.get_rgb_data().reshape(dframe.get_height(),
-                                                      dframe.get_width(), 3),
-                        cv2.COLOR_RGB2BGR)
+                    bgr_dframe = dframe.get_rgb_data().reshape(dframe.get_height(), dframe.get_width(), 3)
                     cv2.imshow("Depth image", bgr_dframe)
                     z_map = dframe.get_depth_ZD_value().reshape(
                         dframe.get_height(), dframe.get_width())
@@ -104,6 +108,8 @@ def cv_sample(device, config):
                 ord('Q'): 'exit',
                 ord('e'): 'exposure',
                 ord('E'): 'exposure',
+                ord('w'): 'white_balance',
+                ord('W'): 'white_balance',
                 65470: 'snapshot',  # F1
                 65471: 'dump_frame_info',  # F2
                 65472: 'dump_imu_data',  # F3
@@ -126,10 +132,8 @@ def cv_sample(device, config):
                 65361: 'play',  # Left arrow
                 ord('p'): 'HW_pp',
                 ord('P'): 'HW_pp',
-            }[cv2.waitKeyEx(10)]
-            if status == 'play':
-                pipe.reset()  # Clean the queue buffer before retrieving frame
-                continue
+            }[cv2.waitKeyEx(1)]
+            # pipe.reset() removed - C++ LatestFrameBuffer design handles frame freshness
             if status == 'exit':
                 cv2.destroyAllWindows()
                 pipe.pause()
@@ -137,11 +141,20 @@ def cv_sample(device, config):
             if status == 'exposure':
                 flag["exposure"] = not (flag["exposure"])
                 if flag["exposure"]:
-                    logger.info("Enable exposure")
+                    logger.info("Enable Auto Exposure (AE)")
                     camera_property.enable_AE()
                 else:
-                    logger.info("Disable exposure")
+                    logger.info("Disable Auto Exposure (AE)")
                     camera_property.disable_AE()
+                status = 'play'
+            if status == 'white_balance':
+                flag["white_balance"] = not (flag["white_balance"])
+                if flag["white_balance"]:
+                    logger.info("Enable Auto White Balance (AWB)")
+                    camera_property.enable_AWB()
+                else:
+                    logger.info("Disable Auto White Balance (AWB)")
+                    camera_property.disable_AWB()
                 status = 'play'
             if status == 'snapshot':
                 device.do_snapshot()
@@ -235,7 +248,27 @@ def cv_sample(device, config):
     pipe.stop()
 
 
-def calculate_roi(x, y, w, h, depth_roi, z_map):
+def calculate_roi(
+    x: int,
+    y: int,
+    w: int,
+    h: int,
+    depth_roi: int,
+    z_map: np.ndarray
+) -> float:
+    """Calculate average Z value within ROI around cursor position.
+
+    Args:
+        x: Cursor X-coordinate.
+        y: Cursor Y-coordinate.
+        w: Frame width.
+        h: Frame height.
+        depth_roi: ROI size in pixels (square).
+        z_map: Depth map array (H, W) with Z values in mm.
+
+    Returns:
+        Average Z value in mm within the ROI, excluding zero (invalid) pixels.
+    """
     if depth_roi > 1:
         roi_x = max(x - depth_roi / 2.0, 0)
         roi_y = max(y - depth_roi / 2.0, 0)
@@ -268,8 +301,16 @@ def calculate_roi(x, y, w, h, depth_roi, z_map):
     return z_value
 
 
-def depth_roi_callback(event, x_, y_, flag, param):
-    # Update coord x and y
+def depth_roi_callback(event: int, x_: int, y_: int, flag: int, param: object) -> None:
+    """OpenCV mouse callback to update ROI center coordinates.
+
+    Args:
+        event: OpenCV mouse event type.
+        x_: Mouse X-coordinate.
+        y_: Mouse Y-coordinate.
+        flag: OpenCV event flags.
+        param: User data (unused).
+    """
     global x, y
     x = x_
     y = y_
